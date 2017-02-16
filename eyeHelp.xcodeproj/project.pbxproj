@@ -7,14 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		005E5740A3C8C4EF5A9A96FA /* libPods-eyeHelpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 838FCAF957B0FE9152A49D4A /* libPods-eyeHelpTests.a */; };
+		330FCBB6BC54C4C2D2FB697F /* libPods-eyeHelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022CD5E6F87FAF0691DF347 /* libPods-eyeHelp.a */; };
+		386FFB37F655E4D245D2AA9D /* libPods-eyeHelpUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC15FEAC16A47E3DE97FDC /* libPods-eyeHelpUITests.a */; };
 		3C62484E1E55346000125670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C62484D1E55346000125670 /* main.m */; };
 		3C6248511E55346000125670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248501E55346000125670 /* AppDelegate.m */; };
-		3C6248541E55346000125670 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248531E55346000125670 /* ViewController.m */; };
 		3C6248571E55346000125670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248551E55346000125670 /* Main.storyboard */; };
 		3C6248591E55346000125670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248581E55346000125670 /* Assets.xcassets */; };
 		3C62485C1E55346000125670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C62485A1E55346000125670 /* LaunchScreen.storyboard */; };
 		3C6248671E55346000125670 /* eyeHelpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248661E55346000125670 /* eyeHelpTests.m */; };
 		3C6248721E55346000125670 /* eyeHelpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248711E55346000125670 /* eyeHelpUITests.m */; };
+		3C6248A51E55436F00125670 /* EHScienceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248A31E55436F00125670 /* EHScienceTableViewController.m */; };
+		3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248A41E55436F00125670 /* EHScienceTableViewController.xib */; };
+		3C6248AF1E5543B900125670 /* EHConsultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248AD1E5543B900125670 /* EHConsultTableViewController.m */; };
+		3C6248B01E5543B900125670 /* EHConsultTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248AE1E5543B900125670 /* EHConsultTableViewController.xib */; };
+		3C6248B41E5543CC00125670 /* EHMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248B21E5543CC00125670 /* EHMineTableViewController.m */; };
+		3C6248B51E5543CC00125670 /* EHMineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248B31E5543CC00125670 /* EHMineTableViewController.xib */; };
+		3C6248BE1E5545F200125670 /* EHScreenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248BC1E5545F200125670 /* EHScreenTableViewController.m */; };
+		3C6248BF1E5545F200125670 /* EHScreenTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248BD1E5545F200125670 /* EHScreenTableViewController.xib */; };
+		3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248CA1E55548D00125670 /* CustomNavigationController.m */; };
+		3C6248D01E55548D00125670 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248CC1E55548D00125670 /* CustomTabBar.m */; };
+		3C6248D11E55548D00125670 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248CE1E55548D00125670 /* CustomTabBarController.m */; };
+		3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB281E5578E800A19245 /* EHCourseViewController.m */; };
+		3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB291E5578E800A19245 /* EHCourseViewController.xib */; };
+		3CF1BB2F1E5596C900A19245 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB2E1E5596C900A19245 /* MenuView.m */; };
+		3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB341E55973E00A19245 /* LeftMenuViewDemo.m */; };
+		3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB371E55A9CA00A19245 /* LeftMenuTableViewCell.m */; };
+		3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB381E55A9CA00A19245 /* LeftMenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0022CD5E6F87FAF0691DF347 /* libPods-eyeHelp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eyeHelp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AFC15FEAC16A47E3DE97FDC /* libPods-eyeHelpUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eyeHelpUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6248491E55346000125670 /* eyeHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyeHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62484D1E55346000125670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C62484F1E55346000125670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C6248501E55346000125670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C6248521E55346000125670 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3C6248531E55346000125670 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C6248561E55346000125670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C6248581E55346000125670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C62485B1E55346000125670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +70,44 @@
 		3C62486D1E55346000125670 /* eyeHelpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eyeHelpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6248711E55346000125670 /* eyeHelpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = eyeHelpUITests.m; sourceTree = "<group>"; };
 		3C6248731E55346000125670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6248841E553CA200125670 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Configs/PrefixHeader.pch; sourceTree = "<group>"; };
+		3C6248851E553EB900125670 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Configs/Constants.h; sourceTree = "<group>"; };
+		3C6248871E553EF000125670 /* Enumeration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enumeration.h; path = Configs/Enumeration.h; sourceTree = "<group>"; };
+		3C6248A21E55436F00125670 /* EHScienceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHScienceTableViewController.h; path = Class/Module/Science/ViewControllers/EHScienceTableViewController.h; sourceTree = "<group>"; };
+		3C6248A31E55436F00125670 /* EHScienceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHScienceTableViewController.m; path = Class/Module/Science/ViewControllers/EHScienceTableViewController.m; sourceTree = "<group>"; };
+		3C6248A41E55436F00125670 /* EHScienceTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHScienceTableViewController.xib; path = Class/Module/Science/ViewControllers/EHScienceTableViewController.xib; sourceTree = "<group>"; };
+		3C6248AC1E5543B900125670 /* EHConsultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHConsultTableViewController.h; path = Class/Module/Consult/ViewControllers/EHConsultTableViewController.h; sourceTree = "<group>"; };
+		3C6248AD1E5543B900125670 /* EHConsultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHConsultTableViewController.m; path = Class/Module/Consult/ViewControllers/EHConsultTableViewController.m; sourceTree = "<group>"; };
+		3C6248AE1E5543B900125670 /* EHConsultTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHConsultTableViewController.xib; path = Class/Module/Consult/ViewControllers/EHConsultTableViewController.xib; sourceTree = "<group>"; };
+		3C6248B11E5543CC00125670 /* EHMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHMineTableViewController.h; path = Class/Module/Mine/ViewControllers/EHMineTableViewController.h; sourceTree = "<group>"; };
+		3C6248B21E5543CC00125670 /* EHMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHMineTableViewController.m; path = Class/Module/Mine/ViewControllers/EHMineTableViewController.m; sourceTree = "<group>"; };
+		3C6248B31E5543CC00125670 /* EHMineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHMineTableViewController.xib; path = Class/Module/Mine/ViewControllers/EHMineTableViewController.xib; sourceTree = "<group>"; };
+		3C6248BB1E5545F200125670 /* EHScreenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHScreenTableViewController.h; path = Class/Module/Screen/ViewControllers/EHScreenTableViewController.h; sourceTree = "<group>"; };
+		3C6248BC1E5545F200125670 /* EHScreenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHScreenTableViewController.m; path = Class/Module/Screen/ViewControllers/EHScreenTableViewController.m; sourceTree = "<group>"; };
+		3C6248BD1E5545F200125670 /* EHScreenTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHScreenTableViewController.xib; path = Class/Module/Screen/ViewControllers/EHScreenTableViewController.xib; sourceTree = "<group>"; };
+		3C6248C91E55548D00125670 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavigationController.h; path = Class/Base/CustomNavigationController.h; sourceTree = "<group>"; };
+		3C6248CA1E55548D00125670 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavigationController.m; path = Class/Base/CustomNavigationController.m; sourceTree = "<group>"; };
+		3C6248CB1E55548D00125670 /* CustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBar.h; path = Class/Base/CustomTabBar.h; sourceTree = "<group>"; };
+		3C6248CC1E55548D00125670 /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBar.m; path = Class/Base/CustomTabBar.m; sourceTree = "<group>"; };
+		3C6248CD1E55548D00125670 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarController.h; path = Class/Base/CustomTabBarController.h; sourceTree = "<group>"; };
+		3C6248CE1E55548D00125670 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarController.m; path = Class/Base/CustomTabBarController.m; sourceTree = "<group>"; };
+		3CF1BB271E5578E800A19245 /* EHCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHCourseViewController.h; path = Class/Module/Course/ViewControllers/EHCourseViewController.h; sourceTree = "<group>"; };
+		3CF1BB281E5578E800A19245 /* EHCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHCourseViewController.m; path = Class/Module/Course/ViewControllers/EHCourseViewController.m; sourceTree = "<group>"; };
+		3CF1BB291E5578E800A19245 /* EHCourseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHCourseViewController.xib; path = Class/Module/Course/ViewControllers/EHCourseViewController.xib; sourceTree = "<group>"; };
+		3CF1BB2D1E5596C900A19245 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuView.h; path = "Category/侧滑/MenuView.h"; sourceTree = "<group>"; };
+		3CF1BB2E1E5596C900A19245 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuView.m; path = "Category/侧滑/MenuView.m"; sourceTree = "<group>"; };
+		3CF1BB331E55973E00A19245 /* LeftMenuViewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuViewDemo.h; path = Class/Module/Course/ViewControllers/LeftMenuViewDemo.h; sourceTree = "<group>"; };
+		3CF1BB341E55973E00A19245 /* LeftMenuViewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuViewDemo.m; path = Class/Module/Course/ViewControllers/LeftMenuViewDemo.m; sourceTree = "<group>"; };
+		3CF1BB361E55A9CA00A19245 /* LeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuTableViewCell.h; path = Class/Module/Course/Views/LeftMenuTableViewCell.h; sourceTree = "<group>"; };
+		3CF1BB371E55A9CA00A19245 /* LeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuTableViewCell.m; path = Class/Module/Course/Views/LeftMenuTableViewCell.m; sourceTree = "<group>"; };
+		3CF1BB381E55A9CA00A19245 /* LeftMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuTableViewCell.xib; path = Class/Module/Course/Views/LeftMenuTableViewCell.xib; sourceTree = "<group>"; };
+		42CD977474DC0A65DF337F96 /* Pods-eyeHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.release.xcconfig"; sourceTree = "<group>"; };
+		4A6B458A0A722FCE921AEBA6 /* Pods-eyeHelpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelpTests/Pods-eyeHelpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C5425DD485F6BF6E0401646 /* Pods-eyeHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.debug.xcconfig"; sourceTree = "<group>"; };
+		838FCAF957B0FE9152A49D4A /* libPods-eyeHelpTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eyeHelpTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4E384F3A147BFC5E4F25663 /* Pods-eyeHelpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelpUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelpUITests/Pods-eyeHelpUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D5CF9D121ED0CDF4A3B0559A /* Pods-eyeHelpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelpTests/Pods-eyeHelpTests.release.xcconfig"; sourceTree = "<group>"; };
+		E4E0EEE98B228E8116939656 /* Pods-eyeHelpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelpUITests/Pods-eyeHelpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330FCBB6BC54C4C2D2FB697F /* libPods-eyeHelp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				005E5740A3C8C4EF5A9A96FA /* libPods-eyeHelpTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386FFB37F655E4D245D2AA9D /* libPods-eyeHelpUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +145,8 @@
 				3C6248651E55346000125670 /* eyeHelpTests */,
 				3C6248701E55346000125670 /* eyeHelpUITests */,
 				3C62484A1E55346000125670 /* Products */,
+				7B1A6967BD2AEE9DD5847964 /* Pods */,
+				48F5581946C8C2666836C115 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +163,11 @@
 		3C62484B1E55346000125670 /* eyeHelp */ = {
 			isa = PBXGroup;
 			children = (
+				3C6248801E553B8C00125670 /* Class */,
+				3C6248811E553B9400125670 /* Configs */,
+				3C62487F1E553B8000125670 /* Category */,
 				3C62484F1E55346000125670 /* AppDelegate.h */,
 				3C6248501E55346000125670 /* AppDelegate.m */,
-				3C6248521E55346000125670 /* ViewController.h */,
-				3C6248531E55346000125670 /* ViewController.m */,
 				3C6248551E55346000125670 /* Main.storyboard */,
 				3C6248581E55346000125670 /* Assets.xcassets */,
 				3C62485A1E55346000125670 /* LaunchScreen.storyboard */,
@@ -140,6 +203,265 @@
 			path = eyeHelpUITests;
 			sourceTree = "<group>";
 		};
+		3C62487F1E553B8000125670 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1BB2C1E5596BB00A19245 /* 侧滑 */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		3C6248801E553B8C00125670 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				3C62488A1E55420800125670 /* Module */,
+				3C6248821E553BDF00125670 /* Base */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		3C6248811E553B9400125670 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248841E553CA200125670 /* PrefixHeader.pch */,
+				3C6248851E553EB900125670 /* Constants.h */,
+				3C6248871E553EF000125670 /* Enumeration.h */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		3C6248821E553BDF00125670 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248C91E55548D00125670 /* CustomNavigationController.h */,
+				3C6248CA1E55548D00125670 /* CustomNavigationController.m */,
+				3C6248CB1E55548D00125670 /* CustomTabBar.h */,
+				3C6248CC1E55548D00125670 /* CustomTabBar.m */,
+				3C6248CD1E55548D00125670 /* CustomTabBarController.h */,
+				3C6248CE1E55548D00125670 /* CustomTabBarController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		3C6248831E553BE300125670 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		3C6248881E5541D100125670 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				3C62489C1E55427500125670 /* Views */,
+				3C6248971E55426000125670 /* ViewControllers */,
+				3C6248831E553BE300125670 /* Modules */,
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		3C62488A1E55420800125670 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				3C62488E1E55423300125670 /* Course */,
+				3C62488D1E55422C00125670 /* Science */,
+				3C62488C1E55422600125670 /* Screen */,
+				3C62488B1E55421300125670 /* Consult */,
+				3C6248881E5541D100125670 /* Mine */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		3C62488B1E55421300125670 /* Consult */ = {
+			isa = PBXGroup;
+			children = (
+				3C62489B1E55427200125670 /* Views */,
+				3C6248961E55425E00125670 /* ViewControllers */,
+				3C6248921E55424B00125670 /* Modules */,
+			);
+			name = Consult;
+			sourceTree = "<group>";
+		};
+		3C62488C1E55422600125670 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				3C62489A1E55426D00125670 /* Views */,
+				3C6248951E55425A00125670 /* ViewControllers */,
+				3C6248911E55424800125670 /* Modules */,
+			);
+			name = Screen;
+			sourceTree = "<group>";
+		};
+		3C62488D1E55422C00125670 /* Science */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248991E55426B00125670 /* Views */,
+				3C6248941E55425700125670 /* ViewControllers */,
+				3C6248901E55424400125670 /* Modules */,
+			);
+			name = Science;
+			sourceTree = "<group>";
+		};
+		3C62488E1E55423300125670 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248981E55426800125670 /* Views */,
+				3C6248931E55425300125670 /* ViewControllers */,
+				3C62488F1E55423800125670 /* Modules */,
+			);
+			name = Course;
+			sourceTree = "<group>";
+		};
+		3C62488F1E55423800125670 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		3C6248901E55424400125670 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		3C6248911E55424800125670 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		3C6248921E55424B00125670 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		3C6248931E55425300125670 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1BB331E55973E00A19245 /* LeftMenuViewDemo.h */,
+				3CF1BB341E55973E00A19245 /* LeftMenuViewDemo.m */,
+				3CF1BB271E5578E800A19245 /* EHCourseViewController.h */,
+				3CF1BB281E5578E800A19245 /* EHCourseViewController.m */,
+				3CF1BB291E5578E800A19245 /* EHCourseViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C6248941E55425700125670 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248A21E55436F00125670 /* EHScienceTableViewController.h */,
+				3C6248A31E55436F00125670 /* EHScienceTableViewController.m */,
+				3C6248A41E55436F00125670 /* EHScienceTableViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C6248951E55425A00125670 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248BB1E5545F200125670 /* EHScreenTableViewController.h */,
+				3C6248BC1E5545F200125670 /* EHScreenTableViewController.m */,
+				3C6248BD1E5545F200125670 /* EHScreenTableViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C6248961E55425E00125670 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248AC1E5543B900125670 /* EHConsultTableViewController.h */,
+				3C6248AD1E5543B900125670 /* EHConsultTableViewController.m */,
+				3C6248AE1E5543B900125670 /* EHConsultTableViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C6248971E55426000125670 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C6248B11E5543CC00125670 /* EHMineTableViewController.h */,
+				3C6248B21E5543CC00125670 /* EHMineTableViewController.m */,
+				3C6248B31E5543CC00125670 /* EHMineTableViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3C6248981E55426800125670 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1BB361E55A9CA00A19245 /* LeftMenuTableViewCell.h */,
+				3CF1BB371E55A9CA00A19245 /* LeftMenuTableViewCell.m */,
+				3CF1BB381E55A9CA00A19245 /* LeftMenuTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3C6248991E55426B00125670 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3C62489A1E55426D00125670 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3C62489B1E55427200125670 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3C62489C1E55427500125670 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		3CF1BB2C1E5596BB00A19245 /* 侧滑 */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1BB2D1E5596C900A19245 /* MenuView.h */,
+				3CF1BB2E1E5596C900A19245 /* MenuView.m */,
+			);
+			name = "侧滑";
+			sourceTree = "<group>";
+		};
+		48F5581946C8C2666836C115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0022CD5E6F87FAF0691DF347 /* libPods-eyeHelp.a */,
+				838FCAF957B0FE9152A49D4A /* libPods-eyeHelpTests.a */,
+				1AFC15FEAC16A47E3DE97FDC /* libPods-eyeHelpUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B1A6967BD2AEE9DD5847964 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C5425DD485F6BF6E0401646 /* Pods-eyeHelp.debug.xcconfig */,
+				42CD977474DC0A65DF337F96 /* Pods-eyeHelp.release.xcconfig */,
+				4A6B458A0A722FCE921AEBA6 /* Pods-eyeHelpTests.debug.xcconfig */,
+				D5CF9D121ED0CDF4A3B0559A /* Pods-eyeHelpTests.release.xcconfig */,
+				E4E0EEE98B228E8116939656 /* Pods-eyeHelpUITests.debug.xcconfig */,
+				B4E384F3A147BFC5E4F25663 /* Pods-eyeHelpUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +469,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C6248761E55346000125670 /* Build configuration list for PBXNativeTarget "eyeHelp" */;
 			buildPhases = (
+				4F2CE45FD53418D5018799DF /* [CP] Check Pods Manifest.lock */,
 				3C6248451E55346000125670 /* Sources */,
 				3C6248461E55346000125670 /* Frameworks */,
 				3C6248471E55346000125670 /* Resources */,
+				4763BDDF79BF14C41732557E /* [CP] Embed Pods Frameworks */,
+				1F4D164E5148C8CF98577AE1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +489,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C6248791E55346000125670 /* Build configuration list for PBXNativeTarget "eyeHelpTests" */;
 			buildPhases = (
+				313F86FA6A676B6FE8FE7F3A /* [CP] Check Pods Manifest.lock */,
 				3C62485E1E55346000125670 /* Sources */,
 				3C62485F1E55346000125670 /* Frameworks */,
 				3C6248601E55346000125670 /* Resources */,
+				C3C2E779201B6CAE0F43DA9D /* [CP] Embed Pods Frameworks */,
+				E56E032E178CF5A3F5766A75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +510,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C62487C1E55346000125670 /* Build configuration list for PBXNativeTarget "eyeHelpUITests" */;
 			buildPhases = (
+				4AA65D01006F59F817B2BE1D /* [CP] Check Pods Manifest.lock */,
 				3C6248691E55346000125670 /* Sources */,
 				3C62486A1E55346000125670 /* Frameworks */,
 				3C62486B1E55346000125670 /* Resources */,
+				F5A27FD3777565F94358DF1A /* [CP] Embed Pods Frameworks */,
+				475BF9E45D5BF28D9721B56F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,8 +581,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C62485C1E55346000125670 /* LaunchScreen.storyboard in Resources */,
+				3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */,
+				3C6248BF1E5545F200125670 /* EHScreenTableViewController.xib in Resources */,
+				3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */,
+				3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */,
+				3C6248B51E5543CC00125670 /* EHMineTableViewController.xib in Resources */,
 				3C6248591E55346000125670 /* Assets.xcassets in Resources */,
 				3C6248571E55346000125670 /* Main.storyboard in Resources */,
+				3C6248B01E5543B900125670 /* EHConsultTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +608,162 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F4D164E5148C8CF98577AE1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		313F86FA6A676B6FE8FE7F3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		475BF9E45D5BF28D9721B56F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eyeHelpUITests/Pods-eyeHelpUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4763BDDF79BF14C41732557E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AA65D01006F59F817B2BE1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4F2CE45FD53418D5018799DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3C2E779201B6CAE0F43DA9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eyeHelpTests/Pods-eyeHelpTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56E032E178CF5A3F5766A75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eyeHelpTests/Pods-eyeHelpTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5A27FD3777565F94358DF1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eyeHelpUITests/Pods-eyeHelpUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C6248451E55346000125670 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C6248541E55346000125670 /* ViewController.m in Sources */,
+				3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */,
+				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
+				3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */,
+				3C6248AF1E5543B900125670 /* EHConsultTableViewController.m in Sources */,
 				3C6248511E55346000125670 /* AppDelegate.m in Sources */,
+				3C6248BE1E5545F200125670 /* EHScreenTableViewController.m in Sources */,
+				3CF1BB2F1E5596C900A19245 /* MenuView.m in Sources */,
 				3C62484E1E55346000125670 /* main.m in Sources */,
+				3C6248D01E55548D00125670 /* CustomTabBar.m in Sources */,
+				3C6248A51E55436F00125670 /* EHScienceTableViewController.m in Sources */,
+				3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */,
+				3C6248D11E55548D00125670 /* CustomTabBarController.m in Sources */,
+				3C6248B41E5543CC00125670 /* EHMineTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +910,11 @@
 		};
 		3C6248771E55346000125670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C5425DD485F6BF6E0401646 /* Pods-eyeHelp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N872UDE66A;
+				GCC_PREFIX_HEADER = "/Users/Wougle/Desktop/开发/eyeHelp/eyeHelp/Configs/PrefixHeader.pch";
 				INFOPLIST_FILE = eyeHelp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EH.eyeHelp;
@@ -437,9 +924,11 @@
 		};
 		3C6248781E55346000125670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42CD977474DC0A65DF337F96 /* Pods-eyeHelp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N872UDE66A;
+				GCC_PREFIX_HEADER = "/Users/Wougle/Desktop/开发/eyeHelp/eyeHelp/Configs/PrefixHeader.pch";
 				INFOPLIST_FILE = eyeHelp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = EH.eyeHelp;
@@ -449,6 +938,7 @@
 		};
 		3C62487A1E55346000125670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A6B458A0A722FCE921AEBA6 /* Pods-eyeHelpTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = N872UDE66A;
@@ -462,6 +952,7 @@
 		};
 		3C62487B1E55346000125670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5CF9D121ED0CDF4A3B0559A /* Pods-eyeHelpTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = N872UDE66A;
@@ -475,6 +966,7 @@
 		};
 		3C62487D1E55346000125670 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E0EEE98B228E8116939656 /* Pods-eyeHelpUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = N872UDE66A;
 				INFOPLIST_FILE = eyeHelpUITests/Info.plist;
@@ -487,6 +979,7 @@
 		};
 		3C62487E1E55346000125670 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4E384F3A147BFC5E4F25663 /* Pods-eyeHelpUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = N872UDE66A;
 				INFOPLIST_FILE = eyeHelpUITests/Info.plist;
@@ -516,6 +1009,7 @@
 				3C6248781E55346000125670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C6248791E55346000125670 /* Build configuration list for PBXNativeTarget "eyeHelpTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +1018,7 @@
 				3C62487B1E55346000125670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3C62487C1E55346000125670 /* Build configuration list for PBXNativeTarget "eyeHelpUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +1027,7 @@
 				3C62487E1E55346000125670 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

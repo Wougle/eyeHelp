@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CustomTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,45 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /*********************** nav全局定义 ***************************/
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : TEXT_COLOR_SECONDARY};
+    
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    // hide title of back button
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 0)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
+    NSShadow *clearShadow = [[NSShadow alloc] init];
+    clearShadow.shadowColor = [UIColor clearColor];
+    clearShadow.shadowOffset = CGSizeMake(0, 0);
+    
+    UIColor *normalTitleColor = [UIColor blackColor];
+    UIColor *highlightedTitleColor = [UIColor blackColor];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName : normalTitleColor,
+                                                           NSShadowAttributeName : clearShadow
+                                                           } forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName : highlightedTitleColor,
+                                                           NSShadowAttributeName : clearShadow
+                                                           } forState:UIControlStateHighlighted];
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
+    
+    [[UIToolbar appearance] setBarTintColor:[UIColor blackColor]];
+    
+    //[self setNaviBack];
+
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[CustomTabBarController alloc]init];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
