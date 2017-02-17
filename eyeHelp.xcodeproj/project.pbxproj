@@ -34,6 +34,13 @@
 		3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB341E55973E00A19245 /* LeftMenuViewDemo.m */; };
 		3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB371E55A9CA00A19245 /* LeftMenuTableViewCell.m */; };
 		3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB381E55A9CA00A19245 /* LeftMenuTableViewCell.xib */; };
+		3CF1BB3E1E569D5D00A19245 /* EHGraphicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB3C1E569D5D00A19245 /* EHGraphicTableViewCell.m */; };
+		3CF1BB3F1E569D5D00A19245 /* EHGraphicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB3D1E569D5D00A19245 /* EHGraphicTableViewCell.xib */; };
+		3CF1BB4D1E56C56000A19245 /* EHCourseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB4B1E56C56000A19245 /* EHCourseCollectionViewCell.m */; };
+		3CF1BB4E1E56C56000A19245 /* EHCourseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB4C1E56C56000A19245 /* EHCourseCollectionViewCell.xib */; };
+		3CF1BB511E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB501E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m */; };
+		3CF1BB551E56DA4B00A19245 /* EHScienceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB531E56DA4B00A19245 /* EHScienceTableViewCell.m */; };
+		3CF1BB561E56DA4B00A19245 /* EHScienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB541E56DA4B00A19245 /* EHScienceTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +108,17 @@
 		3CF1BB361E55A9CA00A19245 /* LeftMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftMenuTableViewCell.h; path = Class/Module/Course/Views/LeftMenuTableViewCell.h; sourceTree = "<group>"; };
 		3CF1BB371E55A9CA00A19245 /* LeftMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftMenuTableViewCell.m; path = Class/Module/Course/Views/LeftMenuTableViewCell.m; sourceTree = "<group>"; };
 		3CF1BB381E55A9CA00A19245 /* LeftMenuTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeftMenuTableViewCell.xib; path = Class/Module/Course/Views/LeftMenuTableViewCell.xib; sourceTree = "<group>"; };
+		3CF1BB3B1E569D5D00A19245 /* EHGraphicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHGraphicTableViewCell.h; path = Class/Module/Course/Views/EHGraphicTableViewCell.h; sourceTree = "<group>"; };
+		3CF1BB3C1E569D5D00A19245 /* EHGraphicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHGraphicTableViewCell.m; path = Class/Module/Course/Views/EHGraphicTableViewCell.m; sourceTree = "<group>"; };
+		3CF1BB3D1E569D5D00A19245 /* EHGraphicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHGraphicTableViewCell.xib; path = Class/Module/Course/Views/EHGraphicTableViewCell.xib; sourceTree = "<group>"; };
+		3CF1BB4A1E56C56000A19245 /* EHCourseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHCourseCollectionViewCell.h; path = Class/Module/Course/Views/EHCourseCollectionViewCell.h; sourceTree = "<group>"; };
+		3CF1BB4B1E56C56000A19245 /* EHCourseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHCourseCollectionViewCell.m; path = Class/Module/Course/Views/EHCourseCollectionViewCell.m; sourceTree = "<group>"; };
+		3CF1BB4C1E56C56000A19245 /* EHCourseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHCourseCollectionViewCell.xib; path = Class/Module/Course/Views/EHCourseCollectionViewCell.xib; sourceTree = "<group>"; };
+		3CF1BB4F1E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHCourseCollectionViewFlowLayout.h; path = Class/Module/Course/Views/EHCourseCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		3CF1BB501E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHCourseCollectionViewFlowLayout.m; path = Class/Module/Course/Views/EHCourseCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		3CF1BB521E56DA4B00A19245 /* EHScienceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHScienceTableViewCell.h; path = Class/Module/Science/Views/EHScienceTableViewCell.h; sourceTree = "<group>"; };
+		3CF1BB531E56DA4B00A19245 /* EHScienceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHScienceTableViewCell.m; path = Class/Module/Science/Views/EHScienceTableViewCell.m; sourceTree = "<group>"; };
+		3CF1BB541E56DA4B00A19245 /* EHScienceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHScienceTableViewCell.xib; path = Class/Module/Science/Views/EHScienceTableViewCell.xib; sourceTree = "<group>"; };
 		42CD977474DC0A65DF337F96 /* Pods-eyeHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.release.xcconfig"; sourceTree = "<group>"; };
 		4A6B458A0A722FCE921AEBA6 /* Pods-eyeHelpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelpTests/Pods-eyeHelpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C5425DD485F6BF6E0401646 /* Pods-eyeHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -395,9 +413,17 @@
 		3C6248981E55426800125670 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CF1BB4F1E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.h */,
+				3CF1BB501E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m */,
 				3CF1BB361E55A9CA00A19245 /* LeftMenuTableViewCell.h */,
 				3CF1BB371E55A9CA00A19245 /* LeftMenuTableViewCell.m */,
 				3CF1BB381E55A9CA00A19245 /* LeftMenuTableViewCell.xib */,
+				3CF1BB3B1E569D5D00A19245 /* EHGraphicTableViewCell.h */,
+				3CF1BB3C1E569D5D00A19245 /* EHGraphicTableViewCell.m */,
+				3CF1BB3D1E569D5D00A19245 /* EHGraphicTableViewCell.xib */,
+				3CF1BB4A1E56C56000A19245 /* EHCourseCollectionViewCell.h */,
+				3CF1BB4B1E56C56000A19245 /* EHCourseCollectionViewCell.m */,
+				3CF1BB4C1E56C56000A19245 /* EHCourseCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -405,6 +431,9 @@
 		3C6248991E55426B00125670 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CF1BB521E56DA4B00A19245 /* EHScienceTableViewCell.h */,
+				3CF1BB531E56DA4B00A19245 /* EHScienceTableViewCell.m */,
+				3CF1BB541E56DA4B00A19245 /* EHScienceTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -580,6 +609,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF1BB4E1E56C56000A19245 /* EHCourseCollectionViewCell.xib in Resources */,
 				3C62485C1E55346000125670 /* LaunchScreen.storyboard in Resources */,
 				3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */,
 				3C6248BF1E5545F200125670 /* EHScreenTableViewController.xib in Resources */,
@@ -587,6 +617,8 @@
 				3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */,
 				3C6248B51E5543CC00125670 /* EHMineTableViewController.xib in Resources */,
 				3C6248591E55346000125670 /* Assets.xcassets in Resources */,
+				3CF1BB3F1E569D5D00A19245 /* EHGraphicTableViewCell.xib in Resources */,
+				3CF1BB561E56DA4B00A19245 /* EHScienceTableViewCell.xib in Resources */,
 				3C6248571E55346000125670 /* Main.storyboard in Resources */,
 				3C6248B01E5543B900125670 /* EHConsultTableViewController.xib in Resources */,
 			);
@@ -751,6 +783,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF1BB4D1E56C56000A19245 /* EHCourseCollectionViewCell.m in Sources */,
 				3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */,
 				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
 				3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */,
@@ -762,7 +795,10 @@
 				3C6248D01E55548D00125670 /* CustomTabBar.m in Sources */,
 				3C6248A51E55436F00125670 /* EHScienceTableViewController.m in Sources */,
 				3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */,
+				3CF1BB3E1E569D5D00A19245 /* EHGraphicTableViewCell.m in Sources */,
 				3C6248D11E55548D00125670 /* CustomTabBarController.m in Sources */,
+				3CF1BB551E56DA4B00A19245 /* EHScienceTableViewCell.m in Sources */,
+				3CF1BB511E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m in Sources */,
 				3C6248B41E5543CC00125670 /* EHMineTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

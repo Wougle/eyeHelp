@@ -28,7 +28,8 @@
         self.selectedIndex = type - CustomTabBarTypeCourse;
         return;
     }
-    
+    self.selectedIndex = 2;
+    return;
 //    LaunchViewController *launchView = [[LaunchViewController alloc] init];
 //    [self presentViewController:launchView animated:YES completion:nil];
     

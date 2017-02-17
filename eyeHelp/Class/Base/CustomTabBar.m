@@ -24,7 +24,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        NSMutableArray *viewArray = [NSMutableArray arrayWithArray:@[@"教程",@"科普",@"",@"咨询",@"我的"]];
+        NSMutableArray *viewArray = [NSMutableArray arrayWithArray:@[@"教程",@"科普",@"        调屏",@"咨询",@"我的"]];
         
         //背景图
         [self addSubview:self.bgView];
@@ -85,10 +85,7 @@
         [self.delegate selectedBarItemWithType:button.tag];
     }
     
-    //点击中间按钮跳过下面
-    if (button.tag==CustomTabBarTypeScreen) {
-        return;
-    }
+
     
     //取消上次点击选中状态
     self.lastButton.selected = NO;
@@ -98,6 +95,21 @@
     
     //赋值新的被点击按钮
     self.lastButton = button;
+    
+    //点击中间按钮跳过下面
+    if (button.tag==CustomTabBarTypeScreen) {
+        
+        UIButton *myButton1 = (UIButton *)[self viewWithTag:202];
+        myButton1.selected = YES;
+        self.lastButton.selected = NO;
+        self.lastButton = myButton1;
+        _cameraBtn.selected = YES;
+    }
+    else{
+        UIButton *myButton1 = (UIButton *)[self viewWithTag:202];
+        myButton1.selected = NO;
+        _cameraBtn.selected = NO;
+    }
 }
 
 
@@ -141,6 +153,7 @@
     if (!_cameraBtn) {
         _cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_cameraBtn setImage:[UIImage imageNamed:@"icon_light"] forState:UIControlStateNormal];
+        [_cameraBtn setImage:[UIImage imageNamed:@"icon_light_yes"] forState:UIControlStateSelected];
         [_cameraBtn sizeToFit];
         [_cameraBtn addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
         _cameraBtn.tag = CustomTabBarTypeScreen;

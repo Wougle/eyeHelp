@@ -7,9 +7,16 @@
 //
 
 #import "EHScienceTableViewController.h"
+#import "MenuView.h"
+#import "LeftMenuViewDemo.h"
+#import "EHScienceTableViewCell.h"
 
-@interface EHScienceTableViewController ()
-
+static NSString *const kEHSciencTableViewCell = @"kEHSciencTableViewCell";
+@interface EHScienceTableViewController ()<UITableViewDataSource,UITableViewDelegate,HomeMenuViewDelegate>
+/** 侧滑栏页面 */
+@property (nonatomic ,strong)MenuView      *menu;
+/** 科普的数据 */
+@property(nonatomic,strong)NSMutableArray *scienceArr;
 @end
 
 @implementation EHScienceTableViewController
@@ -17,98 +24,128 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"科普";
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setTableView];
+    [self setNavigation];//导航栏设置
+    [self leftMenu];//侧滑
+    [self setData];//数据
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setTableView{
+    self.view.backgroundColor = BG_COLOR;
+    self.tableView.separatorStyle = NO;
+}
+
+- (void)setNavigation{
+    UIButton *planBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 34.f, 34.f)];
+    [planBtn setImage:[UIImage imageNamed:@"icon_plan"] forState:UIControlStateNormal];
+    [planBtn addTarget:self action:@selector(planBtn) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:planBtn];
+    self.navigationItem.leftBarButtonItem = leftButtonItem;
+    
+    UIButton *searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 34.f, 34.f)];
+    [searchBtn setImage:[UIImage imageNamed:@"icon_search"] forState:UIControlStateNormal];
+    [searchBtn addTarget:self action:@selector(searchBtn) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithCustomView:searchBtn];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _scienceArr.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 215;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    EHScienceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kEHSciencTableViewCell];
     
-    // Configure the cell...
-    
+    if (cell == nil) {
+        //通过xib的名称加载自定义的cell
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"EHScienceTableViewCell" owner:self options:nil] lastObject];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.detailImageView.image = [UIImage imageNamed:_scienceArr[indexPath.row][@"detailImage"]];
+    cell.titleNameLabel.text = _scienceArr[indexPath.row][@"titleName"];
+
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+- (void)setData{
+    _scienceArr = [[NSMutableArray alloc] init];
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    NSDictionary *tableDic1 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic2 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic3 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic4 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic5 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic6 = [[NSDictionary alloc] init];
     
-    // Pass the selected object to the new view controller.
+    tableDic1 = @{
+                  @"detailImage":@"pic_sear4",
+                  @"titleName":@"究竟吃哪些水果对眼睛好？",
+                  @"isLike":@"0",
+                  };
+    tableDic2 = @{
+                  @"detailImage":@"pic_sear5",
+                  @"titleName":@"眼药水并非是根治你眼部不适症状的良药",
+                  @"isLike":@"0",
+                  };
+    tableDic3 = @{
+                  @"detailImage":@"pic_sear6",
+                  @"titleName":@"每天做眼保健操非常有必要",
+                  @"isLike":@"0",
+                  };
+    tableDic4 = @{
+                  @"detailImage":@"pic_sear4",
+                  @"titleName":@"究竟吃哪些水果对眼睛好？",
+                  @"isLike":@"0",
+                  };
+    tableDic5 = @{
+                  @"detailImage":@"pic_sear5",
+                  @"titleName":@"眼药水并非是根治你眼部不适症状的良药",
+                  @"isLike":@"0",
+                  };
+    tableDic6 = @{
+                  @"detailImage":@"pic_sear6",
+                  @"titleName":@"每天做眼保健操非常有必要",
+                  @"isLike":@"0",
+                  };
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [_scienceArr addObject:tableDic1];
+    [_scienceArr addObject:tableDic2];
+    [_scienceArr addObject:tableDic3];
+    [_scienceArr addObject:tableDic4];
+    [_scienceArr addObject:tableDic5];
+    [_scienceArr addObject:tableDic6];
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark -- 侧滑
+- (void)leftMenu{
+    LeftMenuViewDemo *demo = [[LeftMenuViewDemo alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width * 0.6, [[UIScreen mainScreen] bounds].size.height)];
+    demo.customDelegate = self;
+    
+    MenuView *menu = [MenuView MenuViewWithDependencyView:self.view MenuView:demo isShowCoverView:YES];
+    //    MenuView *menu = [[MenuView alloc]initWithDependencyView:self.view MenuView:demo isShowCoverView:YES];
+    self.menu = menu;
 }
-*/
+
+-(void)LeftMenuViewClick:(NSInteger)tag{
+    [self.menu hidenWithAnimation];
+}
+
+#pragma mark --ButtonClick
+- (void)planBtn{
+    [self.menu show];
+}
+
+- (void)searchBtn{
+    
+}
 
 @end

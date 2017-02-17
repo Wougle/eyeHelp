@@ -12,7 +12,11 @@
 #import "LeftMenuTableViewCell.h"
 static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 
-@interface LeftMenuViewDemo ()<UITableViewDataSource,UITableViewDelegate>
+@interface LeftMenuViewDemo ()<UITableViewDataSource,UITableViewDelegate>{
+    NSArray *imageArr;
+    NSArray *amArr;
+    NSArray *pmArr;
+}
 
 @property (nonatomic ,strong)UITableView    *contentTableView;
 
@@ -39,7 +43,7 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 
     imageview.layer.cornerRadius = imageview.frame.size.width / 2;
     imageview.layer.masksToBounds = YES;
-    [imageview setImage:[UIImage imageNamed:@"icon_liketxt_yes"]];
+    [imageview setImage:[UIImage imageNamed:@"pic_head"]];
     [headerView addSubview:imageview];
     
     [self addSubview:headerView];
@@ -67,11 +71,14 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
     [addPlanBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     addPlanBtn.titleLabel.font = [UIFont systemFontOfSize:12];//title字体大小
     addPlanBtn.titleLabel.textAlignment = NSTextAlignmentCenter;//设置title的字体居中
-    [addPlanBtn setImage:[UIImage imageNamed:@"icon_liketxt_yes"] forState:UIControlStateNormal];
+    [addPlanBtn setImage:[UIImage imageNamed:@"icon_edit"] forState:UIControlStateNormal];
     [footerView addSubview:addPlanBtn];
 
-    
     [self addSubview:footerView];
+    
+    imageArr = @[@"icon_alarm",@"icon_list",@"icon_alarm",@"icon_list"];
+    amArr = @[@"9:00",@"大空骨的救赎",@"10:30",@"按摩护眼睛"];
+    pmArr = @[@"13:30",@"按摩护眼睛",@"16:00",@"大空骨的救赎"];
 }
 
 
@@ -82,7 +89,12 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    if (section == 0) {
+        return amArr.count;
+    }
+    else{
+        return pmArr.count;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -91,9 +103,7 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString *str = [NSString stringWithFormat:@"LeftView%li",indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
-    
+
     LeftMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kLeftMenuTableViewCell];
     
     if (cell == nil) {
@@ -102,30 +112,17 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     [cell setBackgroundColor:TEXT_COLOR_MAIN];
-    [cell.textLabel setTextColor:[UIColor whiteColor]];
-    
-    //    [cell setCellModel:nil indexPath:indexPath];
-    //    [cell setBackgroundColor:[UIColor colorWithHexString:ColorBackGround]];
+    [cell.planNameLabel setTextColor:[UIColor whiteColor]];
+
     cell.hidden = NO;
-    switch (indexPath.row) {
-        case 0:
-        {
-            [cell.imageView setImage:[UIImage imageNamed:@"person-icon1"]];
-            [cell.textLabel setText:@"预约发货"];
-        }
-            break;
-            
-        case 1:
-        {
-            
-            [cell.imageView setImage:[UIImage imageNamed:@"person-icon2"]];
-            [cell.textLabel setText:@"我的订单"];
-        }
-            break;
-            
-            
-        default:
-            break;
+
+    if (indexPath.section == 0) {
+        cell.iconImageView.image = [UIImage imageNamed:imageArr[indexPath.row]];
+        cell.planNameLabel.text = amArr[indexPath.row];
+    }
+    else{
+        cell.iconImageView.image = [UIImage imageNamed:imageArr[indexPath.row]];
+        cell.planNameLabel.text = pmArr[indexPath.row];
     }
     
     
@@ -148,11 +145,11 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 {
     UIView* myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Frame_Width, 50)];
     myView.backgroundColor = TEXT_COLOR_MAIN;
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(110, 16, 50, 22)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 16, 50, 20)];
     titleLabel.font = [UIFont systemFontOfSize:20];
     titleLabel.textColor=[UIColor whiteColor];
     [myView addSubview:titleLabel];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(68, 10, 30, 30)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(54, 10, 30, 30)];
     [myView addSubview:imageView];
     if (section == 0) {
         titleLabel.text = @"上午";
