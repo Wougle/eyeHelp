@@ -142,6 +142,7 @@
 - (UIImageView *)bgView{
     if (!_bgView) {
         _bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"global_tab_bg"]];
+        _bgView.backgroundColor = [UIColor whiteColor]; // 设置背景颜色
         _bgView.frame = self.bounds;
         
     }
