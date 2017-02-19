@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="EHAdjustTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBc-Iw-JsJ">
+                        <rect key="frame" x="10" y="6" width="355" height="103"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="调节屏幕亮度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-Fk-aAA">
+                                <rect key="frame" x="20" y="15" width="92" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Zsk-Px-e2U">
+                                <rect key="frame" x="13" y="58" width="336" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jhF-z4-BGp"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.098039215686274508" green="0.75294117647058822" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.86274509803921573" green="0.8666666666666667" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.082352941176470587" green="0.3529411764705882" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自动调节" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waD-Es-tdk">
+                                <rect key="frame" x="211.5" y="14" width="69.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.066666666666666666" green="0.3529411764705882" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="37v-nm-dFk">
+                                <rect key="frame" x="296" y="9" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aJo-Fk-aAA" firstAttribute="leading" secondItem="kBc-Iw-JsJ" secondAttribute="leading" constant="20" id="ESw-QX-DlD"/>
+                            <constraint firstItem="aJo-Fk-aAA" firstAttribute="top" secondItem="kBc-Iw-JsJ" secondAttribute="top" constant="15" id="HYE-Bt-QaQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Zsk-Px-e2U" secondAttribute="bottom" constant="15" id="LEi-z1-25A"/>
+                            <constraint firstAttribute="trailing" secondItem="Zsk-Px-e2U" secondAttribute="trailing" constant="8" id="P9z-Z1-32m"/>
+                            <constraint firstItem="waD-Es-tdk" firstAttribute="trailing" secondItem="37v-nm-dFk" secondAttribute="leading" constant="-15" id="j1f-OI-1yb"/>
+                            <constraint firstAttribute="trailing" secondItem="37v-nm-dFk" secondAttribute="trailing" constant="10" id="nZ5-mc-7xl"/>
+                            <constraint firstItem="37v-nm-dFk" firstAttribute="top" secondItem="kBc-Iw-JsJ" secondAttribute="top" constant="9" id="yCU-h6-2zi"/>
+                            <constraint firstItem="waD-Es-tdk" firstAttribute="centerY" secondItem="37v-nm-dFk" secondAttribute="centerY" id="yJb-ht-DRm"/>
+                            <constraint firstItem="Zsk-Px-e2U" firstAttribute="leading" secondItem="kBc-Iw-JsJ" secondAttribute="leading" constant="15" id="zJZ-IY-O8J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="kBc-Iw-JsJ" secondAttribute="bottom" constant="-8" id="4vX-wW-O0N"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="kBc-Iw-JsJ" secondAttribute="trailing" constant="2" id="YZb-Ds-vQX"/>
+                    <constraint firstAttribute="topMargin" secondItem="kBc-Iw-JsJ" secondAttribute="top" constant="2" id="kxM-l7-CmB"/>
+                    <constraint firstItem="kBc-Iw-JsJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="xc4-fA-RBU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="adjsutSwitch" destination="37v-nm-dFk" id="jRc-EG-lZf"/>
+                <outlet property="baseView" destination="kBc-Iw-JsJ" id="y3M-TY-2RQ"/>
+                <outlet property="lightSlider" destination="Zsk-Px-e2U" id="9bb-X3-Udc"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="60"/>
+        </tableViewCell>
+    </objects>
+</document>

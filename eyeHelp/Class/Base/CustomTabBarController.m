@@ -12,7 +12,7 @@
 #import "EHMineTableViewController.h"
 #import "EHConsultTableViewController.h"
 #import "EHScienceTableViewController.h"
-#import "EHScreenTableViewController.h"
+#import "EHScreenViewController.h"
 #import "EHCourseViewController.h"
 @interface CustomTabBarController ()<CustomTabBarTypeDelegate>
 
@@ -49,7 +49,7 @@
 
 - (void)configViewConrollers{
     
-    NSMutableArray *viewArray = [NSMutableArray arrayWithArray:@[@"EHCourseViewController",@"EHScienceTableViewController",@"EHScreenTableViewController",@"EHConsultTableViewController",@"EHMineTableViewController"]];
+    NSMutableArray *viewArray = [NSMutableArray arrayWithArray:@[@"EHCourseViewController",@"EHScienceTableViewController",@"EHScreenViewController",@"EHConsultTableViewController",@"EHMineTableViewController"]];
     
     for (NSInteger i = 0; i < viewArray.count; i ++) {
         

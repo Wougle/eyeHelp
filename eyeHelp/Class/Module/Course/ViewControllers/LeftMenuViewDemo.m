@@ -143,7 +143,7 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView* myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Frame_Width, 50)];
+    UIView* myView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, Frame_Width*0.6, 50)];
     myView.backgroundColor = TEXT_COLOR_MAIN;
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 16, 50, 20)];
     titleLabel.font = [UIFont systemFontOfSize:20];

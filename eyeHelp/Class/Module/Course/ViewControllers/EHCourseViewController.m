@@ -215,7 +215,7 @@ HomeMenuViewDelegate>
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         _collectionView = ({
-            UICollectionView *collect = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 375, 667) collectionViewLayout:[[EHCourseCollectionViewFlowLayout alloc] init]];
+            UICollectionView *collect = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:[[EHCourseCollectionViewFlowLayout alloc] init]];
             collect.dataSource = self;
             collect.delegate   = self;
             collect.backgroundColor = [UIColor clearColor];

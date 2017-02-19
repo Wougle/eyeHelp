@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,9 +21,6 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Ec-9q-J5K">
                         <rect key="frame" x="0.0" y="0.0" width="305" height="235"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="235" id="aDJ-0A-xbH"/>
-                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZP0-5X-jeS">
                         <rect key="frame" x="133" y="255" width="38" height="18"/>
@@ -117,6 +115,7 @@
                 <constraint firstItem="ams-8w-16L" firstAttribute="top" secondItem="z7n-Ij-lg9" secondAttribute="bottom" constant="10" id="h9o-b1-6io"/>
                 <constraint firstItem="0Ec-9q-J5K" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lsS-VR-jpm"/>
                 <constraint firstAttribute="trailing" secondItem="W3x-sg-PpJ" secondAttribute="trailing" constant="72" id="nWY-6y-7k6"/>
+                <constraint firstItem="0Ec-9q-J5K" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="235/425" id="oP9-r5-cKk"/>
                 <constraint firstItem="ZP0-5X-jeS" firstAttribute="top" secondItem="0Ec-9q-J5K" secondAttribute="bottom" constant="20" id="pj3-l1-X38"/>
                 <constraint firstItem="ZP0-5X-jeS" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="qNa-5n-Dyj"/>
                 <constraint firstItem="4qL-u4-o7O" firstAttribute="top" secondItem="ZP0-5X-jeS" secondAttribute="bottom" constant="12" id="rbJ-Ct-h9E"/>

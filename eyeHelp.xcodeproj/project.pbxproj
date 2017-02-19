@@ -41,6 +41,11 @@
 		3CF1BB511E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB501E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m */; };
 		3CF1BB551E56DA4B00A19245 /* EHScienceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB531E56DA4B00A19245 /* EHScienceTableViewCell.m */; };
 		3CF1BB561E56DA4B00A19245 /* EHScienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB541E56DA4B00A19245 /* EHScienceTableViewCell.xib */; };
+		3CF1BB5A1E5958BB00A19245 /* EHScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB581E5958BB00A19245 /* EHScreenViewController.m */; };
+		3CF1BB5B1E5958BB00A19245 /* EHScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB591E5958BB00A19245 /* EHScreenViewController.xib */; };
+		3CF1BB5F1E595B8000A19245 /* VWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB5E1E595B8000A19245 /* VWaterView.m */; };
+		3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB611E59695400A19245 /* EHAdjustTableViewCell.m */; };
+		3CF1BB641E59695400A19245 /* EHAdjustTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB621E59695400A19245 /* EHAdjustTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +124,14 @@
 		3CF1BB521E56DA4B00A19245 /* EHScienceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHScienceTableViewCell.h; path = Class/Module/Science/Views/EHScienceTableViewCell.h; sourceTree = "<group>"; };
 		3CF1BB531E56DA4B00A19245 /* EHScienceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHScienceTableViewCell.m; path = Class/Module/Science/Views/EHScienceTableViewCell.m; sourceTree = "<group>"; };
 		3CF1BB541E56DA4B00A19245 /* EHScienceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHScienceTableViewCell.xib; path = Class/Module/Science/Views/EHScienceTableViewCell.xib; sourceTree = "<group>"; };
+		3CF1BB571E5958BB00A19245 /* EHScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHScreenViewController.h; path = Class/Module/Screen/ViewControllers/EHScreenViewController.h; sourceTree = "<group>"; };
+		3CF1BB581E5958BB00A19245 /* EHScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHScreenViewController.m; path = Class/Module/Screen/ViewControllers/EHScreenViewController.m; sourceTree = "<group>"; };
+		3CF1BB591E5958BB00A19245 /* EHScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHScreenViewController.xib; path = Class/Module/Screen/ViewControllers/EHScreenViewController.xib; sourceTree = "<group>"; };
+		3CF1BB5D1E595B8000A19245 /* VWaterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWaterView.h; path = "Category/环形进度条/VWaterView.h"; sourceTree = "<group>"; };
+		3CF1BB5E1E595B8000A19245 /* VWaterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWaterView.m; path = "Category/环形进度条/VWaterView.m"; sourceTree = "<group>"; };
+		3CF1BB601E59695400A19245 /* EHAdjustTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHAdjustTableViewCell.h; path = Class/Module/Screen/Views/EHAdjustTableViewCell.h; sourceTree = "<group>"; };
+		3CF1BB611E59695400A19245 /* EHAdjustTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHAdjustTableViewCell.m; path = Class/Module/Screen/Views/EHAdjustTableViewCell.m; sourceTree = "<group>"; };
+		3CF1BB621E59695400A19245 /* EHAdjustTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHAdjustTableViewCell.xib; path = Class/Module/Screen/Views/EHAdjustTableViewCell.xib; sourceTree = "<group>"; };
 		42CD977474DC0A65DF337F96 /* Pods-eyeHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.release.xcconfig"; sourceTree = "<group>"; };
 		4A6B458A0A722FCE921AEBA6 /* Pods-eyeHelpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelpTests/Pods-eyeHelpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C5425DD485F6BF6E0401646 /* Pods-eyeHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +237,7 @@
 		3C62487F1E553B8000125670 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3CF1BB5C1E595B6F00A19245 /* 环形进度条 */,
 				3CF1BB2C1E5596BB00A19245 /* 侧滑 */,
 			);
 			name = Category;
@@ -386,6 +400,9 @@
 				3C6248BB1E5545F200125670 /* EHScreenTableViewController.h */,
 				3C6248BC1E5545F200125670 /* EHScreenTableViewController.m */,
 				3C6248BD1E5545F200125670 /* EHScreenTableViewController.xib */,
+				3CF1BB571E5958BB00A19245 /* EHScreenViewController.h */,
+				3CF1BB581E5958BB00A19245 /* EHScreenViewController.m */,
+				3CF1BB591E5958BB00A19245 /* EHScreenViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -441,6 +458,9 @@
 		3C62489A1E55426D00125670 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CF1BB601E59695400A19245 /* EHAdjustTableViewCell.h */,
+				3CF1BB611E59695400A19245 /* EHAdjustTableViewCell.m */,
+				3CF1BB621E59695400A19245 /* EHAdjustTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -466,6 +486,15 @@
 				3CF1BB2E1E5596C900A19245 /* MenuView.m */,
 			);
 			name = "侧滑";
+			sourceTree = "<group>";
+		};
+		3CF1BB5C1E595B6F00A19245 /* 环形进度条 */ = {
+			isa = PBXGroup;
+			children = (
+				3CF1BB5D1E595B8000A19245 /* VWaterView.h */,
+				3CF1BB5E1E595B8000A19245 /* VWaterView.m */,
+			);
+			name = "环形进度条";
 			sourceTree = "<group>";
 		};
 		48F5581946C8C2666836C115 /* Frameworks */ = {
@@ -614,12 +643,14 @@
 				3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */,
 				3C6248BF1E5545F200125670 /* EHScreenTableViewController.xib in Resources */,
 				3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */,
+				3CF1BB641E59695400A19245 /* EHAdjustTableViewCell.xib in Resources */,
 				3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */,
 				3C6248B51E5543CC00125670 /* EHMineTableViewController.xib in Resources */,
 				3C6248591E55346000125670 /* Assets.xcassets in Resources */,
 				3CF1BB3F1E569D5D00A19245 /* EHGraphicTableViewCell.xib in Resources */,
 				3CF1BB561E56DA4B00A19245 /* EHScienceTableViewCell.xib in Resources */,
 				3C6248571E55346000125670 /* Main.storyboard in Resources */,
+				3CF1BB5B1E5958BB00A19245 /* EHScreenViewController.xib in Resources */,
 				3C6248B01E5543B900125670 /* EHConsultTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,9 +814,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF1BB5F1E595B8000A19245 /* VWaterView.m in Sources */,
 				3CF1BB4D1E56C56000A19245 /* EHCourseCollectionViewCell.m in Sources */,
 				3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */,
 				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
+				3CF1BB5A1E5958BB00A19245 /* EHScreenViewController.m in Sources */,
 				3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */,
 				3C6248AF1E5543B900125670 /* EHConsultTableViewController.m in Sources */,
 				3C6248511E55346000125670 /* AppDelegate.m in Sources */,
@@ -794,6 +827,7 @@
 				3C62484E1E55346000125670 /* main.m in Sources */,
 				3C6248D01E55548D00125670 /* CustomTabBar.m in Sources */,
 				3C6248A51E55436F00125670 /* EHScienceTableViewController.m in Sources */,
+				3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */,
 				3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */,
 				3CF1BB3E1E569D5D00A19245 /* EHGraphicTableViewCell.m in Sources */,
 				3C6248D11E55548D00125670 /* CustomTabBarController.m in Sources */,
