@@ -7,8 +7,22 @@
 //
 
 #import "EHConsultTableViewController.h"
+#import "EHConsultHeaderView.h"
+#import "EHConsultTableViewCell.h"
+#import "LeftMenuViewDemo.h"
+#import "MenuView.h"
+static NSString *const kEHConsultHeaderView = @"kEHConsultHeaderView";
+static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
 
-@interface EHConsultTableViewController ()
+@interface EHConsultTableViewController ()<UITableViewDelegate, UITableViewDataSource,HomeMenuViewDelegate>
+
+/** 侧滑栏页面 */
+@property (nonatomic ,strong)MenuView      *menu;
+/** cell的数据 */
+@property(nonatomic,strong)NSMutableArray *cellArr;
+@property (strong, nonatomic) EHConsultHeaderView *consultHeaderView;
+
+@property (nonatomic,strong) UIView *headerView;
 
 @end
 
@@ -17,12 +31,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"咨询";
-    self.view.backgroundColor = [UIColor redColor];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.view.backgroundColor = BG_COLOR;
+    
+    [self setNavigation];//导航栏设置
+    
+    [self leftMenu];//侧滑
+    
+    [self prepareHomeTableViewHeader];
+    
+    [self setData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,86 +48,157 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setNavigation{
+    UIButton *planBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 34.f, 34.f)];
+    [planBtn setImage:[UIImage imageNamed:@"icon_plan"] forState:UIControlStateNormal];
+    [planBtn addTarget:self action:@selector(planBtn) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftButtonItem = [[UIBarButtonItem alloc] initWithCustomView:planBtn];
+    self.navigationItem.leftBarButtonItem = leftButtonItem;
+    
+    UIButton *searchBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.f, 0.f, 34.f, 34.f)];
+    [searchBtn setImage:[UIImage imageNamed:@"icon_search"] forState:UIControlStateNormal];
+    [searchBtn addTarget:self action:@selector(searchBtn) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightButtonItem = [[UIBarButtonItem alloc] initWithCustomView:searchBtn];
+    self.navigationItem.rightBarButtonItem = rightButtonItem;
+}
+
+- (void)prepareHomeTableViewHeader{
+    
+    self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 225)];
+    
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"EHConsultHeaderView" owner:self options:nil];
+    
+    self.consultHeaderView = [nib objectAtIndex:0];
+    
+    self.consultHeaderView.frame = CGRectMake(0,0, SCREEN_WIDTH,225);
+    
+    [self.headerView addSubview:self.consultHeaderView];
+    
+    self.tableView.tableHeaderView = self.headerView;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"EHConsultTableViewCell" bundle:nil] forCellReuseIdentifier:kEHConsultTableViewCell];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    self.tableView.separatorStyle = NO;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _cellArr.count;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 110;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    EHConsultTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kEHConsultTableViewCell];
     
-    // Configure the cell...
+    if (cell == nil) {
+        //通过xib的名称加载自定义的cell
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"EHConsultTableViewCell" owner:self options:nil] lastObject];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.headImageView.image = [UIImage imageNamed:_cellArr[indexPath.row][@"headImage"]];
+    cell.doctorNameLabel.text = _cellArr[indexPath.row][@"name"];
+    cell.doctorAddressLabel.text = _cellArr[indexPath.row][@"address"];
+    cell.doctorMainLabel.text = _cellArr[indexPath.row][@"main"];
+    cell.doctorTimeLabel.text = _cellArr[indexPath.row][@"time"];
+
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+- (void)setData{
+    _cellArr = [[NSMutableArray alloc] init];
     
-    // Pass the selected object to the new view controller.
+    NSDictionary *tableDic1 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic2 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic3 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic4 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic5 = [[NSDictionary alloc] init];
+    NSDictionary *tableDic6 = [[NSDictionary alloc] init];
     
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-}
-*/
+    tableDic1 = @{
+                  @"headImage":@"pic_ask6",
+                  @"name":@"张白二",
+                  @"address":@"杭州第一眼科医院主任",
+                  @"main":@"屈光不正 视疲劳",
+                  @"time":@"33",
+                  };
+    tableDic2 = @{
+                  @"headImage":@"pic_ask7",
+                  @"name":@"李潇潇",
+                  @"address":@"杭州第二眼科医院副主任",
+                  @"main":@"屈光不正 视疲劳 假性近视",
+                  @"time":@"29",
+                  };
+    tableDic3 = @{
+                  @"headImage":@"pic_ask8",
+                  @"name":@"百丽",
+                  @"address":@"杭州第三眼科医院主任",
+                  @"main":@"假性近视",
+                  @"time":@"28",
+                  };
+    tableDic4 = @{
+                  @"headImage":@"pic_ask6",
+                  @"name":@"张白二",
+                  @"address":@"杭州第一眼科医院主任",
+                  @"main":@"屈光不正 视疲劳",
+                  @"time":@"33",
+                  };
+    tableDic5 = @{
+                  @"headImage":@"pic_ask7",
+                  @"name":@"李潇潇",
+                  @"address":@"杭州第二眼科医院副主任",
+                  @"main":@"屈光不正 视疲劳 假性近视",
+                  @"time":@"29",
+                  };
+    tableDic6 = @{
+                  @"headImage":@"pic_ask8",
+                  @"name":@"百丽",
+                  @"address":@"杭州第三眼科医院主任",
+                  @"main":@"假性近视",
+                  @"time":@"28",
+                  };
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    [_cellArr addObject:tableDic1];
+    [_cellArr addObject:tableDic2];
+    [_cellArr addObject:tableDic3];
+    [_cellArr addObject:tableDic4];
+    [_cellArr addObject:tableDic5];
+    [_cellArr addObject:tableDic6];
 }
-*/
+
+#pragma mark -- 侧滑
+- (void)leftMenu{
+    LeftMenuViewDemo *demo = [[LeftMenuViewDemo alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width * 0.6, [[UIScreen mainScreen] bounds].size.height)];
+    demo.customDelegate = self;
+    
+    MenuView *menu = [MenuView MenuViewWithDependencyView:self.view MenuView:demo isShowCoverView:YES];
+    //    MenuView *menu = [[MenuView alloc]initWithDependencyView:self.view MenuView:demo isShowCoverView:YES];
+    self.menu = menu;
+}
+
+-(void)LeftMenuViewClick:(NSInteger)tag{
+    [self.menu hidenWithAnimation];
+}
+
+#pragma mark --ButtonClick
+- (void)planBtn{
+    [self.menu show];
+}
+
+- (void)searchBtn{
+    
+}
 
 @end
