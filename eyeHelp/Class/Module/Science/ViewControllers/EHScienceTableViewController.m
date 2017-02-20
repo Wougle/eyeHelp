@@ -10,7 +10,7 @@
 #import "MenuView.h"
 #import "LeftMenuViewDemo.h"
 #import "EHScienceTableViewCell.h"
-
+#import "EHGraphicTextViewController.h"
 static NSString *const kEHSciencTableViewCell = @"kEHSciencTableViewCell";
 @interface EHScienceTableViewController ()<UITableViewDataSource,UITableViewDelegate,HomeMenuViewDelegate>
 /** 侧滑栏页面 */
@@ -74,6 +74,13 @@ static NSString *const kEHSciencTableViewCell = @"kEHSciencTableViewCell";
     cell.titleNameLabel.text = _scienceArr[indexPath.row][@"titleName"];
 
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"选中---%ld", indexPath.row);
+    EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
+    vc.type = EHScience;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)setData{

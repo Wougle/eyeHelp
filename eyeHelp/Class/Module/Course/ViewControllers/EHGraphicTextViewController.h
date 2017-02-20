@@ -10,4 +10,8 @@
 
 @interface EHGraphicTextViewController : UIViewController
 
+@property (nonatomic, assign)EHGraphicTextType type;
+
+@property (nonatomic, assign)NSString *titleName;
+
 @end

@@ -12,6 +12,7 @@
 #import "LeftMenuViewDemo.h"
 #import "MenuView.h"
 #import "MyCollectionViewCell.h"
+#import "EHGraphicTextViewController.h"
 
 static NSString *const kEHConsultHeaderView = @"kEHConsultHeaderView";
 static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
@@ -154,6 +155,11 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%ld",(long)indexPath.row);
+    NSArray *arr = [NSArray arrayWithObjects:@"视疲劳",@"眼睛干涩",@"流泪",@"酸胀",@"屈光不正",@"",@"",@"",@"", nil];
+    EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
+    vc.type = EHConsult;
+    vc.titleName = arr[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

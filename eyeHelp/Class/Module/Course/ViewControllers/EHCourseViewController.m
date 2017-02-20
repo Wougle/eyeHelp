@@ -185,6 +185,16 @@ HomeMenuViewDelegate>
 
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"选中---%ld", indexPath.row);
+    if (self.state == EHGraphyState) {
+        EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
+        vc.type = EHCource;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -380,8 +390,7 @@ HomeMenuViewDelegate>
 }
 
 - (void)searchBtn{
-    EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end

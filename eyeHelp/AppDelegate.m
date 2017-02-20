@@ -22,11 +22,11 @@
     /*********************** nav全局定义 ***************************/
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
-    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : TEXT_COLOR_SECONDARY};
+    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : THEME_COLOR};
     
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     // hide title of back button
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 0)
                                                          forBarMetrics:UIBarMetricsDefault];
@@ -35,8 +35,8 @@
     clearShadow.shadowColor = [UIColor clearColor];
     clearShadow.shadowOffset = CGSizeMake(0, 0);
     
-    UIColor *normalTitleColor = [UIColor blackColor];
-    UIColor *highlightedTitleColor = [UIColor blackColor];
+    UIColor *normalTitleColor = THEME_COLOR;//返回按钮颜色
+    UIColor *highlightedTitleColor = THEME_COLOR;//返回按钮颜色
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
                                                            NSForegroundColorAttributeName : normalTitleColor,
                                                            NSShadowAttributeName : clearShadow
@@ -46,9 +46,8 @@
                                                            NSShadowAttributeName : clearShadow
                                                            } forState:UIControlStateHighlighted];
     
-    [[UIBarButtonItem appearance] setTintColor:THEME_COLOR];
-    
-    [[UIToolbar appearance] setBarTintColor:THEME_COLOR];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];//title颜色
+    [[UIToolbar appearance] setBarTintColor:[UIColor blackColor]];//title颜色
     
     [self setNaviBack];
 

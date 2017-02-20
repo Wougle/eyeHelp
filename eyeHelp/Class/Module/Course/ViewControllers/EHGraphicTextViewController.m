@@ -34,7 +34,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self consultText];
+    if (self.type == EHCource) {
+        self.title = @"图文详情";
+        [self courseText];
+    }
+    else if(self.type == EHScience){
+        self.title = @"科普详情";
+        [self scienceText];
+    }
+    else if(self.type == EHConsult){
+        self.title = self.titleName;
+        [self consultText];
+    }
+    else{
+        self.title = @"NULL";
+    }
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -43,7 +58,7 @@
     
     // 创建图片图片附件
     NSTextAttachment *attach = [[NSTextAttachment alloc] init];
-    attach.image = [UIImage imageNamed:@"pic_scitxt1"];
+    attach.image = [UIImage imageNamed:@"pic_pic1"];
     attach.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 200);
     NSAttributedString *attachString = [NSAttributedString attributedStringWithAttachment:attach];
     [string appendAttributedString:attachString];
@@ -64,8 +79,8 @@
     
     // 创建图片图片附件
     NSTextAttachment *attach2 = [[NSTextAttachment alloc] init];
-    attach2.image = [UIImage imageNamed:@"pic_scitxt2"];
-    attach2.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 120);
+    attach2.image = [UIImage imageNamed:@"pic_pic2"];
+    attach2.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 160);
     NSAttributedString *attachString2 = [NSAttributedString attributedStringWithAttachment:attach2];
     [string appendAttributedString:attachString2];
     
@@ -73,8 +88,8 @@
     
     // 创建图片图片附件
     NSTextAttachment *attach3 = [[NSTextAttachment alloc] init];
-    attach3.image = [UIImage imageNamed:@"pic_scitxt2"];
-    attach3.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 120);
+    attach3.image = [UIImage imageNamed:@"pic_pic3"];
+    attach3.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 160);
     NSAttributedString *attachString3 = [NSAttributedString attributedStringWithAttachment:attach3];
     [string appendAttributedString:attachString3];
     
@@ -82,8 +97,8 @@
     
     // 创建图片图片附件
     NSTextAttachment *attach4 = [[NSTextAttachment alloc] init];
-    attach4.image = [UIImage imageNamed:@"pic_scitxt2"];
-    attach4.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 120);
+    attach4.image = [UIImage imageNamed:@"pic_dv1"];
+    attach4.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 160);
     NSAttributedString *attachString4 = [NSAttributedString attributedStringWithAttachment:attach4];
     [string appendAttributedString:attachString4];
     
@@ -153,7 +168,7 @@
     
     // 创建图片图片附件
     NSTextAttachment *attach = [[NSTextAttachment alloc] init];
-    attach.image = [UIImage imageNamed:@"pic_scitxt1"];
+    attach.image = [UIImage imageNamed:@"pic_asktxt1"];
     attach.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 200);
     NSAttributedString *attachString = [NSAttributedString attributedStringWithAttachment:attach];
     [string appendAttributedString:attachString];
@@ -170,7 +185,7 @@
     
     // 创建图片图片附件
     NSTextAttachment *attach2 = [[NSTextAttachment alloc] init];
-    attach2.image = [UIImage imageNamed:@"pic_scitxt2"];
+    attach2.image = [UIImage imageNamed:@"pic_asktxt2"];
     attach2.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 120);
     NSAttributedString *attachString2 = [NSAttributedString attributedStringWithAttachment:attach2];
     [string appendAttributedString:attachString2];
@@ -179,7 +194,7 @@
 
     // 创建图片图片附件
     NSTextAttachment *attach3 = [[NSTextAttachment alloc] init];
-    attach3.image = [UIImage imageNamed:@"pic_scitxt2"];
+    attach3.image = [UIImage imageNamed:@"pic_asktxt3"];
     attach3.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 120);
     NSAttributedString *attachString3 = [NSAttributedString attributedStringWithAttachment:attach3];
     [string appendAttributedString:attachString3];
@@ -188,7 +203,7 @@
     
     // 创建图片图片附件
     NSTextAttachment *attach4 = [[NSTextAttachment alloc] init];
-    attach4.image = [UIImage imageNamed:@"pic_scitxt2"];
+    attach4.image = [UIImage imageNamed:@"pic_asktxt4"];
     attach4.bounds = CGRectMake(0, 0, SCREEN_WIDTH, 120);
     NSAttributedString *attachString4 = [NSAttributedString attributedStringWithAttachment:attach4];
     [string appendAttributedString:attachString4];

@@ -15,4 +15,10 @@ typedef NS_ENUM(NSInteger, EHCoureseType){
     EHCoureseState,      //手把手
 };
 
+typedef NS_ENUM(NSInteger, EHGraphicTextType){
+    EHCource = 0,   //图文
+    EHScience = 1,  //科普
+    EHConsult,      //咨询
+};
+
 #endif /* Enumeration_h */
