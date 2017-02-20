@@ -70,7 +70,7 @@
             <connections>
                 <outlet property="baseView" destination="vJI-3i-Eqw" id="gq6-vx-fT0"/>
                 <outlet property="detailImageView" destination="He9-Pg-3LA" id="WZ8-gZ-6bI"/>
-                <outlet property="likeBtn" destination="vJI-3i-Eqw" id="tjL-4G-yv7"/>
+                <outlet property="likeBtn" destination="oHw-Qo-uqn" id="ak3-wI-e29"/>
                 <outlet property="titleNameLabel" destination="eny-bw-CjT" id="3a4-nZ-3It"/>
             </connections>
         </tableViewCell>

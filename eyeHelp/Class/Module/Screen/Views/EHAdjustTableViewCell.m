@@ -15,6 +15,9 @@
     _baseView.layer.cornerRadius = 7.0f;
     _baseView.layer.masksToBounds = YES;
     [_lightSlider trackRectForBounds:CGRectMake(0, 0, 5, 5)];
+    _adjsutSwitch.onTintColor= THEME_COLOR;
+    
+    [_lightSlider addTarget:self action:@selector(sliderChange) forControlEvents:UIControlEventTouchUpInside];
     // Initialization code
 }
 
@@ -26,4 +29,9 @@
 - (CGRect)trackRectForBounds:(CGRect)bounds {
     return CGRectMake(0, 0, SCREEN_WIDTH-100, 15);
 }
+
+- (void)sliderChange{
+    [[UIScreen mainScreen] setBrightness:_lightSlider.value];
+}
+
 @end

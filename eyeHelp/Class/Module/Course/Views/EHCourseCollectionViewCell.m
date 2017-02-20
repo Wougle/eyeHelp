@@ -14,7 +14,17 @@
     [super awakeFromNib];
     self.layer.cornerRadius = 20.f;
     self.layer.masksToBounds = YES;
+    [_likeBtn addTarget:self action:@selector(likeBtnAction) forControlEvents:UIControlEventTouchUpInside];
     // Initialization code
+}
+
+- (void)likeBtnAction{
+    if (_likeBtn.isSelected) {
+        [self.likeBtn setSelected:NO];
+    }
+    else{
+        [self.likeBtn setSelected:YES];
+    }
 }
 
 @end
