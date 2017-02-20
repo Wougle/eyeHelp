@@ -46,9 +46,9 @@
                                                            NSShadowAttributeName : clearShadow
                                                            } forState:UIControlStateHighlighted];
     
-    [[UIBarButtonItem appearance] setTintColor:[UIColor blackColor]];
+    [[UIBarButtonItem appearance] setTintColor:THEME_COLOR];
     
-    [[UIToolbar appearance] setBarTintColor:[UIColor blackColor]];
+    [[UIToolbar appearance] setBarTintColor:THEME_COLOR];
     
     [self setNaviBack];
 
