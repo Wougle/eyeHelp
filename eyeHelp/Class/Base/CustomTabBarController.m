@@ -7,7 +7,6 @@
 //
 
 #import "CustomTabBarController.h"
-#import "CustomTabBar.h"
 #import "CustomNavigationController.h"
 #import "EHMineTableViewController.h"
 #import "EHConsultTableViewController.h"
@@ -16,11 +15,10 @@
 #import "EHCourseViewController.h"
 @interface CustomTabBarController ()<CustomTabBarTypeDelegate>
 
-@property (nonatomic,strong) CustomTabBar *itemTabBar;
+
 @end
 
 @implementation CustomTabBarController
-
 
 - (void)selectedBarItemWithType:(CustomTabBarType)type{
     
@@ -46,7 +44,6 @@
     
 }
 
-
 - (void)configViewConrollers{
     
     NSMutableArray *viewArray = [NSMutableArray arrayWithArray:@[@"EHCourseViewController",@"EHScienceTableViewController",@"EHScreenViewController",@"EHConsultTableViewController",@"EHMineTableViewController"]];
@@ -69,6 +66,7 @@
         CGRect rect = self.tabBar.frame;
         _itemTabBar = [[CustomTabBar alloc] initWithFrame:rect];
         _itemTabBar.delegate = self;
+        _itemTabBar.tag = 10086;
     }
     return _itemTabBar;
 }

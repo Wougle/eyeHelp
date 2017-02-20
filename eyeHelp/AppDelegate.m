@@ -50,7 +50,7 @@
     
     [[UIToolbar appearance] setBarTintColor:[UIColor blackColor]];
     
-    //[self setNaviBack];
+    [self setNaviBack];
 
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
@@ -87,5 +87,29 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)setNaviBack{
+    
+    UINavigationBar * navigationBar = [UINavigationBar appearance];
+    
+    //设置返回样式图片
+    
+    UIImage *image = [UIImage imageNamed:@"icon_arrow"];
+    
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    navigationBar.backIndicatorImage = image;
+    
+    navigationBar.backIndicatorTransitionMaskImage = image;
+    
+//        UIBarButtonItem *buttonItem = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
+//    
+//        UIOffset offset;
+//    
+//        offset.horizontal = - 500;
+//    
+//        offset.vertical =  - 500;
+//    
+//        [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
+}
 
 @end

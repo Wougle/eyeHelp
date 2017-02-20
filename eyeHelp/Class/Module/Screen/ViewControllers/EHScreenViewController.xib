@@ -72,7 +72,7 @@
                             </state>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="调屏" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj4-5E-q7y">
-                            <rect key="frame" x="169" y="35" width="37" height="21.5"/>
+                            <rect key="frame" x="169" y="22" width="37" height="21.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -81,7 +81,7 @@
                     <color key="backgroundColor" red="0.098039215686274508" green="0.75294117647058822" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="CBs-kr-jnP" firstAttribute="top" secondItem="KZE-GA-oAK" secondAttribute="top" constant="50" id="CmN-la-Ri0"/>
-                        <constraint firstItem="hj4-5E-q7y" firstAttribute="top" secondItem="JLp-8r-7hD" secondAttribute="top" constant="35" id="Dfl-nl-Fja"/>
+                        <constraint firstItem="hj4-5E-q7y" firstAttribute="top" secondItem="JLp-8r-7hD" secondAttribute="top" constant="22" id="Dfl-nl-Fja"/>
                         <constraint firstItem="KZE-GA-oAK" firstAttribute="leading" secondItem="JLp-8r-7hD" secondAttribute="leading" constant="20" id="Jiu-lr-3bW"/>
                         <constraint firstItem="hj4-5E-q7y" firstAttribute="centerX" secondItem="JLp-8r-7hD" secondAttribute="centerX" id="VpM-rM-Y9u"/>
                         <constraint firstItem="tdy-2H-cPy" firstAttribute="top" secondItem="JLp-8r-7hD" secondAttribute="top" constant="110" id="alJ-G4-jmJ"/>

@@ -9,6 +9,7 @@
 #import "EHScreenViewController.h"
 #import "VWaterView.h"
 #import "EHAdjustTableViewCell.h"
+#import "EHChartViewViewController.h"
 static NSString *const kEHAdjustTableViewCell = @"kEHAdjustTableViewCell";
 
 @interface EHScreenViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -22,6 +23,16 @@ static NSString *const kEHAdjustTableViewCell = @"kEHAdjustTableViewCell";
 @end
 
 @implementation EHScreenViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //[self.navigationController setNavigationBarHidden:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //[self.navigationController setNavigationBarHidden:NO];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,8 +49,7 @@ static NSString *const kEHAdjustTableViewCell = @"kEHAdjustTableViewCell";
 }
 
 - (void)setNavigation{
-    //隐藏navigation
-    [self.navigationController setNavigationBarHidden:YES];
+    [_weekUseLabel addTarget:self action:@selector(turnTo) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)setTableView{
@@ -82,6 +92,12 @@ static NSString *const kEHAdjustTableViewCell = @"kEHAdjustTableViewCell";
     }
     
     return cell;
+}
+
+#pragma mark - button action
+- (void)turnTo{
+    EHChartViewViewController *vc = [[EHChartViewViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 设置label的富文本和内容

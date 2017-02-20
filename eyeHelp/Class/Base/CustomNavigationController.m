@@ -18,7 +18,6 @@
     [super viewDidLoad]; UIColor * radomcolor = [UIColor whiteColor];
     
     self.navigationBar.barTintColor = radomcolor;
-    
     self.navigationBar.tintColor = [UIColor whiteColor];
 }
 
@@ -28,6 +27,7 @@
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];
+    //viewController.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)didReceiveMemoryWarning {

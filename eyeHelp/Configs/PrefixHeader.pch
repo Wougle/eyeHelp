@@ -23,5 +23,6 @@
 #import "Enumeration.h"
 #import "KDCycleBannerView.h"
 #import "MBProgressHUD.h"
+#import "CustomTabBar.h"
 
 #endif /* PrefixHeader_pch */

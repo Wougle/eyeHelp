@@ -11,6 +11,17 @@
 		330FCBB6BC54C4C2D2FB697F /* libPods-eyeHelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022CD5E6F87FAF0691DF347 /* libPods-eyeHelp.a */; };
 		386FFB37F655E4D245D2AA9D /* libPods-eyeHelpUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC15FEAC16A47E3DE97FDC /* libPods-eyeHelpUITests.a */; };
 		3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E1FC1E5A7D1B0073F505 /* MyCollectionViewCell.m */; };
+		3C30E20E1E5A92760073F505 /* DashesLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E2001E5A92760073F505 /* DashesLineView.m */; };
+		3C30E20F1E5A92760073F505 /* GraphBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E2021E5A92760073F505 /* GraphBar.m */; };
+		3C30E2101E5A92760073F505 /* GraphDot.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E2051E5A92760073F505 /* GraphDot.m */; };
+		3C30E2111E5A92760073F505 /* GraphLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E2071E5A92760073F505 /* GraphLine.m */; };
+		3C30E2121E5A92760073F505 /* GraphPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E2091E5A92760073F505 /* GraphPopView.m */; };
+		3C30E2131E5A92760073F505 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E20B1E5A92760073F505 /* GraphView.m */; };
+		3C30E2141E5A92760073F505 /* UIView+mySize.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E20D1E5A92760073F505 /* UIView+mySize.m */; };
+		3C30E2181E5A92B80073F505 /* EHChartViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E2161E5A92B80073F505 /* EHChartViewViewController.m */; };
+		3C30E2191E5A92B80073F505 /* EHChartViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30E2171E5A92B80073F505 /* EHChartViewViewController.xib */; };
+		3C30E21D1E5AD27D0073F505 /* EHGraphicTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E21B1E5AD27D0073F505 /* EHGraphicTextViewController.m */; };
+		3C30E21E1E5AD27D0073F505 /* EHGraphicTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C30E21C1E5AD27D0073F505 /* EHGraphicTextViewController.xib */; };
 		3C62484E1E55346000125670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C62484D1E55346000125670 /* main.m */; };
 		3C6248511E55346000125670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248501E55346000125670 /* AppDelegate.m */; };
 		3C6248571E55346000125670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248551E55346000125670 /* Main.storyboard */; };
@@ -73,6 +84,27 @@
 		1AFC15FEAC16A47E3DE97FDC /* libPods-eyeHelpUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eyeHelpUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C30E1FB1E5A7D1B0073F505 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCollectionViewCell.h; path = Class/Module/Consult/Views/MyCollectionViewCell.h; sourceTree = "<group>"; };
 		3C30E1FC1E5A7D1B0073F505 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCollectionViewCell.m; path = Class/Module/Consult/Views/MyCollectionViewCell.m; sourceTree = "<group>"; };
+		3C30E1FF1E5A92760073F505 /* DashesLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashesLineView.h; path = "Category/折线图/DashesLineView.h"; sourceTree = "<group>"; };
+		3C30E2001E5A92760073F505 /* DashesLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashesLineView.m; path = "Category/折线图/DashesLineView.m"; sourceTree = "<group>"; };
+		3C30E2011E5A92760073F505 /* GraphBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphBar.h; path = "Category/折线图/GraphBar.h"; sourceTree = "<group>"; };
+		3C30E2021E5A92760073F505 /* GraphBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphBar.m; path = "Category/折线图/GraphBar.m"; sourceTree = "<group>"; };
+		3C30E2031E5A92760073F505 /* GraphConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphConstants.h; path = "Category/折线图/GraphConstants.h"; sourceTree = "<group>"; };
+		3C30E2041E5A92760073F505 /* GraphDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphDot.h; path = "Category/折线图/GraphDot.h"; sourceTree = "<group>"; };
+		3C30E2051E5A92760073F505 /* GraphDot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphDot.m; path = "Category/折线图/GraphDot.m"; sourceTree = "<group>"; };
+		3C30E2061E5A92760073F505 /* GraphLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphLine.h; path = "Category/折线图/GraphLine.h"; sourceTree = "<group>"; };
+		3C30E2071E5A92760073F505 /* GraphLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphLine.m; path = "Category/折线图/GraphLine.m"; sourceTree = "<group>"; };
+		3C30E2081E5A92760073F505 /* GraphPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphPopView.h; path = "Category/折线图/GraphPopView.h"; sourceTree = "<group>"; };
+		3C30E2091E5A92760073F505 /* GraphPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphPopView.m; path = "Category/折线图/GraphPopView.m"; sourceTree = "<group>"; };
+		3C30E20A1E5A92760073F505 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphView.h; path = "Category/折线图/GraphView.h"; sourceTree = "<group>"; };
+		3C30E20B1E5A92760073F505 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphView.m; path = "Category/折线图/GraphView.m"; sourceTree = "<group>"; };
+		3C30E20C1E5A92760073F505 /* UIView+mySize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+mySize.h"; path = "Category/折线图/UIView+mySize.h"; sourceTree = "<group>"; };
+		3C30E20D1E5A92760073F505 /* UIView+mySize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+mySize.m"; path = "Category/折线图/UIView+mySize.m"; sourceTree = "<group>"; };
+		3C30E2151E5A92B80073F505 /* EHChartViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHChartViewViewController.h; path = Class/Module/Screen/ViewControllers/EHChartViewViewController.h; sourceTree = "<group>"; };
+		3C30E2161E5A92B80073F505 /* EHChartViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHChartViewViewController.m; path = Class/Module/Screen/ViewControllers/EHChartViewViewController.m; sourceTree = "<group>"; };
+		3C30E2171E5A92B80073F505 /* EHChartViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHChartViewViewController.xib; path = Class/Module/Screen/ViewControllers/EHChartViewViewController.xib; sourceTree = "<group>"; };
+		3C30E21A1E5AD27D0073F505 /* EHGraphicTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHGraphicTextViewController.h; path = Class/Module/Course/ViewControllers/EHGraphicTextViewController.h; sourceTree = "<group>"; };
+		3C30E21B1E5AD27D0073F505 /* EHGraphicTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHGraphicTextViewController.m; path = Class/Module/Course/ViewControllers/EHGraphicTextViewController.m; sourceTree = "<group>"; };
+		3C30E21C1E5AD27D0073F505 /* EHGraphicTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHGraphicTextViewController.xib; path = Class/Module/Course/ViewControllers/EHGraphicTextViewController.xib; sourceTree = "<group>"; };
 		3C6248491E55346000125670 /* eyeHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyeHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62484D1E55346000125670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C62484F1E55346000125670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -177,6 +209,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C30E1FE1E5A924E0073F505 /* 折线图 */ = {
+			isa = PBXGroup;
+			children = (
+				3C30E1FF1E5A92760073F505 /* DashesLineView.h */,
+				3C30E2001E5A92760073F505 /* DashesLineView.m */,
+				3C30E2011E5A92760073F505 /* GraphBar.h */,
+				3C30E2021E5A92760073F505 /* GraphBar.m */,
+				3C30E2031E5A92760073F505 /* GraphConstants.h */,
+				3C30E2041E5A92760073F505 /* GraphDot.h */,
+				3C30E2051E5A92760073F505 /* GraphDot.m */,
+				3C30E2061E5A92760073F505 /* GraphLine.h */,
+				3C30E2071E5A92760073F505 /* GraphLine.m */,
+				3C30E2081E5A92760073F505 /* GraphPopView.h */,
+				3C30E2091E5A92760073F505 /* GraphPopView.m */,
+				3C30E20A1E5A92760073F505 /* GraphView.h */,
+				3C30E20B1E5A92760073F505 /* GraphView.m */,
+				3C30E20C1E5A92760073F505 /* UIView+mySize.h */,
+				3C30E20D1E5A92760073F505 /* UIView+mySize.m */,
+			);
+			name = "折线图";
+			sourceTree = "<group>";
+		};
 		3C6248401E55346000125670 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +299,7 @@
 		3C62487F1E553B8000125670 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3C30E1FE1E5A924E0073F505 /* 折线图 */,
 				3CF1BB5C1E595B6F00A19245 /* 环形进度条 */,
 				3CF1BB2C1E5596BB00A19245 /* 侧滑 */,
 			);
@@ -388,6 +443,9 @@
 				3CF1BB271E5578E800A19245 /* EHCourseViewController.h */,
 				3CF1BB281E5578E800A19245 /* EHCourseViewController.m */,
 				3CF1BB291E5578E800A19245 /* EHCourseViewController.xib */,
+				3C30E21A1E5AD27D0073F505 /* EHGraphicTextViewController.h */,
+				3C30E21B1E5AD27D0073F505 /* EHGraphicTextViewController.m */,
+				3C30E21C1E5AD27D0073F505 /* EHGraphicTextViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -408,6 +466,9 @@
 				3CF1BB571E5958BB00A19245 /* EHScreenViewController.h */,
 				3CF1BB581E5958BB00A19245 /* EHScreenViewController.m */,
 				3CF1BB591E5958BB00A19245 /* EHScreenViewController.xib */,
+				3C30E2151E5A92B80073F505 /* EHChartViewViewController.h */,
+				3C30E2161E5A92B80073F505 /* EHChartViewViewController.m */,
+				3C30E2171E5A92B80073F505 /* EHChartViewViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -658,6 +719,8 @@
 				3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */,
 				3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */,
 				3CF1BB641E59695400A19245 /* EHAdjustTableViewCell.xib in Resources */,
+				3C30E21E1E5AD27D0073F505 /* EHGraphicTextViewController.xib in Resources */,
+				3C30E2191E5A92B80073F505 /* EHChartViewViewController.xib in Resources */,
 				3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */,
 				3C6248B51E5543CC00125670 /* EHMineTableViewController.xib in Resources */,
 				3C6248591E55346000125670 /* Assets.xcassets in Resources */,
@@ -834,18 +897,27 @@
 				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
 				3CF1BB5A1E5958BB00A19245 /* EHScreenViewController.m in Sources */,
 				3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */,
+				3C30E2141E5A92760073F505 /* UIView+mySize.m in Sources */,
 				3C6248AF1E5543B900125670 /* EHConsultTableViewController.m in Sources */,
 				3C6248511E55346000125670 /* AppDelegate.m in Sources */,
 				3CF1BB2F1E5596C900A19245 /* MenuView.m in Sources */,
+				3C30E2101E5A92760073F505 /* GraphDot.m in Sources */,
+				3C30E2181E5A92B80073F505 /* EHChartViewViewController.m in Sources */,
 				3C62484E1E55346000125670 /* main.m in Sources */,
+				3C30E2131E5A92760073F505 /* GraphView.m in Sources */,
 				3C6248D01E55548D00125670 /* CustomTabBar.m in Sources */,
+				3C30E2111E5A92760073F505 /* GraphLine.m in Sources */,
 				3C6248A51E55436F00125670 /* EHScienceTableViewController.m in Sources */,
+				3C30E20F1E5A92760073F505 /* GraphBar.m in Sources */,
+				3C30E20E1E5A92760073F505 /* DashesLineView.m in Sources */,
 				3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */,
 				3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */,
 				3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */,
 				3CF1BB3E1E569D5D00A19245 /* EHGraphicTableViewCell.m in Sources */,
+				3C30E21D1E5AD27D0073F505 /* EHGraphicTextViewController.m in Sources */,
 				3C6248D11E55548D00125670 /* CustomTabBarController.m in Sources */,
 				3CF1BB551E56DA4B00A19245 /* EHScienceTableViewCell.m in Sources */,
+				3C30E2121E5A92760073F505 /* GraphPopView.m in Sources */,
 				3CBE41CD1E59BA0100C5414E /* EHConsultHeaderView.m in Sources */,
 				3CBE41D31E59BDA200C5414E /* EHConsultTableViewCell.m in Sources */,
 				3CF1BB511E56CA3F00A19245 /* EHCourseCollectionViewFlowLayout.m in Sources */,

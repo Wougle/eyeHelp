@@ -12,6 +12,7 @@
 #import "EHGraphicTableViewCell.h"
 #import "EHCourseCollectionViewCell.h"
 #import "EHCourseCollectionViewFlowLayout.h"
+#import "EHGraphicTextViewController.h"
 
 #define MENU_BUTTON_WIDTH ViewWidth/3
 #define ViewWidth [[UIScreen mainScreen] bounds].size.width
@@ -379,7 +380,8 @@ HomeMenuViewDelegate>
 }
 
 - (void)searchBtn{
-    
+    EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

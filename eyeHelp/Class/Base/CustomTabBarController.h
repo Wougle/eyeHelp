@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomTabBar.h"
 @interface CustomTabBarController : UITabBarController
-
+@property (nonatomic,strong) CustomTabBar *itemTabBar;
 
 @end
