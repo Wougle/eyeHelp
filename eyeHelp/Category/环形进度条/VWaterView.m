@@ -56,7 +56,7 @@
     CGContextSetRGBStrokeColor(context,21/255.,91/255.,80/255.,1.0);
     CGContextSetLineWidth(context, 16.0);
     CGContextSetLineCap(context,kCGLineCapRound);
-    CGContextAddArc(context, 130/2+10, 130/2+10, 134/2, M_PI*-0.5, M_PI*(-0.5 + _circlePercent*0.75), 0);
+    CGContextAddArc(context, self.frame.size.width/2, self.frame.size.width/2, self.frame.size.width/2-8, M_PI*-0.5, M_PI*(-0.5 + _circlePercent*0.75), 0);
     //绘制路径
     CGContextDrawPath(context, kCGPathStroke);
   

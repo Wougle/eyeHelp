@@ -10,6 +10,7 @@
 		005E5740A3C8C4EF5A9A96FA /* libPods-eyeHelpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 838FCAF957B0FE9152A49D4A /* libPods-eyeHelpTests.a */; };
 		330FCBB6BC54C4C2D2FB697F /* libPods-eyeHelp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0022CD5E6F87FAF0691DF347 /* libPods-eyeHelp.a */; };
 		386FFB37F655E4D245D2AA9D /* libPods-eyeHelpUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AFC15FEAC16A47E3DE97FDC /* libPods-eyeHelpUITests.a */; };
+		3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C30E1FC1E5A7D1B0073F505 /* MyCollectionViewCell.m */; };
 		3C62484E1E55346000125670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C62484D1E55346000125670 /* main.m */; };
 		3C6248511E55346000125670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248501E55346000125670 /* AppDelegate.m */; };
 		3C6248571E55346000125670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6248551E55346000125670 /* Main.storyboard */; };
@@ -70,6 +71,8 @@
 /* Begin PBXFileReference section */
 		0022CD5E6F87FAF0691DF347 /* libPods-eyeHelp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eyeHelp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AFC15FEAC16A47E3DE97FDC /* libPods-eyeHelpUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eyeHelpUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C30E1FB1E5A7D1B0073F505 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCollectionViewCell.h; path = Class/Module/Consult/Views/MyCollectionViewCell.h; sourceTree = "<group>"; };
+		3C30E1FC1E5A7D1B0073F505 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCollectionViewCell.m; path = Class/Module/Consult/Views/MyCollectionViewCell.m; sourceTree = "<group>"; };
 		3C6248491E55346000125670 /* eyeHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eyeHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C62484D1E55346000125670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C62484F1E55346000125670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -470,6 +473,8 @@
 		3C62489B1E55427200125670 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C30E1FB1E5A7D1B0073F505 /* MyCollectionViewCell.h */,
+				3C30E1FC1E5A7D1B0073F505 /* MyCollectionViewCell.m */,
 				3CBE41CB1E59BA0100C5414E /* EHConsultHeaderView.h */,
 				3CBE41CC1E59BA0100C5414E /* EHConsultHeaderView.m */,
 				3CBE41CE1E59BA0E00C5414E /* EHConsultHeaderView.xib */,
@@ -835,6 +840,7 @@
 				3C62484E1E55346000125670 /* main.m in Sources */,
 				3C6248D01E55548D00125670 /* CustomTabBar.m in Sources */,
 				3C6248A51E55436F00125670 /* EHScienceTableViewController.m in Sources */,
+				3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */,
 				3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */,
 				3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */,
 				3CF1BB3E1E569D5D00A19245 /* EHGraphicTableViewCell.m in Sources */,

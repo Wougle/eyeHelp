@@ -11,10 +11,12 @@
 #import "EHConsultTableViewCell.h"
 #import "LeftMenuViewDemo.h"
 #import "MenuView.h"
+#import "MyCollectionViewCell.h"
+
 static NSString *const kEHConsultHeaderView = @"kEHConsultHeaderView";
 static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
 
-@interface EHConsultTableViewController ()<UITableViewDelegate, UITableViewDataSource,HomeMenuViewDelegate>
+@interface EHConsultTableViewController ()<UITableViewDelegate, UITableViewDataSource,HomeMenuViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 /** 侧滑栏页面 */
 @property (nonatomic ,strong)MenuView      *menu;
@@ -23,6 +25,8 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
 @property (strong, nonatomic) EHConsultHeaderView *consultHeaderView;
 
 @property (nonatomic,strong) UIView *headerView;
+
+@property(nonatomic,strong)UICollectionView *collectionView;
 
 @end
 
@@ -39,6 +43,8 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
     [self leftMenu];//侧滑
     
     [self prepareHomeTableViewHeader];
+    
+    [self setCollection];
     
     [self setData];
 }
@@ -84,6 +90,27 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
     self.tableView.separatorStyle = NO;
 }
 
+- (void)setCollection{
+    _collectionView = ({
+        
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        layout.itemSize = CGSizeMake(75, 95);
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        layout.minimumLineSpacing = 10;
+        
+        UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 65, self.view.frame.size.width,95) collectionViewLayout:layout];
+        collectionView.backgroundColor = [UIColor whiteColor];
+        collectionView.delegate = self;
+        collectionView.dataSource = self;
+        collectionView.scrollsToTop = NO;
+        collectionView.showsVerticalScrollIndicator = NO;
+        collectionView.showsHorizontalScrollIndicator = NO;
+        [collectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:kMyCollectionViewCellID];
+        [self.consultHeaderView addSubview:collectionView];
+        collectionView;
+    });
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -112,9 +139,29 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
     cell.doctorMainLabel.text = _cellArr[indexPath.row][@"main"];
     cell.doctorTimeLabel.text = _cellArr[indexPath.row][@"time"];
 
-    
     return cell;
 }
+
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 8;
+}
+
+
+- ( UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return [collectionView dequeueReusableCellWithReuseIdentifier:kMyCollectionViewCellID forIndexPath:indexPath];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%ld",(long)indexPath.row);
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    [(MyCollectionViewCell *)cell configureCellWithPostURL:[NSString stringWithFormat:@"consultCell%li",indexPath.row+1]];
+}
+
 
 - (void)setData{
     _cellArr = [[NSMutableArray alloc] init];

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,8 +33,7 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cardView" translatesAutoresizingMaskIntoConstraints="NO" id="KZE-GA-oAK">
                             <rect key="frame" x="20" y="75" width="150" height="150"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="150" id="0n8-zz-LrL"/>
-                                <constraint firstAttribute="height" constant="150" id="nFw-V4-FYU"/>
+                                <constraint firstAttribute="width" secondItem="KZE-GA-oAK" secondAttribute="height" id="RhI-p4-xGH"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="眼疲劳程度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBs-kr-jnP">
@@ -89,6 +89,7 @@
                         <constraint firstAttribute="trailing" secondItem="wVw-Dn-iQP" secondAttribute="trailing" constant="20" id="e62-W7-OTx"/>
                         <constraint firstItem="CBs-kr-jnP" firstAttribute="centerX" secondItem="KZE-GA-oAK" secondAttribute="centerX" id="gex-5H-eZo"/>
                         <constraint firstAttribute="trailing" secondItem="rBI-fO-imr" secondAttribute="trailing" constant="10" id="jlq-7E-DP9"/>
+                        <constraint firstItem="KZE-GA-oAK" firstAttribute="width" secondItem="JLp-8r-7hD" secondAttribute="width" multiplier="150/375" id="k94-G1-76U"/>
                         <constraint firstAttribute="trailing" secondItem="tdy-2H-cPy" secondAttribute="trailing" constant="20" id="oHz-Vi-gyV"/>
                         <constraint firstAttribute="bottom" secondItem="KZE-GA-oAK" secondAttribute="bottom" constant="15" id="p6X-ai-0pu"/>
                         <constraint firstItem="exl-zF-Kbu" firstAttribute="centerX" secondItem="KZE-GA-oAK" secondAttribute="centerX" id="r8q-8z-7G6"/>
