@@ -24,5 +24,6 @@
 #import "KDCycleBannerView.h"
 #import "MBProgressHUD.h"
 #import "CustomTabBar.h"
+#import "HcdCacheVideoPlayer.h"
 
 #endif /* PrefixHeader_pch */

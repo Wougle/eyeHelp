@@ -38,6 +38,8 @@
 		3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248CA1E55548D00125670 /* CustomNavigationController.m */; };
 		3C6248D01E55548D00125670 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248CC1E55548D00125670 /* CustomTabBar.m */; };
 		3C6248D11E55548D00125670 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6248CE1E55548D00125670 /* CustomTabBarController.m */; };
+		3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */; };
+		3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */; };
 		3CBE41CD1E59BA0100C5414E /* EHConsultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE41CC1E59BA0100C5414E /* EHConsultHeaderView.m */; };
 		3CBE41CF1E59BA0E00C5414E /* EHConsultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE41CE1E59BA0E00C5414E /* EHConsultHeaderView.xib */; };
 		3CBE41D31E59BDA200C5414E /* EHConsultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE41D11E59BDA200C5414E /* EHConsultTableViewCell.m */; };
@@ -137,6 +139,9 @@
 		3C6248CC1E55548D00125670 /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBar.m; path = Class/Base/CustomTabBar.m; sourceTree = "<group>"; };
 		3C6248CD1E55548D00125670 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarController.h; path = Class/Base/CustomTabBarController.h; sourceTree = "<group>"; };
 		3C6248CE1E55548D00125670 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarController.m; path = Class/Base/CustomTabBarController.m; sourceTree = "<group>"; };
+		3C98FA1D1E5C3B63008E300A /* EHVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHVideoViewController.h; path = Class/Module/Course/ViewControllers/EHVideoViewController.h; sourceTree = "<group>"; };
+		3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHVideoViewController.m; path = Class/Module/Course/ViewControllers/EHVideoViewController.m; sourceTree = "<group>"; };
+		3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHVideoViewController.xib; path = Class/Module/Course/ViewControllers/EHVideoViewController.xib; sourceTree = "<group>"; };
 		3CBE41CB1E59BA0100C5414E /* EHConsultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHConsultHeaderView.h; path = Class/Module/Consult/Views/EHConsultHeaderView.h; sourceTree = "<group>"; };
 		3CBE41CC1E59BA0100C5414E /* EHConsultHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHConsultHeaderView.m; path = Class/Module/Consult/Views/EHConsultHeaderView.m; sourceTree = "<group>"; };
 		3CBE41CE1E59BA0E00C5414E /* EHConsultHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHConsultHeaderView.xib; path = Class/Module/Consult/Views/EHConsultHeaderView.xib; sourceTree = "<group>"; };
@@ -446,6 +451,9 @@
 				3C30E21A1E5AD27D0073F505 /* EHGraphicTextViewController.h */,
 				3C30E21B1E5AD27D0073F505 /* EHGraphicTextViewController.m */,
 				3C30E21C1E5AD27D0073F505 /* EHGraphicTextViewController.xib */,
+				3C98FA1D1E5C3B63008E300A /* EHVideoViewController.h */,
+				3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */,
+				3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -717,6 +725,7 @@
 				3C62485C1E55346000125670 /* LaunchScreen.storyboard in Resources */,
 				3CBE41D41E59BDA200C5414E /* EHConsultTableViewCell.xib in Resources */,
 				3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */,
+				3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */,
 				3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */,
 				3CF1BB641E59695400A19245 /* EHAdjustTableViewCell.xib in Resources */,
 				3C30E21E1E5AD27D0073F505 /* EHGraphicTextViewController.xib in Resources */,
@@ -912,6 +921,7 @@
 				3C30E20E1E5A92760073F505 /* DashesLineView.m in Sources */,
 				3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */,
 				3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */,
+				3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */,
 				3C6248CF1E55548D00125670 /* CustomNavigationController.m in Sources */,
 				3CF1BB3E1E569D5D00A19245 /* EHGraphicTableViewCell.m in Sources */,
 				3C30E21D1E5AD27D0073F505 /* EHGraphicTextViewController.m in Sources */,

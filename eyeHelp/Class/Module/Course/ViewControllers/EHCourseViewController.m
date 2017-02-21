@@ -13,7 +13,7 @@
 #import "EHCourseCollectionViewCell.h"
 #import "EHCourseCollectionViewFlowLayout.h"
 #import "EHGraphicTextViewController.h"
-
+#import "EHVideoViewController.h"
 #define MENU_BUTTON_WIDTH ViewWidth/3
 #define ViewWidth [[UIScreen mainScreen] bounds].size.width
 #define ViewHeight [[UIScreen mainScreen] bounds].size.height
@@ -191,6 +191,10 @@ HomeMenuViewDelegate>
     if (self.state == EHGraphyState) {
         EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
         vc.type = EHCource;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if (self.state == EHVideoState) {
+        EHVideoViewController *vc = [[EHVideoViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

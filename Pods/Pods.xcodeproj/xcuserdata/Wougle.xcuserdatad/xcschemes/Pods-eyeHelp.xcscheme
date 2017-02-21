@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CFA5980D5D32CA8D91F876765BBAD5A4'
+               BlueprintIdentifier = '8A93B786906242F6082FB9B43C72D24A'
                BlueprintName = 'Pods-eyeHelp'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-eyeHelp.a'>

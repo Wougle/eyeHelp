@@ -25,6 +25,8 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - HcdCachePlayer (1.0.0):
+    - Masonry (~> 1.0.1)
   - IQKeyboardManager (4.0.8)
   - KDCycleBannerView (1.1.1):
     - SDWebImage
@@ -43,6 +45,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - CocoaLumberjack (~> 2.3.0)
   - FMDB (~> 2.6.2)
+  - HcdCachePlayer
   - IQKeyboardManager (~> 4.0.4)
   - KDCycleBannerView (~> 1.1.1)
   - Masonry (~> 1.0.1)
@@ -56,6 +59,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  HcdCachePlayer: 52497ecbf7c98b28f8222c48e999dabb4976f56e
   IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
   KDCycleBannerView: 6dbac2cda6b1a6f4e27b65d66249ecd966403b8b
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -65,6 +69,6 @@ SPEC CHECKSUMS:
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: f0f6d4fc38107b91ab423362b49e238a393ee33e
+PODFILE CHECKSUM: d1f208f7bf9fb1e6753895c656a5aa216d76702e
 
 COCOAPODS: 1.2.0

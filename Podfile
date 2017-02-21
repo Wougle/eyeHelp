@@ -16,7 +16,7 @@ target ‘eyeHelp’ do
   pod 'FMDB', '~>2.6.2'
   pod 'KDCycleBannerView', '~>1.1.1'
   pod 'YYCategories', '~>1.0.3'
-
+  pod 'HcdCachePlayer'
 
   # Pods for eyeHelp
 
