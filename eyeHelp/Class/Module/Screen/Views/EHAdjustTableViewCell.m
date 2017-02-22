@@ -17,7 +17,8 @@
     [_lightSlider trackRectForBounds:CGRectMake(0, 0, 5, 5)];
     _adjsutSwitch.onTintColor= THEME_COLOR;
     
-    [_lightSlider addTarget:self action:@selector(sliderChange) forControlEvents:UIControlEventTouchUpInside];
+    [_lightSlider addTarget:self action:@selector(sliderChange) forControlEvents:UIControlEventValueChanged];
+
     // Initialization code
 }
 

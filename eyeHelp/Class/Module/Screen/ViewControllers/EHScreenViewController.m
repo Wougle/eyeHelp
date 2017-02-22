@@ -89,6 +89,7 @@ static NSString *const kEHAdjustTableViewCell = @"kEHAdjustTableViewCell";
     EHAdjustTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kEHAdjustTableViewCell];
     if (!cell) {
         cell=[[NSBundle mainBundle]loadNibNamed:@"EHAdjustTableViewCell" owner:self options:nil][0];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return cell;
