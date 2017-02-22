@@ -13,6 +13,8 @@
 #import "MenuView.h"
 #import "MyCollectionViewCell.h"
 #import "EHGraphicTextViewController.h"
+#import "ChatViewController.h"
+
 
 static NSString *const kEHConsultHeaderView = @"kEHConsultHeaderView";
 static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
@@ -143,6 +145,11 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ChatViewController *vc = [[ChatViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 8;
