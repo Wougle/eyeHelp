@@ -1,9 +1,9 @@
 //
 //  CustomTableViewCell.m
-//  QQ自动回复
 //
-//  Created by 冷求慧 on 15/12/7.
-//  Copyright © 2015年 gdd. All rights reserved.
+//
+//  Created by 吴戈 on 2017/2/19.
+//  Copyright © 2017年 吴戈. All rights reserved.
 //
 
 #import "CustomTableViewCell.h"
@@ -13,7 +13,7 @@
 #define contentFont [UIFont systemFontOfSize:13.0]//聊天消息字体的大小
 @interface CustomTableViewCell(){
     UILabel *labelTime;
-    UIImageView *imageView;
+    //UIImageView *imageView;
     UIButton *btnContent;
 }
 @end
@@ -31,8 +31,8 @@
     labelTime.textAlignment=NSTextAlignmentCenter;
     [self.contentView addSubview:labelTime];
     
-    imageView=[[UIImageView alloc]init]; //添加显示头像的ImageView
-    [self.contentView addSubview:imageView];
+    self.headImageView=[[UIImageView alloc]init]; //添加显示头像的ImageView
+    [self.contentView addSubview:self.headImageView];
     
     btnContent=[[UIButton alloc]init]; //添加显示文字的按钮
     btnContent.titleLabel.font=contentFont;
@@ -44,7 +44,7 @@
 }
 -(void)setFrameModel:(modelFrame *)frameModel{
     labelTime.frame=frameModel.timeFrame;//设置坐标
-    imageView.frame=frameModel.headImageFrame;
+    self.headImageView.frame=frameModel.headImageFrame;
     btnContent.frame=frameModel.btnFrame;
     
     if (frameModel.myself) {
@@ -53,12 +53,12 @@
         [btnContent setBackgroundImage:[bgImage resizableImageWithCapInsets:UIEdgeInsetsMake(28, 32, 28, 32) resizingMode:UIImageResizingModeStretch] forState:UIControlStateNormal]; //拉伸图片的方法(固定图片的位置,其他部分被拉伸)
     }
     else{
-        [btnContent setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btnContent setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         UIImage *bgImage=[UIImage imageNamed:@"chat_recive_press_pic"]; //设置背景图片
         [btnContent setBackgroundImage:[bgImage resizableImageWithCapInsets:UIEdgeInsetsMake(28, 32, 28, 32) resizingMode:UIImageResizingModeStretch] forState:UIControlStateNormal];
     }
     labelTime.text=[NSString stringWithFormat:@"发送:%@",frameModel.dataModel.time];
-    imageView.image=[UIImage imageNamed:frameModel.dataModel.imageName];
+    self.headImageView.image=[UIImage imageNamed:frameModel.dataModel.imageName];
     [btnContent setTitle:frameModel.dataModel.desc forState:UIControlStateNormal];//设置内容
     
     

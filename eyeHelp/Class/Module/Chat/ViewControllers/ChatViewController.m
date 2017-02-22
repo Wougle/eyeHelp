@@ -10,12 +10,19 @@
 #import "messModel.h"
 #import "modelFrame.h"
 #import "CustomTableViewCell.h"
-@interface ChatViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+#import "DPImagePickerVC.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+
+@interface ChatViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,DPImagePickerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *customTableView;
 @property (weak, nonatomic) IBOutlet UITextField *inputMess;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 - (IBAction)sendAction:(UIButton *)sender;
 @property (nonatomic,strong)NSMutableArray *arrModelData;
+@property (weak, nonatomic) IBOutlet UIButton *sendBtn;
+@property (weak, nonatomic) IBOutlet UIButton *cameraBtn;
+@property (strong, nonatomic)  DPImagePickerVC * Viewasd;
+
 @end
 @implementation ChatViewController
 
@@ -41,6 +48,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = self.docName;
     [self someSet];
     [self messModelArr];
     // 监听键盘出现的出现和消失
@@ -53,15 +61,20 @@
     self.inputMess.returnKeyType=UIReturnKeySend;//更改返回键的文字 (或者在sroryBoard中的,选中UITextField,对return key更改)
     self.inputMess.clearButtonMode=UITextFieldViewModeWhileEditing;
     
-    [self.view setBackgroundColor:[UIColor colorWithRed:222.0/255.0f green:222.0/255.0f blue:221.0/255.0f alpha:1.0f]];
+    [self.view setBackgroundColor:BG_COLOR];
     self.customTableView.separatorStyle=UITableViewCellSeparatorStyleNone;
     UIView *bgView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [bgView setBackgroundColor:[UIColor colorWithRed:222.0/255.0f green:222.0/255.0f blue:221.0/255.0f alpha:1.0f]];
+    [bgView setBackgroundColor:BG_COLOR];
     self.customTableView.delegate = self;
     self.customTableView.dataSource = self;
     [self.customTableView setBackgroundView:bgView];
     [self.customTableView setTableFooterView:[[UIView alloc]initWithFrame:CGRectZero]];
     [self.customTableView setShowsVerticalScrollIndicator:NO];
+    
+    self.sendBtn.layer.cornerRadius = 3.0f;
+    self.sendBtn.layer.masksToBounds = YES;
+    
+    [self.cameraBtn addTarget:self action:@selector(camera) forControlEvents:UIControlEventTouchUpInside];
 }
 #pragma mark 得到Cell上面的Frame的模型
 -(void)messModelArr{
@@ -95,9 +108,12 @@
     if (customCell==nil) {
         customCell=[[CustomTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:strId];
     }
-    [customCell setBackgroundColor:[UIColor colorWithRed:222.0/255.0f green:222.0/255.0f blue:221.0/255.0f alpha:1.0f]];
+    [customCell setBackgroundColor:BG_COLOR];
     customCell.selectionStyle=UITableViewCellSelectionStyleNone;
     customCell.frameModel=self.arrModelData[indexPath.row];
+//    if (self.arrModelData[indexPath.row][@"person"] == 0) {
+//        customCell.headImageView.image = [UIImage imageNamed:self.docImage];
+//    }
     return customCell;
 }
 
@@ -113,10 +129,11 @@
 -(void)dealKeyboardFrame:(NSNotification *)changeMess{
     NSDictionary *dicMess=changeMess.userInfo;//键盘改变的所有信息
     CGFloat changeTime=[dicMess[@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];//通过userInfo 这个字典得到对得到相应的信息//0.25秒后消失键盘
-    CGFloat keyboardMoveY=[dicMess[UIKeyboardFrameEndUserInfoKey]CGRectValue].origin.y-[UIScreen mainScreen].bounds.size.height;//键盘Y值的改变(字典里面的键UIKeyboardFrameEndUserInfoKey对应的值-屏幕自己的高度)
+    CGFloat keyboardMoveY=[dicMess[UIKeyboardFrameEndUserInfoKey]CGRectValue].origin.y;//键盘Y值的改变(字典里面的键UIKeyboardFrameEndUserInfoKey对应的值-屏幕自己的高度)
+    NSLog(@"%f",keyboardMoveY);
     [UIView animateWithDuration:changeTime animations:^{ //0.25秒之后改变tableView和bgView的Y轴
-        self.customTableView.transform=CGAffineTransformMakeTranslation(0, keyboardMoveY);
-        self.bgView.transform=CGAffineTransformMakeTranslation(0, keyboardMoveY);
+        self.customTableView.transform=CGAffineTransformMakeTranslation(0, 0);
+        self.bgView.transform=CGAffineTransformMakeTranslation(0, 0);
         
     }];
     NSIndexPath *path=[NSIndexPath indexPathForItem:self.arrModelData.count-1 inSection:0];
@@ -144,10 +161,10 @@
     NSString *nowTime=[forMatter stringFromDate:nowdate];
     
     NSMutableDictionary *dicValues=[NSMutableDictionary dictionary];
-    dicValues[@"imageName"]=@"girl";
+    dicValues[@"imageName"]=@"head_user";
     dicValues[@"desc"]=messValues;
     dicValues[@"time"]=nowTime; //当前的时间
-    dicValues[@"person"]=[NSNumber numberWithBool:0]; //转为Bool类型
+    dicValues[@"person"]=[NSNumber numberWithBool:1]; //转为Bool类型
     messModel *mess=[[messModel alloc]initWithModel:dicValues];
     modelFrame *frameModel=[modelFrame modelFrame:mess timeIsEqual:[self timeIsEqual:nowTime]]; //判断前后时候是否一致
     [self.arrModelData addObject:frameModel];
@@ -163,10 +180,10 @@
     
     //    NSLog(@"得到的时间是:%@",nowdate);
     NSMutableDictionary *dicAuto=[NSMutableDictionary dictionary];
-    dicAuto[@"imageName"]=@"boy";
+    dicAuto[@"imageName"]=self.docImage;
     dicAuto[@"desc"]=[arrayAutoData objectAtIndex:num];
     dicAuto[@"time"]=nowTime;
-    dicAuto[@"person"]=[NSNumber numberWithBool:1]; //转为Bool类型
+    dicAuto[@"person"]=[NSNumber numberWithBool:0]; //转为Bool类型
     messModel *messAuto=[[messModel alloc]initWithModel:dicAuto];
     modelFrame *frameModelAuto=[modelFrame modelFrame:messAuto timeIsEqual:[self timeIsEqual:nowTime]];//判断前后时候是否一致
     [self.arrModelData addObject:frameModelAuto];
@@ -185,4 +202,83 @@
     }
     return NO;
 }
+
+#pragma mark ButtonActiob
+
+- (void)camera{
+    UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+    }];
+    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+#if TARGET_IPHONE_SIMULATOR
+        //模拟器
+        UIAlertView *alerView=[[UIAlertView alloc]initWithTitle:@"提醒" message:@"请真机测试！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alerView show];
+#elif TARGET_OS_IPHONE
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.delegate = self;
+        imagePickerController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:([UIColor colorWithRed:231.0/255.0 green:56.0/255.0 blue:32.0/255.0 alpha:1.0]),NSForegroundColorAttributeName, nil];
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:imagePickerController animated:YES completion:^{}];
+#endif
+        
+        
+    }];
+    UIAlertAction *confirm2 = [UIAlertAction actionWithTitle:@"从手机相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        DPImagePickerVC *vc = [[DPImagePickerVC alloc]init];
+        vc.delegate = self;
+        vc.isDouble = NO;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+        
+    }];
+    [alertVc addAction:cancle];
+    [alertVc addAction:confirm];
+    [alertVc addAction:confirm2];
+    [self presentViewController:alertVc animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    //获得编辑过的图片
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage* image = [info objectForKey: @"UIImagePickerControllerEditedImage"];
+    
+    CGSize size = CGSizeMake(200, 200);
+    // 创建一个bitmap的context
+    // 并把它设置成为当前正在使用的context
+    UIGraphicsBeginImageContext(size);
+    // 绘制改变大小的图片
+    [image drawInRect:CGRectMake(0,0, size.width, size.height)];
+    // 从当前context中创建一个改变大小后的图片
+    UIImage* scaledImage =UIGraphicsGetImageFromCurrentImageContext();
+    //[_iconImageView setImage: scaledImage];
+    
+    
+    //NSData *data = UIImageJPEGRepresentation(scaledImage, 1.0f);
+    //_headImgBase64 = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
+    // 使当前的context出堆栈
+    UIGraphicsEndImageContext();
+    //isImageChange = 1;
+}
+
+#pragma mark -- DPImagePickerDelegate
+- (void)getCutImage:(UIImage *)image{
+    [self.navigationController popViewControllerAnimated:YES];
+    //self.imageV.image = image;
+    
+}
+
+- (void)getImageArray:(NSMutableArray *)arrayImage{
+    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"------------------%ld",arrayImage.count);
+    if (arrayImage.count !=0) {
+        //self.imageV.image = arrayImage[0];
+    }
+    
+}
+
+
 @end

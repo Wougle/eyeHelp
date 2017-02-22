@@ -10,4 +10,7 @@
 
 @interface ChatViewController : UIViewController
 
+@property (nonatomic, assign)NSString *docName;
+@property (nonatomic, assign)NSString *docImage;
+
 @end

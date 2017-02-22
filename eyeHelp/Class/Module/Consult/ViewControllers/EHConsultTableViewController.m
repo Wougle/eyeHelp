@@ -148,6 +148,8 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ChatViewController *vc = [[ChatViewController alloc] init];
+    vc.docName = _cellArr[indexPath.row][@"name"];
+    vc.docImage = _cellArr[indexPath.row][@"headImage"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark - UICollectionViewDataSource
