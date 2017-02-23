@@ -255,9 +255,9 @@
     UIImage* scaledImage =UIGraphicsGetImageFromCurrentImageContext();
     //[_iconImageView setImage: scaledImage];
     
-    
-    //NSData *data = UIImageJPEGRepresentation(scaledImage, 1.0f);
-    //_headImgBase64 = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+//    
+//    NSData *data = UIImageJPEGRepresentation(scaledImage, 1.0f);
+//    NSString *headImageBase64 = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
     
     // 使当前的context出堆栈
     UIGraphicsEndImageContext();
