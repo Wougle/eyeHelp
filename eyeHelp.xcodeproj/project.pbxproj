@@ -45,6 +45,10 @@
 		3C6BD2AC1E6115230027BE35 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2AB1E6115230027BE35 /* MineHeaderView.xib */; };
 		3C6BD2B01E6119100027BE35 /* EHMineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2AE1E6119100027BE35 /* EHMineTableViewCell.m */; };
 		3C6BD2B11E6119100027BE35 /* EHMineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2AF1E6119100027BE35 /* EHMineTableViewCell.xib */; };
+		3C6BD2B51E6121F20027BE35 /* ExercisePlanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2B31E6121F20027BE35 /* ExercisePlanTableViewController.m */; };
+		3C6BD2B61E6121F20027BE35 /* ExercisePlanTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2B41E6121F20027BE35 /* ExercisePlanTableViewController.xib */; };
+		3C6BD2BA1E6122100027BE35 /* ExercisePlanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2B81E6122100027BE35 /* ExercisePlanTableViewCell.m */; };
+		3C6BD2BB1E6122100027BE35 /* ExercisePlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2B91E6122100027BE35 /* ExercisePlanTableViewCell.xib */; };
 		3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */; };
 		3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */; };
 		3CA85F691E5D12FF00980746 /* messModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F661E5D12FF00980746 /* messModel.m */; };
@@ -165,6 +169,12 @@
 		3C6BD2AD1E6119100027BE35 /* EHMineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHMineTableViewCell.h; path = Class/Module/Mine/Views/EHMineTableViewCell.h; sourceTree = "<group>"; };
 		3C6BD2AE1E6119100027BE35 /* EHMineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHMineTableViewCell.m; path = Class/Module/Mine/Views/EHMineTableViewCell.m; sourceTree = "<group>"; };
 		3C6BD2AF1E6119100027BE35 /* EHMineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHMineTableViewCell.xib; path = Class/Module/Mine/Views/EHMineTableViewCell.xib; sourceTree = "<group>"; };
+		3C6BD2B21E6121F20027BE35 /* ExercisePlanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExercisePlanTableViewController.h; path = Class/Module/Mine/ViewControllers/ExercisePlanTableViewController.h; sourceTree = "<group>"; };
+		3C6BD2B31E6121F20027BE35 /* ExercisePlanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExercisePlanTableViewController.m; path = Class/Module/Mine/ViewControllers/ExercisePlanTableViewController.m; sourceTree = "<group>"; };
+		3C6BD2B41E6121F20027BE35 /* ExercisePlanTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExercisePlanTableViewController.xib; path = Class/Module/Mine/ViewControllers/ExercisePlanTableViewController.xib; sourceTree = "<group>"; };
+		3C6BD2B71E6122100027BE35 /* ExercisePlanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExercisePlanTableViewCell.h; path = Class/Module/Mine/Views/ExercisePlanTableViewCell.h; sourceTree = "<group>"; };
+		3C6BD2B81E6122100027BE35 /* ExercisePlanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExercisePlanTableViewCell.m; path = Class/Module/Mine/Views/ExercisePlanTableViewCell.m; sourceTree = "<group>"; };
+		3C6BD2B91E6122100027BE35 /* ExercisePlanTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExercisePlanTableViewCell.xib; path = Class/Module/Mine/Views/ExercisePlanTableViewCell.xib; sourceTree = "<group>"; };
 		3C98FA1D1E5C3B63008E300A /* EHVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHVideoViewController.h; path = Class/Module/Course/ViewControllers/EHVideoViewController.h; sourceTree = "<group>"; };
 		3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHVideoViewController.m; path = Class/Module/Course/ViewControllers/EHVideoViewController.m; sourceTree = "<group>"; };
 		3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHVideoViewController.xib; path = Class/Module/Course/ViewControllers/EHVideoViewController.xib; sourceTree = "<group>"; };
@@ -536,6 +546,9 @@
 				3C6248B11E5543CC00125670 /* EHMineTableViewController.h */,
 				3C6248B21E5543CC00125670 /* EHMineTableViewController.m */,
 				3C6248B31E5543CC00125670 /* EHMineTableViewController.xib */,
+				3C6BD2B21E6121F20027BE35 /* ExercisePlanTableViewController.h */,
+				3C6BD2B31E6121F20027BE35 /* ExercisePlanTableViewController.m */,
+				3C6BD2B41E6121F20027BE35 /* ExercisePlanTableViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -602,6 +615,9 @@
 				3C6BD2AD1E6119100027BE35 /* EHMineTableViewCell.h */,
 				3C6BD2AE1E6119100027BE35 /* EHMineTableViewCell.m */,
 				3C6BD2AF1E6119100027BE35 /* EHMineTableViewCell.xib */,
+				3C6BD2B71E6122100027BE35 /* ExercisePlanTableViewCell.h */,
+				3C6BD2B81E6122100027BE35 /* ExercisePlanTableViewCell.m */,
+				3C6BD2B91E6122100027BE35 /* ExercisePlanTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -826,6 +842,7 @@
 				3C62485C1E55346000125670 /* LaunchScreen.storyboard in Resources */,
 				3C6BD2AC1E6115230027BE35 /* MineHeaderView.xib in Resources */,
 				3CBE41D41E59BDA200C5414E /* EHConsultTableViewCell.xib in Resources */,
+				3C6BD2B61E6121F20027BE35 /* ExercisePlanTableViewController.xib in Resources */,
 				3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */,
 				3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */,
 				3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */,
@@ -839,6 +856,7 @@
 				3CF1BB561E56DA4B00A19245 /* EHScienceTableViewCell.xib in Resources */,
 				3C6248571E55346000125670 /* Main.storyboard in Resources */,
 				3CA85F6D1E5D130B00980746 /* dataPlist.plist in Resources */,
+				3C6BD2BB1E6122100027BE35 /* ExercisePlanTableViewCell.xib in Resources */,
 				3CF1BB5B1E5958BB00A19245 /* EHScreenViewController.xib in Resources */,
 				3CA85F761E5D136F00980746 /* ChatViewController.xib in Resources */,
 				3C6248B01E5543B900125670 /* EHConsultTableViewController.xib in Resources */,
@@ -1012,6 +1030,7 @@
 				3C6BD2431E5D66CE0027BE35 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				3CF1BB5A1E5958BB00A19245 /* EHScreenViewController.m in Sources */,
 				3C6BD2AA1E6115100027BE35 /* MineHeaderView.m in Sources */,
+				3C6BD2BA1E6122100027BE35 /* ExercisePlanTableViewCell.m in Sources */,
 				3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */,
 				3CA85F691E5D12FF00980746 /* messModel.m in Sources */,
 				3C30E2141E5A92760073F505 /* UIView+mySize.m in Sources */,
@@ -1031,6 +1050,7 @@
 				3CA85F751E5D136F00980746 /* ChatViewController.m in Sources */,
 				3C30E20F1E5A92760073F505 /* GraphBar.m in Sources */,
 				3C30E20E1E5A92760073F505 /* DashesLineView.m in Sources */,
+				3C6BD2B51E6121F20027BE35 /* ExercisePlanTableViewController.m in Sources */,
 				3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */,
 				3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */,
 				3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */,
