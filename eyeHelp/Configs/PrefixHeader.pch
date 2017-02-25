@@ -23,7 +23,7 @@
 #import "Enumeration.h"
 #import "KDCycleBannerView.h"
 #import "MBProgressHUD.h"
-#import "CustomTabBar.h"
+#import "EHTabBarViewController.h"
 #import "HcdCacheVideoPlayer.h"
-
+#import "HyperlinksButton.h"
 #endif /* PrefixHeader_pch */

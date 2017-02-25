@@ -10,6 +10,7 @@
 
 #import "LeftMenuViewDemo.h"
 #import "LeftMenuTableViewCell.h"
+
 static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 
 @interface LeftMenuViewDemo ()<UITableViewDataSource,UITableViewDelegate>{
@@ -72,6 +73,7 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
     addPlanBtn.titleLabel.font = [UIFont systemFontOfSize:12];//title字体大小
     addPlanBtn.titleLabel.textAlignment = NSTextAlignmentCenter;//设置title的字体居中
     [addPlanBtn setImage:[UIImage imageNamed:@"icon_edit"] forState:UIControlStateNormal];
+    [addPlanBtn addTarget:self action:@selector(addPlan) forControlEvents:UIControlEventTouchUpInside];
     [footerView addSubview:addPlanBtn];
 
     [self addSubview:footerView];
@@ -163,6 +165,10 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 }
 
 
+#pragma  mark - buttonAction
 
+- (void)addPlan{
+    [self.customDelegate LeftMenuViewClick:-1];
+}
 
 @end

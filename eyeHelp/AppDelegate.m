@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "CustomTabBarController.h"
-
+#import "EHTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -25,8 +24,8 @@
     [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName : THEME_COLOR};
     
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     // hide title of back button
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, 0)
                                                          forBarMetrics:UIBarMetricsDefault];
@@ -54,7 +53,7 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[CustomTabBarController alloc]init];
+    self.window.rootViewController = [[EHTabBarViewController alloc]init];
     [self.window makeKeyAndVisible];
     return YES;
 }

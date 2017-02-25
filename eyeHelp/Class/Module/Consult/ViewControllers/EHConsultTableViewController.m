@@ -150,7 +150,9 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
     ChatViewController *vc = [[ChatViewController alloc] init];
     vc.docName = _cellArr[indexPath.row][@"name"];
     vc.docImage = _cellArr[indexPath.row][@"headImage"];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -168,7 +170,9 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
     EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
     vc.type = EHConsult;
     vc.titleName = arr[indexPath.row];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

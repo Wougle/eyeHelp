@@ -80,7 +80,9 @@ static NSString *const kEHSciencTableViewCell = @"kEHSciencTableViewCell";
     NSLog(@"选中---%ld", indexPath.row);
     EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
     vc.type = EHScience;
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)setData{

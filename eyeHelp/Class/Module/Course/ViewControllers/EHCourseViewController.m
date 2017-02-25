@@ -14,6 +14,7 @@
 #import "EHCourseCollectionViewFlowLayout.h"
 #import "EHGraphicTextViewController.h"
 #import "EHVideoViewController.h"
+#import "QALeadViewController.h"
 #define MENU_BUTTON_WIDTH ViewWidth/3
 #define ViewWidth [[UIScreen mainScreen] bounds].size.width
 #define ViewHeight [[UIScreen mainScreen] bounds].size.height
@@ -145,10 +146,10 @@ HomeMenuViewDelegate>
 
 #pragma mark - UITableViewDataSource和UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
+    if (tableView.tag == 0) {
         return _graphyArr.count;
     }
-    else if(section == 1){
+    else if(tableView.tag == 1){
         return _videoArr.count;
     }
     else{
@@ -191,11 +192,15 @@ HomeMenuViewDelegate>
     if (self.state == EHGraphyState) {
         EHGraphicTextViewController *vc = [[EHGraphicTextViewController alloc] init];
         vc.type = EHCource;
+        self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     if (self.state == EHVideoState) {
         EHVideoViewController *vc = [[EHVideoViewController alloc] init];
+        self.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
 }
 
@@ -386,6 +391,10 @@ HomeMenuViewDelegate>
 
 -(void)LeftMenuViewClick:(NSInteger)tag{
     [self.menu hidenWithAnimation];
+    QALeadViewController *vc = [[QALeadViewController alloc] init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark --ButtonClick

@@ -98,7 +98,9 @@ static NSString *const kEHAdjustTableViewCell = @"kEHAdjustTableViewCell";
 #pragma mark - button action
 - (void)turnTo{
     EHChartViewViewController *vc = [[EHChartViewViewController alloc] init];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 #pragma mark - 设置label的富文本和内容

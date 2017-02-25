@@ -18,15 +18,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    UIView *sinaBar = [self.tabBarController.view viewWithTag:10086];
-    sinaBar.hidden = YES;
+//    UIView *sinaBar = [self.tabBarController.view viewWithTag:10086];
+//    sinaBar.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    UIView *sinaBar = [self.tabBarController.view viewWithTag:10086];
-    sinaBar.hidden = NO;
+//    UIView *sinaBar = [self.tabBarController.view viewWithTag:10086];
+//    sinaBar.hidden = NO;
     //    for (UIView *v in self.tabBarController) {
     //
     //    }
