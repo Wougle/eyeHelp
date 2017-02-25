@@ -7,22 +7,41 @@
 //
 
 #import "EHMineTableViewController.h"
+#import "MineHeaderView.h"
+#import "EHMineTableViewCell.h"
 
-@interface EHMineTableViewController ()
+
+static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
+
+@interface EHMineTableViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    NSArray *iconArr;
+    NSArray *titleArr;
+}
+
+@property (strong, nonatomic) MineHeaderView *mineHeaderViews;
 
 @end
 
 @implementation EHMineTableViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //[UIApplication sharedApplication].statusBarHidden = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    iconArr = @[@"icon_file",@"icon_plan_my",@"icon_like_my",@"icon_infor",@"icon_setting",@"icon_help"];
+    titleArr = @[@"个人资料",@"训练计划",@"我的收藏",@"消息通知",@"设置",@"关于我们"];
+    [self prepareView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的";
-    self.view.backgroundColor = [UIColor redColor];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //self.title = @"我的";
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,86 +49,92 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)prepareView{
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = Rgb2UIColor(243, 243, 243, 1.0);
+    
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MineHeaderView" owner:self options:nil];
+    self.mineHeaderViews = [nib objectAtIndex:0];
+    self.mineHeaderViews.frame = CGRectMake(0, 0, SCREEN_WIDTH, 300);
+    
+    self.mineHeaderViews.nickNameLabel.text = @"飞翔的小飞侠";
+    self.mineHeaderViews.leftEyeLabel.text = @"左眼：4.4";
+    self.mineHeaderViews.rightEyeLabel.text = @"右眼：4.7";
+    
+    self.tableView.tableHeaderView = self.mineHeaderViews;
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 1)];
+    view.backgroundColor = Rgb2UIColor(243, 243, 243, 1.0);
+    self.tableView.tableFooterView =view;
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return 6;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50.f;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    EHMineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kEHMineTableViewCell];
+    if (cell == nil) {
+        //通过xib的名称加载自定义的cell
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"EHMineTableViewCell" owner:self options:nil] lastObject];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.cellNameLabel.text = titleArr[indexPath.row];
+    cell.iconImageView.image = [UIImage imageNamed:iconArr[indexPath.row]];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    if (indexPath.section == 0) {
+//        if (indexPath.row == 0) {
+//            WordLibraryViewController *vc = [[WordLibraryViewController alloc] init];
+//            vc.wordType = 1;
+//            self.hidesBottomBarWhenPushed  = YES;
+//            [self.navigationController pushViewController:vc animated:YES];
+//            self.hidesBottomBarWhenPushed = NO;
+//        }
+//        else if (indexPath.row == 1){
+//            WordLibraryViewController *vc = [[WordLibraryViewController alloc] init];
+//            vc.wordType = 2;
+//            self.hidesBottomBarWhenPushed  = YES;
+//            [self.navigationController pushViewController:vc animated:YES];
+//            self.hidesBottomBarWhenPushed = NO;
+//        }
+//        else if (indexPath.row == 2){
+//            PEProgressViewController *vc = [[PEProgressViewController alloc] init];
+//            self.hidesBottomBarWhenPushed  = YES;
+//            [self.navigationController pushViewController:vc animated:YES];
+//            self.hidesBottomBarWhenPushed = NO;
+//        }
+//        else {
+//            PEMyLikeCommTableViewController *vc = [[PEMyLikeCommTableViewController alloc] init];
+//            self.hidesBottomBarWhenPushed  = YES;
+//            [self.navigationController pushViewController:vc animated:YES];
+//            self.hidesBottomBarWhenPushed = NO;
+//        }
+//    }
+//    else{
+//        PESettingTableViewController *vc = [[PESettingTableViewController alloc] init];
+//        self.hidesBottomBarWhenPushed  = YES;
+//        [self.navigationController pushViewController:vc animated:YES];
+//        self.hidesBottomBarWhenPushed = NO;
+//    }
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Table view delegate
-
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -41,6 +41,10 @@
 		3C6BD2431E5D66CE0027BE35 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD23E1E5D66CE0027BE35 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		3C6BD2441E5D66CE0027BE35 /* DPImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2401E5D66CE0027BE35 /* DPImagePickerVC.m */; };
 		3C6BD2451E5D66CE0027BE35 /* CameraCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2421E5D66CE0027BE35 /* CameraCollectionViewCell.m */; };
+		3C6BD2AA1E6115100027BE35 /* MineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2A91E6115100027BE35 /* MineHeaderView.m */; };
+		3C6BD2AC1E6115230027BE35 /* MineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2AB1E6115230027BE35 /* MineHeaderView.xib */; };
+		3C6BD2B01E6119100027BE35 /* EHMineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2AE1E6119100027BE35 /* EHMineTableViewCell.m */; };
+		3C6BD2B11E6119100027BE35 /* EHMineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2AF1E6119100027BE35 /* EHMineTableViewCell.xib */; };
 		3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */; };
 		3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */; };
 		3CA85F691E5D12FF00980746 /* messModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F661E5D12FF00980746 /* messModel.m */; };
@@ -155,6 +159,12 @@
 		3C6BD2401E5D66CE0027BE35 /* DPImagePickerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPImagePickerVC.m; path = Class/Module/Camera/DPImagePickerVC.m; sourceTree = "<group>"; };
 		3C6BD2411E5D66CE0027BE35 /* CameraCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraCollectionViewCell.h; path = Class/Module/Camera/CameraCollectionViewCell.h; sourceTree = "<group>"; };
 		3C6BD2421E5D66CE0027BE35 /* CameraCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraCollectionViewCell.m; path = Class/Module/Camera/CameraCollectionViewCell.m; sourceTree = "<group>"; };
+		3C6BD2A81E6115100027BE35 /* MineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineHeaderView.h; path = Class/Module/Mine/Views/MineHeaderView.h; sourceTree = "<group>"; };
+		3C6BD2A91E6115100027BE35 /* MineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineHeaderView.m; path = Class/Module/Mine/Views/MineHeaderView.m; sourceTree = "<group>"; };
+		3C6BD2AB1E6115230027BE35 /* MineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MineHeaderView.xib; path = Class/Module/Mine/Views/MineHeaderView.xib; sourceTree = "<group>"; };
+		3C6BD2AD1E6119100027BE35 /* EHMineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHMineTableViewCell.h; path = Class/Module/Mine/Views/EHMineTableViewCell.h; sourceTree = "<group>"; };
+		3C6BD2AE1E6119100027BE35 /* EHMineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHMineTableViewCell.m; path = Class/Module/Mine/Views/EHMineTableViewCell.m; sourceTree = "<group>"; };
+		3C6BD2AF1E6119100027BE35 /* EHMineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHMineTableViewCell.xib; path = Class/Module/Mine/Views/EHMineTableViewCell.xib; sourceTree = "<group>"; };
 		3C98FA1D1E5C3B63008E300A /* EHVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHVideoViewController.h; path = Class/Module/Course/ViewControllers/EHVideoViewController.h; sourceTree = "<group>"; };
 		3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHVideoViewController.m; path = Class/Module/Course/ViewControllers/EHVideoViewController.m; sourceTree = "<group>"; };
 		3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHVideoViewController.xib; path = Class/Module/Course/ViewControllers/EHVideoViewController.xib; sourceTree = "<group>"; };
@@ -586,6 +596,12 @@
 		3C62489C1E55427500125670 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C6BD2A81E6115100027BE35 /* MineHeaderView.h */,
+				3C6BD2A91E6115100027BE35 /* MineHeaderView.m */,
+				3C6BD2AB1E6115230027BE35 /* MineHeaderView.xib */,
+				3C6BD2AD1E6119100027BE35 /* EHMineTableViewCell.h */,
+				3C6BD2AE1E6119100027BE35 /* EHMineTableViewCell.m */,
+				3C6BD2AF1E6119100027BE35 /* EHMineTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -805,8 +821,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF1BB4E1E56C56000A19245 /* EHCourseCollectionViewCell.xib in Resources */,
+				3C6BD2B11E6119100027BE35 /* EHMineTableViewCell.xib in Resources */,
 				3CBE41CF1E59BA0E00C5414E /* EHConsultHeaderView.xib in Resources */,
 				3C62485C1E55346000125670 /* LaunchScreen.storyboard in Resources */,
+				3C6BD2AC1E6115230027BE35 /* MineHeaderView.xib in Resources */,
 				3CBE41D41E59BDA200C5414E /* EHConsultTableViewCell.xib in Resources */,
 				3C6248A61E55436F00125670 /* EHScienceTableViewController.xib in Resources */,
 				3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */,
@@ -993,6 +1011,7 @@
 				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
 				3C6BD2431E5D66CE0027BE35 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				3CF1BB5A1E5958BB00A19245 /* EHScreenViewController.m in Sources */,
+				3C6BD2AA1E6115100027BE35 /* MineHeaderView.m in Sources */,
 				3CF1BB351E55973E00A19245 /* LeftMenuViewDemo.m in Sources */,
 				3CA85F691E5D12FF00980746 /* messModel.m in Sources */,
 				3C30E2141E5A92760073F505 /* UIView+mySize.m in Sources */,
@@ -1000,6 +1019,7 @@
 				3C6248511E55346000125670 /* AppDelegate.m in Sources */,
 				3CF1BB2F1E5596C900A19245 /* MenuView.m in Sources */,
 				3C30E2101E5A92760073F505 /* GraphDot.m in Sources */,
+				3C6BD2B01E6119100027BE35 /* EHMineTableViewCell.m in Sources */,
 				3C6BD2451E5D66CE0027BE35 /* CameraCollectionViewCell.m in Sources */,
 				3C30E2181E5A92B80073F505 /* EHChartViewViewController.m in Sources */,
 				3CA85F711E5D131900980746 /* CustomTableViewCell.m in Sources */,

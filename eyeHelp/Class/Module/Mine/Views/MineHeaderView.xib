@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MineHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_mine" translatesAutoresizingMaskIntoConstraints="NO" id="ALH-DB-u64">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="Nro-PO-sVU">
+                    <rect key="frame" x="137" y="84" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="N1M-SB-0SP"/>
+                        <constraint firstAttribute="width" constant="100" id="Vzh-6C-bxG"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飞翔的小飞侠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzK-RC-Khr">
+                    <rect key="frame" x="135.5" y="204" width="104" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.098039215686274508" green="0.75294117647058822" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcj-Vn-jWS">
+                    <rect key="frame" x="114.5" y="254.5" width="26.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFI-YJ-H7a">
+                    <rect key="frame" x="234.5" y="254.5" width="26.5" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ALH-DB-u64" secondAttribute="trailing" id="3yi-WW-AvI"/>
+                <constraint firstItem="Nro-PO-sVU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7NR-Kn-Vx8"/>
+                <constraint firstItem="VzK-RC-Khr" firstAttribute="top" secondItem="Nro-PO-sVU" secondAttribute="bottom" constant="20" id="CU0-sd-tlZ"/>
+                <constraint firstItem="DFI-YJ-H7a" firstAttribute="centerX" secondItem="VzK-RC-Khr" secondAttribute="centerX" constant="60" id="Crd-V7-SJJ"/>
+                <constraint firstItem="Kcj-Vn-jWS" firstAttribute="centerX" secondItem="VzK-RC-Khr" secondAttribute="centerX" constant="-60" id="DGG-Zf-4iF"/>
+                <constraint firstItem="Nro-PO-sVU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="84" id="Ezk-Ec-I2B"/>
+                <constraint firstItem="DFI-YJ-H7a" firstAttribute="top" secondItem="VzK-RC-Khr" secondAttribute="bottom" constant="30" id="Yg9-9s-wcd"/>
+                <constraint firstItem="ALH-DB-u64" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Yr3-lI-deh"/>
+                <constraint firstItem="VzK-RC-Khr" firstAttribute="centerX" secondItem="Nro-PO-sVU" secondAttribute="centerX" id="Zpu-jX-OO4"/>
+                <constraint firstItem="ALH-DB-u64" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aTo-9S-Tkd"/>
+                <constraint firstItem="Kcj-Vn-jWS" firstAttribute="top" secondItem="VzK-RC-Khr" secondAttribute="bottom" constant="30" id="r7l-0d-3HP"/>
+                <constraint firstAttribute="bottom" secondItem="ALH-DB-u64" secondAttribute="bottom" id="zgk-5F-8mc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="baseImageView" destination="ALH-DB-u64" id="7ox-0u-Q0H"/>
+                <outlet property="headerImageView" destination="Nro-PO-sVU" id="itZ-GN-hFK"/>
+                <outlet property="leftEyeLabel" destination="Kcj-Vn-jWS" id="gfT-4z-llo"/>
+                <outlet property="nickNameLabel" destination="VzK-RC-Khr" id="Yfb-cr-SN0"/>
+                <outlet property="rightEyeLabel" destination="DFI-YJ-H7a" id="FLq-qM-V8a"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_mine" width="375" height="305"/>
+        <image name="head" width="100" height="100"/>
+    </resources>
+</document>
