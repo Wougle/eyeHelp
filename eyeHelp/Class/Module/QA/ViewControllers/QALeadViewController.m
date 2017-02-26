@@ -49,7 +49,9 @@
 
 - (void)begin{
     QAViewController *vc = [[QAViewController alloc] init];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (void)pass{

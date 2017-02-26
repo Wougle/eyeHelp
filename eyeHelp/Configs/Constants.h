@@ -24,6 +24,9 @@
 #define LINE_COLOR Rgb2UIColor(221, 221, 221, 1) // 线条颜色
 
 
+#define ALERT_TITLE @"EyeHelp"
+#define ALERT_TIME 1.5
+
 //size
 #define SCREEN_HEIGHT ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 

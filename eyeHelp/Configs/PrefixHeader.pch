@@ -26,4 +26,5 @@
 #import "EHTabBarViewController.h"
 #import "HcdCacheVideoPlayer.h"
 #import "HyperlinksButton.h"
+#import "UIAlertController+AutoHide.h"
 #endif /* PrefixHeader_pch */

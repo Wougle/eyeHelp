@@ -78,9 +78,36 @@ static NSString *const kLeftMenuTableViewCell = @"kLeftMenuTableViewCell";
 
     [self addSubview:footerView];
     
-    imageArr = @[@"icon_alarm",@"icon_list",@"icon_alarm",@"icon_list"];
-    amArr = @[@"9:00",@"大空骨的救赎",@"10:30",@"按摩护眼睛"];
-    pmArr = @[@"13:30",@"按摩护眼睛",@"16:00",@"大空骨的救赎"];
+    imageArr = @[@"icon_alarm",@"icon_list",@"icon_alarm",@"icon_list",@"icon_alarm",@"icon_list",@"icon_alarm",@"icon_list"];
+    int x = arc4random()%4;
+    int y = arc4random()%4;
+    if (x == 0) {
+        amArr = @[@"8:00",@"揉刮解眼疾",@"9:30",@"按摩护眼睛",@"11:00",@"魔芋眼贴"];
+    }
+    else if(x == 1){
+        amArr = @[@"8:00",@"大空骨的救赎",@"9:30",@"按摩护眼睛",@"11:00",@"揉刮解眼疾"];
+    }
+    else if(x == 2){
+        amArr = @[@"9:30",@"魔芋眼贴",@"11:00",@"揉刮解眼疾"];
+    }
+    else{
+        amArr = @[@"9:00",@"揉刮解眼疾",@"10:30",@"大空骨的救赎"];
+    }
+    
+    if (y == 0) {
+        pmArr = @[@"13:30",@"按摩护眼睛",@"15:00",@"大空骨的救赎",@"16:30",@"魔芋眼贴",];
+    }
+    else if(y == 1){
+        pmArr = @[@"13:30",@"按摩护眼睛",@"15:00",@"揉刮解眼疾",@"16:30",@"魔芋眼贴",];
+    }
+    else if(y == 2){
+        pmArr = @[@"13:30",@"魔芋眼贴",@"16:00",@"大空骨的救赎"];
+    }
+    else{
+        pmArr = @[@"13:30",@"大空骨的救赎",@"16:00",@"揉刮解眼疾"];
+    }
+    
+    
 }
 
 

@@ -12,7 +12,17 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [_checkBtn addTarget:self action:@selector(likeBtnAction) forControlEvents:UIControlEventTouchUpInside];
     // Initialization code
+}
+
+- (void)likeBtnAction{
+    if (_checkBtn.isSelected) {
+        [self.checkBtn setSelected:NO];
+    }
+    else{
+        [self.checkBtn setSelected:YES];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

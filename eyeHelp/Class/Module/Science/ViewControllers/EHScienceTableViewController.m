@@ -26,7 +26,6 @@ static NSString *const kEHSciencTableViewCell = @"kEHSciencTableViewCell";
     self.title = @"科普";
     [self setTableView];
     [self setNavigation];//导航栏设置
-    [self leftMenu];//侧滑
     [self setData];//数据
 }
 
@@ -150,6 +149,7 @@ static NSString *const kEHSciencTableViewCell = @"kEHSciencTableViewCell";
 
 #pragma mark --ButtonClick
 - (void)planBtn{
+    [self leftMenu];//侧滑
     [self.menu show];
 }
 

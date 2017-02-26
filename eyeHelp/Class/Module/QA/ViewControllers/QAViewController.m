@@ -15,7 +15,7 @@
 
 static NSString *const kQATableViewCell = @"kQATableViewCell";
 
-@interface QAViewController () <
+@interface QAViewController ()<
 UITableViewDataSource,
 UITableViewDelegate,
 UIScrollViewDelegate>
@@ -31,7 +31,13 @@ UIScrollViewDelegate>
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.navigationItem.hidesBackButton =YES;
     [self setData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.navigationItem.hidesBackButton =NO;
 }
 
 - (void)viewDidLoad {
@@ -55,9 +61,10 @@ UIScrollViewDelegate>
         menu.tag = i;
         [menu addTarget:self action:@selector(selectMenu:) forControlEvents:UIControlEventTouchUpInside];
         [_menuScrollView addSubview:menu];
+        _menuScrollView.hidden = YES;
     }
     [_menuScrollView setContentSize:CGSizeMake(MENU_BUTTON_WIDTH * _menuArray.count, _menuScrollView.frame.size.height)];
-    _menuScrollView.backgroundColor = [UIColor whiteColor];
+    _menuScrollView.backgroundColor = BG_COLOR;
     _menuBgView = [[UIView alloc]initWithFrame:CGRectMake(0, _menuScrollView.frame.size.height - 2, MENU_BUTTON_WIDTH, 2)];
     [_menuBgView setBackgroundColor:THEME_COLOR];
     [_menuScrollView addSubview:_menuBgView];
@@ -80,6 +87,7 @@ UIScrollViewDelegate>
         tableView.dataSource = self;
         tableView.separatorStyle = NO;
         tableView.tag = 2000+i;
+        tableView.backgroundColor = BG_COLOR;
         [_tableViewArray addObject:tableView];
         [scrollView addSubview:tableView];
     }
@@ -104,6 +112,10 @@ UIScrollViewDelegate>
 }
 
 #pragma mark - UITableViewDataSource和UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView.tag == 2000) {
         return _qustArr1.count;
@@ -141,7 +153,114 @@ UIScrollViewDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"选中---%ld", indexPath.row);
+    if (tableView.tag == 2000 || tableView.tag == 2001) {
+        NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
+        QATableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        if (cell.checkBtn.isSelected) {
+            [cell.checkBtn setSelected:NO];
+        }
+        else{
+            [cell.checkBtn setSelected:YES];
+        }
+    }
+    
+    
 
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    if (tableView.tag == 2000 || tableView.tag == 2001) {
+        return 60.0f;
+    }
+    return CGFLOAT_MIN;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    if (tableView.tag == 2000 || tableView.tag == 2001) {
+        return 200.0f;
+    }
+    return CGFLOAT_MIN;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+        view.backgroundColor = BG_COLOR;
+        UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH-20, 60)];
+        subView.backgroundColor = [UIColor whiteColor];
+        [view addSubview:subView];
+        
+        //设置圆角
+        UIBezierPath * maskPath = [UIBezierPath bezierPathWithRoundedRect:subView.bounds byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(10, 10)];
+        
+        CAShapeLayer * maskLayer = [[CAShapeLayer alloc]init];
+        
+        maskLayer.frame = subView.bounds;
+        
+        maskLayer.path = maskPath.CGPath;
+        
+        subView.layer.mask = maskLayer;
+        
+        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 18, SCREEN_WIDTH-30, 20)];
+        nameLabel.font = [UIFont systemFontOfSize:16.0f];
+        nameLabel.textColor = THEME_COLOR;
+        if (tableView.tag == 2000) {
+            nameLabel.text = @"你是否有以下生活习惯";
+        }
+        else{
+            nameLabel.text = @"你是否有如下现象";
+        }
+        [subView addSubview:nameLabel];
+        
+        return view;
+    }
+    return nil;
+}
+
+- (nullable UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    if (section == 0) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+        view.backgroundColor = BG_COLOR;
+        UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH-20, 10)];
+        subView.backgroundColor = [UIColor whiteColor];
+        [view addSubview:subView];
+        
+        UIBezierPath * maskPath = [UIBezierPath bezierPathWithRoundedRect:subView.bounds byRoundingCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadii:CGSizeMake(10, 10)];
+        
+        CAShapeLayer * maskLayer = [[CAShapeLayer alloc]init];
+        
+        maskLayer.frame = subView.bounds;
+        
+        maskLayer.path = maskPath.CGPath;
+        
+        subView.layer.mask = maskLayer;
+        
+        if (tableView.tag == 2000) {
+            UIButton *nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, SCREEN_WIDTH - 20, 40)];
+            nextBtn.backgroundColor = THEME_COLOR;
+            nextBtn.layer.cornerRadius = 5.0f;
+            nextBtn.layer.masksToBounds = YES;
+            [nextBtn setTitle:@"下一题" forState:UIControlStateNormal];
+            [nextBtn setTintColor:[UIColor whiteColor]];
+            [nextBtn addTarget:self action:@selector(next1) forControlEvents:UIControlEventTouchUpInside];
+            [view addSubview:nextBtn];
+        }
+        else{
+            UIButton *nextBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, SCREEN_WIDTH - 20, 40)];
+            nextBtn.backgroundColor = THEME_COLOR;
+            nextBtn.layer.cornerRadius = 5.0f;
+            nextBtn.layer.masksToBounds = YES;
+            [nextBtn setTitle:@"提交" forState:UIControlStateNormal];
+            [nextBtn setTintColor:[UIColor whiteColor]];
+            [nextBtn addTarget:self action:@selector(next2) forControlEvents:UIControlEventTouchUpInside];
+            [view addSubview:nextBtn];
+
+        }
+        return view;
+    }
+    return nil;
 }
 
 
@@ -180,9 +299,20 @@ UIScrollViewDelegate>
     // Dispose of any resources that can be recreated.
 }
 
+- (void)next1{
+    [_scrollView setContentOffset:CGPointMake(ViewWidth * 1, 0) animated:YES];
+    float xx = ViewWidth * (1 - 1) * (MENU_BUTTON_WIDTH / ViewWidth) - MENU_BUTTON_WIDTH;
+    [_menuScrollView scrollRectToVisible:CGRectMake(xx, 0, ViewWidth, _menuScrollView.frame.size.height) animated:YES];
+    [self refreshTableView:(int)1];
+}
+
+- (void)next2{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (void)setData{
-    _qustArr1 = @[@"1",@"1",@"1",@"1",@"1",@"1",@"1"];
-    _qustArr2 = @[@"1",@"1",@"2",@"1",@"1",@"1",@"1"];
+    _qustArr1 = @[@"每天面对屏幕超过4小时",@"阅读姿势不对（床上，车上）",@"经常熬夜",@"经常揉眼睛",@"每周超过5天戴隐形眼镜",@"常用眼药水",@"经常发生颈肩不适",@"屈光不正（近视，远视，花眼）",@"思虑过度或压力大"];
+    _qustArr2 = @[@"过度用眼会流泪",@"看东西久了不想睁眼",@"常常觉得眼睛干涩",@"眼睛容易发痒",@"眼睛容易有血丝，而且难消除",@"经常眼球肿胀",@"最近视力有些下降",@"经常眼屎多",@"常常觉得眼睛有灼热感",@"比别人怕光",@"眼睛不舒服时伴有眉骨痛",@"经常觉得视野有漂浮物",@"经常迎风流泪",@"用眼后感觉事物模糊",@"常常觉得眼中有异物"];
 }
 
 

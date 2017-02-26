@@ -64,7 +64,7 @@ HomeMenuViewDelegate>
     self.state = EHGraphyState;
     [self refreshTableView:0];
     [self setNavigation];//导航栏设置
-    [self leftMenu];//侧滑
+    
 }
 
 - (void)createMenu {
@@ -399,6 +399,7 @@ HomeMenuViewDelegate>
 
 #pragma mark --ButtonClick
 - (void)planBtn{
+    [self leftMenu];//侧滑
     [self.menu show];
 }
 

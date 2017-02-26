@@ -43,8 +43,6 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
     
     [self setNavigation];//导航栏设置
     
-    [self leftMenu];//侧滑
-    
     [self prepareHomeTableViewHeader];
     
     [self setCollection];
@@ -260,6 +258,8 @@ static NSString *const kEHConsultTableViewCell = @"kEHConsultTableViewCell";
 
 #pragma mark --ButtonClick
 - (void)planBtn{
+    
+    [self leftMenu];//侧滑
     [self.menu show];
 }
 
