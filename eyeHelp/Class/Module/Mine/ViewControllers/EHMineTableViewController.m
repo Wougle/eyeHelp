@@ -10,8 +10,9 @@
 #import "MineHeaderView.h"
 #import "EHMineTableViewCell.h"
 
+#import "EHPersonalDataTableViewController.h"
 #import "ExercisePlanTableViewController.h"
-
+#import "SettingTableViewController.h"
 static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
 
 @interface EHMineTableViewController ()<UITableViewDelegate,UITableViewDataSource>{
@@ -103,11 +104,11 @@ static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
-        //            WordLibraryViewController *vc = [[WordLibraryViewController alloc] init];
-        //            vc.wordType = 1;
-        //            self.hidesBottomBarWhenPushed  = YES;
-        //            [self.navigationController pushViewController:vc animated:YES];
-        //            self.hidesBottomBarWhenPushed = NO;
+        EHPersonalDataTableViewController *vc = [[EHPersonalDataTableViewController alloc] init];
+        vc.titleName = titleArr[indexPath.row];
+        self.hidesBottomBarWhenPushed  = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     else if (indexPath.row == 1){
         ExercisePlanTableViewController *vc = [[ExercisePlanTableViewController alloc] init];
@@ -122,12 +123,21 @@ static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
         //            [self.navigationController pushViewController:vc animated:YES];
         //            self.hidesBottomBarWhenPushed = NO;
     }
-    else {
-        //            PEMyLikeCommTableViewController *vc = [[PEMyLikeCommTableViewController alloc] init];
+    else if (indexPath.row == 3){
+        //            PEProgressViewController *vc = [[PEProgressViewController alloc] init];
         //            self.hidesBottomBarWhenPushed  = YES;
         //            [self.navigationController pushViewController:vc animated:YES];
         //            self.hidesBottomBarWhenPushed = NO;
     }
+    else if (indexPath.row == 4){
+        SettingTableViewController *vc = [[SettingTableViewController alloc] init];
+        vc.titleName = titleArr[indexPath.row];
+        self.hidesBottomBarWhenPushed  = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
+    }
+    else {
+            }
 }
 
 @end

@@ -56,6 +56,14 @@
 		3C6BD2DB1E6156810027BE35 /* EHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2D91E6156810027BE35 /* EHTabBarViewController.m */; };
 		3C6BD2DC1E6156810027BE35 /* EHTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2DA1E6156810027BE35 /* EHTabBarViewController.xib */; };
 		3C6BD2E01E62A16E0027BE35 /* UIAlertController+AutoHide.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2DF1E62A16E0027BE35 /* UIAlertController+AutoHide.m */; };
+		3C6BD2E41E62A5830027BE35 /* PersonalDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2E21E62A5830027BE35 /* PersonalDataTableViewCell.m */; };
+		3C6BD2E51E62A5830027BE35 /* PersonalDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2E31E62A5830027BE35 /* PersonalDataTableViewCell.xib */; };
+		3C6BD2E91E62A6FC0027BE35 /* EHPersonalDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2E71E62A6FC0027BE35 /* EHPersonalDataTableViewController.m */; };
+		3C6BD2EA1E62A6FC0027BE35 /* EHPersonalDataTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2E81E62A6FC0027BE35 /* EHPersonalDataTableViewController.xib */; };
+		3C6BD2EE1E62B0080027BE35 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2EC1E62B0080027BE35 /* SettingTableViewCell.m */; };
+		3C6BD2EF1E62B0080027BE35 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2ED1E62B0080027BE35 /* SettingTableViewCell.xib */; };
+		3C6BD2F31E62B1210027BE35 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2F11E62B1210027BE35 /* SettingTableViewController.m */; };
+		3C6BD2F41E62B1210027BE35 /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2F21E62B1210027BE35 /* SettingTableViewController.xib */; };
 		3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */; };
 		3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */; };
 		3CA85F691E5D12FF00980746 /* messModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F661E5D12FF00980746 /* messModel.m */; };
@@ -192,6 +200,18 @@
 		3C6BD2DA1E6156810027BE35 /* EHTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHTabBarViewController.xib; path = Class/Base/EHTabBarViewController.xib; sourceTree = "<group>"; };
 		3C6BD2DE1E62A16E0027BE35 /* UIAlertController+AutoHide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+AutoHide.h"; path = "Category/ALERT/UIAlertController+AutoHide.h"; sourceTree = "<group>"; };
 		3C6BD2DF1E62A16E0027BE35 /* UIAlertController+AutoHide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+AutoHide.m"; path = "Category/ALERT/UIAlertController+AutoHide.m"; sourceTree = "<group>"; };
+		3C6BD2E11E62A5830027BE35 /* PersonalDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalDataTableViewCell.h; path = Class/Module/Mine/Views/PersonalDataTableViewCell.h; sourceTree = "<group>"; };
+		3C6BD2E21E62A5830027BE35 /* PersonalDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalDataTableViewCell.m; path = Class/Module/Mine/Views/PersonalDataTableViewCell.m; sourceTree = "<group>"; };
+		3C6BD2E31E62A5830027BE35 /* PersonalDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonalDataTableViewCell.xib; path = Class/Module/Mine/Views/PersonalDataTableViewCell.xib; sourceTree = "<group>"; };
+		3C6BD2E61E62A6FC0027BE35 /* EHPersonalDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHPersonalDataTableViewController.h; path = Class/Module/Mine/ViewControllers/EHPersonalDataTableViewController.h; sourceTree = "<group>"; };
+		3C6BD2E71E62A6FC0027BE35 /* EHPersonalDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHPersonalDataTableViewController.m; path = Class/Module/Mine/ViewControllers/EHPersonalDataTableViewController.m; sourceTree = "<group>"; };
+		3C6BD2E81E62A6FC0027BE35 /* EHPersonalDataTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHPersonalDataTableViewController.xib; path = Class/Module/Mine/ViewControllers/EHPersonalDataTableViewController.xib; sourceTree = "<group>"; };
+		3C6BD2EB1E62B0080027BE35 /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewCell.h; path = Class/Module/Mine/Views/SettingTableViewCell.h; sourceTree = "<group>"; };
+		3C6BD2EC1E62B0080027BE35 /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewCell.m; path = Class/Module/Mine/Views/SettingTableViewCell.m; sourceTree = "<group>"; };
+		3C6BD2ED1E62B0080027BE35 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingTableViewCell.xib; path = Class/Module/Mine/Views/SettingTableViewCell.xib; sourceTree = "<group>"; };
+		3C6BD2F01E62B1210027BE35 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewController.h; path = Class/Module/Mine/ViewControllers/SettingTableViewController.h; sourceTree = "<group>"; };
+		3C6BD2F11E62B1210027BE35 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewController.m; path = Class/Module/Mine/ViewControllers/SettingTableViewController.m; sourceTree = "<group>"; };
+		3C6BD2F21E62B1210027BE35 /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingTableViewController.xib; path = Class/Module/Mine/ViewControllers/SettingTableViewController.xib; sourceTree = "<group>"; };
 		3C98FA1D1E5C3B63008E300A /* EHVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHVideoViewController.h; path = Class/Module/Course/ViewControllers/EHVideoViewController.h; sourceTree = "<group>"; };
 		3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHVideoViewController.m; path = Class/Module/Course/ViewControllers/EHVideoViewController.m; sourceTree = "<group>"; };
 		3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHVideoViewController.xib; path = Class/Module/Course/ViewControllers/EHVideoViewController.xib; sourceTree = "<group>"; };
@@ -566,6 +586,12 @@
 				3C6BD2B21E6121F20027BE35 /* ExercisePlanTableViewController.h */,
 				3C6BD2B31E6121F20027BE35 /* ExercisePlanTableViewController.m */,
 				3C6BD2B41E6121F20027BE35 /* ExercisePlanTableViewController.xib */,
+				3C6BD2E61E62A6FC0027BE35 /* EHPersonalDataTableViewController.h */,
+				3C6BD2E71E62A6FC0027BE35 /* EHPersonalDataTableViewController.m */,
+				3C6BD2E81E62A6FC0027BE35 /* EHPersonalDataTableViewController.xib */,
+				3C6BD2F01E62B1210027BE35 /* SettingTableViewController.h */,
+				3C6BD2F11E62B1210027BE35 /* SettingTableViewController.m */,
+				3C6BD2F21E62B1210027BE35 /* SettingTableViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -635,6 +661,12 @@
 				3C6BD2B71E6122100027BE35 /* ExercisePlanTableViewCell.h */,
 				3C6BD2B81E6122100027BE35 /* ExercisePlanTableViewCell.m */,
 				3C6BD2B91E6122100027BE35 /* ExercisePlanTableViewCell.xib */,
+				3C6BD2E11E62A5830027BE35 /* PersonalDataTableViewCell.h */,
+				3C6BD2E21E62A5830027BE35 /* PersonalDataTableViewCell.m */,
+				3C6BD2E31E62A5830027BE35 /* PersonalDataTableViewCell.xib */,
+				3C6BD2EB1E62B0080027BE35 /* SettingTableViewCell.h */,
+				3C6BD2EC1E62B0080027BE35 /* SettingTableViewCell.m */,
+				3C6BD2ED1E62B0080027BE35 /* SettingTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -913,6 +945,7 @@
 			files = (
 				3CF1BB4E1E56C56000A19245 /* EHCourseCollectionViewCell.xib in Resources */,
 				3C6BD2B11E6119100027BE35 /* EHMineTableViewCell.xib in Resources */,
+				3C6BD2EF1E62B0080027BE35 /* SettingTableViewCell.xib in Resources */,
 				3CBE41CF1E59BA0E00C5414E /* EHConsultHeaderView.xib in Resources */,
 				3C62485C1E55346000125670 /* LaunchScreen.storyboard in Resources */,
 				3C6BD2AC1E6115230027BE35 /* MineHeaderView.xib in Resources */,
@@ -930,6 +963,9 @@
 				3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */,
 				3C6248B51E5543CC00125670 /* EHMineTableViewController.xib in Resources */,
 				3C6248591E55346000125670 /* Assets.xcassets in Resources */,
+				3C6BD2F41E62B1210027BE35 /* SettingTableViewController.xib in Resources */,
+				3C6BD2E51E62A5830027BE35 /* PersonalDataTableViewCell.xib in Resources */,
+				3C6BD2EA1E62A6FC0027BE35 /* EHPersonalDataTableViewController.xib in Resources */,
 				3CF1BB3F1E569D5D00A19245 /* EHGraphicTableViewCell.xib in Resources */,
 				3CF1BB561E56DA4B00A19245 /* EHScienceTableViewCell.xib in Resources */,
 				3C6248571E55346000125670 /* Main.storyboard in Resources */,
@@ -1101,13 +1137,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6BD2EE1E62B0080027BE35 /* SettingTableViewCell.m in Sources */,
 				3CF1BB5F1E595B8000A19245 /* VWaterView.m in Sources */,
 				3CA85F6E1E5D130B00980746 /* Foundation+Log.m in Sources */,
 				3CF1BB4D1E56C56000A19245 /* EHCourseCollectionViewCell.m in Sources */,
+				3C6BD2F31E62B1210027BE35 /* SettingTableViewController.m in Sources */,
 				3C6BD2DB1E6156810027BE35 /* EHTabBarViewController.m in Sources */,
 				3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */,
 				3C6BD2E01E62A16E0027BE35 /* UIAlertController+AutoHide.m in Sources */,
 				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
+				3C6BD2E41E62A5830027BE35 /* PersonalDataTableViewCell.m in Sources */,
 				3C6BD2431E5D66CE0027BE35 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				3CF1BB5A1E5958BB00A19245 /* EHScreenViewController.m in Sources */,
 				3C6BD2AA1E6115100027BE35 /* MineHeaderView.m in Sources */,
@@ -1129,6 +1168,7 @@
 				3C30E2111E5A92760073F505 /* GraphLine.m in Sources */,
 				3C6248A51E55436F00125670 /* EHScienceTableViewController.m in Sources */,
 				3CA85F751E5D136F00980746 /* ChatViewController.m in Sources */,
+				3C6BD2E91E62A6FC0027BE35 /* EHPersonalDataTableViewController.m in Sources */,
 				3C30E20F1E5A92760073F505 /* GraphBar.m in Sources */,
 				3C30E20E1E5A92760073F505 /* DashesLineView.m in Sources */,
 				3C6BD2B51E6121F20027BE35 /* ExercisePlanTableViewController.m in Sources */,
