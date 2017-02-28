@@ -48,7 +48,6 @@ static NSString *const kSettingTabelViewCell = @"kSettingTabelViewCell";
     [nextBtn setTintColor:[UIColor whiteColor]];
     [nextBtn addTarget:self action:@selector(quit) forControlEvents:UIControlEventTouchUpInside];
     [self.tableView addSubview:nextBtn];
-
 }
 
 - (void)quit{

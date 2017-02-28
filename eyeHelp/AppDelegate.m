@@ -50,7 +50,7 @@
     
     [self setNaviBack];
 
-    
+    /*********************** 初始化配置 ***************************/
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[EHTabBarViewController alloc]init];

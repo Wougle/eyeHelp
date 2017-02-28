@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="height" constant="155" id="Dfo-8E-xjw"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_play" translatesAutoresizingMaskIntoConstraints="NO" id="AII-hF-1Rd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_play" translatesAutoresizingMaskIntoConstraints="NO" id="AII-hF-1Rd">
                                 <rect key="frame" x="112" y="47" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="X9C-2n-hmw"/>
@@ -119,9 +119,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="btn_play" width="50" height="50"/>
         <image name="icon_likedv_no" width="40" height="40"/>
         <image name="icon_likedv_yes" width="40" height="40"/>
+        <image name="icon_play" width="64" height="64"/>
         <image name="icon_plus" width="16" height="16"/>
         <image name="icon_time" width="16" height="16"/>
     </resources>

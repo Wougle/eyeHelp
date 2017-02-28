@@ -41,6 +41,9 @@
     
     self.title = @"一周记录";
     
+    self.maxTimeLabel.text = @"6小时29分钟";
+    self.tiredTimeLabel.text = @"6次";
+    
     [self setGraphView];
     
     UIImageView *buttonImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 207, SCREEN_WIDTH-20, 8)];
