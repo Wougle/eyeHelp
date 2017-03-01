@@ -157,7 +157,7 @@ static NSString *const kSettingTabelViewCell = @"kSettingTabelViewCell";
     UISwitch *switchButton = (UISwitch*)sender;
     BOOL isButtonOn = [switchButton isOn];
     if (isButtonOn) {
-        [UserDefaultsUtils saveValue:@1 forKey:@"tried"];
+        [UserDefaultsUtils saveValue:@1 forKey:@"tired"];
     }else {
         [UserDefaultsUtils saveValue:@0 forKey:@"tired"];
     }
