@@ -21,6 +21,7 @@ static NSString *const kSettingTabelViewCell = @"kSettingTabelViewCell";
     self.title = self.titleName;
     [self prepareView];
     [self setBtn];
+    [self addNotification];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +55,35 @@ static NSString *const kSettingTabelViewCell = @"kSettingTabelViewCell";
     
 }
 
+- (void)addNotification{
+    //如果通知已开启
+    if ([[UserDefaultsUtils valueWithKey:@"tired"] isEqual:@1]) {
+        //创建一条通知
+        UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+        content.title = @"您有一条新的通知";
+        content.subtitle = @"Eye Help的疲劳通知";
+        content.body = @"您已进入视疲劳状态，请注意休息";
+        content.badge = @1;
+        UNNotificationSound *sound = [UNNotificationSound soundNamed:@"caodi.m4a"];
+        content.sound = sound;
+        
+        UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:3600 repeats:NO];
+        
+        //添加通知
+        NSString *requestIdentifier = @"sampleRequest"
+        ;
+        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requestIdentifier
+                                                                              content:content
+                                                                              trigger:trigger];
+        [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+            
+        }];
+    }
+    
+}
+
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -77,9 +107,23 @@ static NSString *const kSettingTabelViewCell = @"kSettingTabelViewCell";
     }
     if (indexPath.row == 0) {
         cell.titleTextLabel.text = @"训练定时提醒";
+        if ([[UserDefaultsUtils valueWithKey:@"exercise"]  isEqual: @1]) {
+            [cell.baseSwitch setOn:YES];
+        }
+        else{
+            [cell.baseSwitch setOn:NO];
+        }
+        [cell.baseSwitch addTarget:self action:@selector(switchAction1:) forControlEvents:UIControlEventTouchUpInside];
     }
     else{
         cell.titleTextLabel.text = @"视疲劳提醒";
+        if ([[UserDefaultsUtils valueWithKey:@"tired"]  isEqual: @1]) {
+            [cell.baseSwitch setOn:YES];
+        }
+        else{
+            [cell.baseSwitch setOn:NO];
+        }
+        [cell.baseSwitch addTarget:self action:@selector(switchAction2:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return cell;
@@ -94,6 +138,30 @@ static NSString *const kSettingTabelViewCell = @"kSettingTabelViewCell";
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 20)];
     view.backgroundColor = BG_COLOR;
     return  view;
+}
+
+#pragma mark - buttonAction
+
+- (void)switchAction1:(id)sender{
+    UISwitch *switchButton = (UISwitch*)sender;
+    BOOL isButtonOn = [switchButton isOn];
+    if (isButtonOn) {
+        [UserDefaultsUtils saveValue:@1 forKey:@"exercise"];
+    }else {
+        [UserDefaultsUtils saveValue:@0 forKey:@"exercise"];
+    }
+    
+}
+
+- (void)switchAction2:(id)sender{
+    UISwitch *switchButton = (UISwitch*)sender;
+    BOOL isButtonOn = [switchButton isOn];
+    if (isButtonOn) {
+        [UserDefaultsUtils saveValue:@1 forKey:@"tried"];
+    }else {
+        [UserDefaultsUtils saveValue:@0 forKey:@"tired"];
+    }
+    [self addNotification];
 }
 
 @end

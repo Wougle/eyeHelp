@@ -26,6 +26,23 @@ static NSString *const kExercisePlanTableViewCell = @"kExercisePlanTableViewCell
     [super viewDidLoad];
     self.title = self.vcTitle;
     
+    [self setData];
+    
+    //如果通知已开启
+    if ([[UserDefaultsUtils valueWithKey:@"exercise"] isEqual:@1]) {
+        [self addNotification];
+    }
+    
+    [self prepareView];
+    [self setNavigation];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)setData{
     if ([UserDefaultsUtils valueWithKey:@"amArr"] == nil) {
         iconArr = @[@"9:30",@"11:00",@"13:30",@"16:00"];
         titleArr = @[@"魔芋眼贴",@"揉刮解眼疾",@"魔芋眼贴",@"大空骨的救赎"];
@@ -47,15 +64,6 @@ static NSString *const kExercisePlanTableViewCell = @"kExercisePlanTableViewCell
         iconArr = @[@"8:00",@"9:30",@"11:00",@"13:30",@"15:30",@"16:00"];
         titleArr = @[@"揉刮解眼疾",@"按摩护眼睛",@"魔芋眼贴",@"按摩护眼睛",@"揉刮解眼疾",@"魔芋眼贴"];
     }
-    
-    [self prepareView];
-    [self addNotification];
-    [self setNavigation];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)setNavigation{
@@ -85,7 +93,7 @@ static NSString *const kExercisePlanTableViewCell = @"kExercisePlanTableViewCell
 //        components.hour = 8;
 //        UNCalendarNotificationTrigger *trigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:components repeats:YES];
         
-        //添加
+        //添加通知
         NSString *requestIdentifier = [NSString stringWithFormat:@"sampleRequest%lu",(unsigned long)iconArr.count]
         ;
         UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:requestIdentifier
