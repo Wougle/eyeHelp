@@ -10,6 +10,7 @@
 #import "PersonalDataTableViewCell.h"
 #import "DPImagePickerVC.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "ModifyViewController.h"
 
 static NSString *const kPersonalDataTableViewCell = @"kPersonalDataTableViewCell";
 @interface EHPersonalDataTableViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate,DPImagePickerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
@@ -93,12 +94,30 @@ static NSString *const kPersonalDataTableViewCell = @"kPersonalDataTableViewCell
         [self camera];
     }
     else if (indexPath.row == 1){
-        
+        ModifyViewController *vc = [[ModifyViewController alloc] init];
+        vc.titleNameStr = @"修改昵称";
+        vc.type = 1;
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else if (indexPath.row == 2){
-        
+        ModifyViewController *vc = [[ModifyViewController alloc] init];
+        vc.titleNameStr = @"修改手机号";
+        vc.type = 2;
+        [self.navigationController pushViewController:vc animated:YES];
     }
-    else {
+    else if (indexPath.row == 3){
+        ModifyViewController *vc = [[ModifyViewController alloc] init];
+        vc.titleNameStr = @"修改密码";
+        vc.type = 3;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.row == 4){
+        ModifyViewController *vc = [[ModifyViewController alloc] init];
+        vc.titleNameStr = @"修改视力";
+        vc.type = 4;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else{
         
     }
 }
