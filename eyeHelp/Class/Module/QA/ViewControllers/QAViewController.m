@@ -18,7 +18,9 @@ static NSString *const kQATableViewCell = @"kQATableViewCell";
 @interface QAViewController ()<
 UITableViewDataSource,
 UITableViewDelegate,
-UIScrollViewDelegate>
+UIScrollViewDelegate>{
+    int count;
+}
 
 /** 图文的数据 */
 @property(nonatomic,strong)NSArray *qustArr1;
@@ -153,6 +155,7 @@ UIScrollViewDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"选中---%ld", indexPath.row);
+    count ++;
     if (tableView.tag == 2000 || tableView.tag == 2001) {
         NSIndexPath *indexPath = [tableView indexPathForSelectedRow];
         QATableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
@@ -163,8 +166,6 @@ UIScrollViewDelegate>
             [cell.checkBtn setSelected:YES];
         }
     }
-    
-    
 
 }
 
@@ -307,10 +308,31 @@ UIScrollViewDelegate>
 }
 
 - (void)next2{
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+    if (count == 0) {
+        
+    }
+    else if(count <= 5 && count >= 1) {
+        [UserDefaultsUtils saveValue:@"1" forKey:@"amArr"];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    else if(count >= 6 && count < 9){
+        [UserDefaultsUtils saveValue:@"2" forKey:@"amArr"];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    else if(count >= 9 && count <= 12){
+        [UserDefaultsUtils saveValue:@"3" forKey:@"amArr"];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    else{
+        [UserDefaultsUtils saveValue:@"4" forKey:@"amArr"];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
 }
 
 - (void)setData{
+    count = 0;
     _qustArr1 = @[@"每天面对屏幕超过4小时",@"阅读姿势不对（床上，车上）",@"经常熬夜",@"经常揉眼睛",@"每周超过5天戴隐形眼镜",@"常用眼药水",@"经常发生颈肩不适",@"屈光不正（近视，远视，花眼）",@"思虑过度或压力大"];
     _qustArr2 = @[@"过度用眼会流泪",@"看东西久了不想睁眼",@"常常觉得眼睛干涩",@"眼睛容易发痒",@"眼睛容易有血丝，而且难消除",@"经常眼球肿胀",@"最近视力有些下降",@"经常眼屎多",@"常常觉得眼睛有灼热感",@"比别人怕光",@"眼睛不舒服时伴有眉骨痛",@"经常觉得视野有漂浮物",@"经常迎风流泪",@"用眼后感觉事物模糊",@"常常觉得眼中有异物"];
 }

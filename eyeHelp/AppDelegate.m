@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "EHTabBarViewController.h"
+#import <UserNotifications/UserNotifications.h>
 @interface AppDelegate ()
 
 @end
@@ -55,6 +56,17 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[EHTabBarViewController alloc]init];
     [self.window makeKeyAndVisible];
+    
+    /*********************** 本地通知权限获取 ***************************/
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    //请求获取通知权限（角标，声音，弹框）
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            //获取用户是否同意开启通知
+            NSLog(@"request authorization successed!");
+        }
+    }];
+    
     return YES;
 }
 
@@ -77,6 +89,9 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    //清空通知数
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
@@ -109,5 +124,6 @@
 //    
 //        [buttonItem setBackButtonTitlePositionAdjustment:offset forBarMetrics:UIBarMetricsDefault];
 }
+
 
 @end

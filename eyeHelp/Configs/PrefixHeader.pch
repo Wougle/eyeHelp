@@ -27,4 +27,7 @@
 #import "HcdCacheVideoPlayer.h"
 #import "HyperlinksButton.h"
 #import "UIAlertController+AutoHide.h"
+#import "UserDefaultsUtils.h"
+#import <UserNotifications/UserNotifications.h>
+
 #endif /* PrefixHeader_pch */

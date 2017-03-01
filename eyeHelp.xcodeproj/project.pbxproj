@@ -64,6 +64,7 @@
 		3C6BD2EF1E62B0080027BE35 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2ED1E62B0080027BE35 /* SettingTableViewCell.xib */; };
 		3C6BD2F31E62B1210027BE35 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BD2F11E62B1210027BE35 /* SettingTableViewController.m */; };
 		3C6BD2F41E62B1210027BE35 /* SettingTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BD2F21E62B1210027BE35 /* SettingTableViewController.xib */; };
+		3C8DAEE31E66A1EF00360252 /* UserDefaultsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8DAEE21E66A1EF00360252 /* UserDefaultsUtils.m */; };
 		3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */; };
 		3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */; };
 		3CA85F691E5D12FF00980746 /* messModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F661E5D12FF00980746 /* messModel.m */; };
@@ -212,6 +213,8 @@
 		3C6BD2F01E62B1210027BE35 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingTableViewController.h; path = Class/Module/Mine/ViewControllers/SettingTableViewController.h; sourceTree = "<group>"; };
 		3C6BD2F11E62B1210027BE35 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingTableViewController.m; path = Class/Module/Mine/ViewControllers/SettingTableViewController.m; sourceTree = "<group>"; };
 		3C6BD2F21E62B1210027BE35 /* SettingTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingTableViewController.xib; path = Class/Module/Mine/ViewControllers/SettingTableViewController.xib; sourceTree = "<group>"; };
+		3C8DAEE11E66A1EF00360252 /* UserDefaultsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDefaultsUtils.h; path = Category/UserDefaultsUtils/UserDefaultsUtils.h; sourceTree = "<group>"; };
+		3C8DAEE21E66A1EF00360252 /* UserDefaultsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDefaultsUtils.m; path = Category/UserDefaultsUtils/UserDefaultsUtils.m; sourceTree = "<group>"; };
 		3C98FA1D1E5C3B63008E300A /* EHVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHVideoViewController.h; path = Class/Module/Course/ViewControllers/EHVideoViewController.h; sourceTree = "<group>"; };
 		3C98FA1E1E5C3B63008E300A /* EHVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHVideoViewController.m; path = Class/Module/Course/ViewControllers/EHVideoViewController.m; sourceTree = "<group>"; };
 		3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHVideoViewController.xib; path = Class/Module/Course/ViewControllers/EHVideoViewController.xib; sourceTree = "<group>"; };
@@ -388,6 +391,7 @@
 		3C62487F1E553B8000125670 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				3C8DAEE01E66A1E100360252 /* UserDefaultsUtils */,
 				3C6BD2DD1E62A1600027BE35 /* Alert */,
 				3C6BD2CA1E6142040027BE35 /* bottomLineButton */,
 				3C30E1FE1E5A924E0073F505 /* 折线图 */,
@@ -740,6 +744,15 @@
 				3C6BD2DF1E62A16E0027BE35 /* UIAlertController+AutoHide.m */,
 			);
 			name = Alert;
+			sourceTree = "<group>";
+		};
+		3C8DAEE01E66A1E100360252 /* UserDefaultsUtils */ = {
+			isa = PBXGroup;
+			children = (
+				3C8DAEE11E66A1EF00360252 /* UserDefaultsUtils.h */,
+				3C8DAEE21E66A1EF00360252 /* UserDefaultsUtils.m */,
+			);
+			name = UserDefaultsUtils;
 			sourceTree = "<group>";
 		};
 		3CA85F611E5D127F00980746 /* Chat */ = {
@@ -1143,6 +1156,7 @@
 				3CF1BB4D1E56C56000A19245 /* EHCourseCollectionViewCell.m in Sources */,
 				3C6BD2F31E62B1210027BE35 /* SettingTableViewController.m in Sources */,
 				3C6BD2DB1E6156810027BE35 /* EHTabBarViewController.m in Sources */,
+				3C8DAEE31E66A1EF00360252 /* UserDefaultsUtils.m in Sources */,
 				3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */,
 				3C6BD2E01E62A16E0027BE35 /* UIAlertController+AutoHide.m in Sources */,
 				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
