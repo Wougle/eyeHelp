@@ -13,6 +13,7 @@
 #import "EHPersonalDataTableViewController.h"
 #import "ExercisePlanTableViewController.h"
 #import "SettingTableViewController.h"
+#import "AlertTableViewController.h"
 static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
 
 @interface EHMineTableViewController ()<UITableViewDelegate,UITableViewDataSource>{
@@ -124,10 +125,10 @@ static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
         //            self.hidesBottomBarWhenPushed = NO;
     }
     else if (indexPath.row == 3){
-        //            PEProgressViewController *vc = [[PEProgressViewController alloc] init];
-        //            self.hidesBottomBarWhenPushed  = YES;
-        //            [self.navigationController pushViewController:vc animated:YES];
-        //            self.hidesBottomBarWhenPushed = NO;
+        AlertTableViewController *vc = [[AlertTableViewController alloc] init];
+        self.hidesBottomBarWhenPushed  = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     else if (indexPath.row == 4){
         SettingTableViewController *vc = [[SettingTableViewController alloc] init];

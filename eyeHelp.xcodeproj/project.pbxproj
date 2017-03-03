@@ -69,6 +69,10 @@
 		3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C98FA1F1E5C3B63008E300A /* EHVideoViewController.xib */; };
 		3C9AB3C01E66BA4800A787CE /* ModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9AB3BE1E66BA4800A787CE /* ModifyViewController.m */; };
 		3C9AB3C11E66BA4800A787CE /* ModifyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9AB3BF1E66BA4800A787CE /* ModifyViewController.xib */; };
+		3C9AB4211E69111B00A787CE /* AlertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9AB41F1E69111B00A787CE /* AlertTableViewCell.m */; };
+		3C9AB4221E69111B00A787CE /* AlertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9AB4201E69111B00A787CE /* AlertTableViewCell.xib */; };
+		3C9AB4261E6912BB00A787CE /* AlertTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9AB4241E6912BB00A787CE /* AlertTableViewController.m */; };
+		3C9AB4271E6912BB00A787CE /* AlertTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C9AB4251E6912BB00A787CE /* AlertTableViewController.xib */; };
 		3CA85F691E5D12FF00980746 /* messModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F661E5D12FF00980746 /* messModel.m */; };
 		3CA85F6A1E5D12FF00980746 /* modelFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F681E5D12FF00980746 /* modelFrame.m */; };
 		3CA85F6D1E5D130B00980746 /* dataPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CA85F6B1E5D130B00980746 /* dataPlist.plist */; };
@@ -223,6 +227,12 @@
 		3C9AB3BD1E66BA4800A787CE /* ModifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModifyViewController.h; path = Class/Module/Mine/ViewControllers/ModifyViewController.h; sourceTree = "<group>"; };
 		3C9AB3BE1E66BA4800A787CE /* ModifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModifyViewController.m; path = Class/Module/Mine/ViewControllers/ModifyViewController.m; sourceTree = "<group>"; };
 		3C9AB3BF1E66BA4800A787CE /* ModifyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ModifyViewController.xib; path = Class/Module/Mine/ViewControllers/ModifyViewController.xib; sourceTree = "<group>"; };
+		3C9AB41E1E69111B00A787CE /* AlertTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertTableViewCell.h; path = Class/Module/Mine/Views/AlertTableViewCell.h; sourceTree = "<group>"; };
+		3C9AB41F1E69111B00A787CE /* AlertTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertTableViewCell.m; path = Class/Module/Mine/Views/AlertTableViewCell.m; sourceTree = "<group>"; };
+		3C9AB4201E69111B00A787CE /* AlertTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlertTableViewCell.xib; path = Class/Module/Mine/Views/AlertTableViewCell.xib; sourceTree = "<group>"; };
+		3C9AB4231E6912BB00A787CE /* AlertTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertTableViewController.h; path = Class/Module/Mine/ViewControllers/AlertTableViewController.h; sourceTree = "<group>"; };
+		3C9AB4241E6912BB00A787CE /* AlertTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertTableViewController.m; path = Class/Module/Mine/ViewControllers/AlertTableViewController.m; sourceTree = "<group>"; };
+		3C9AB4251E6912BB00A787CE /* AlertTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AlertTableViewController.xib; path = Class/Module/Mine/ViewControllers/AlertTableViewController.xib; sourceTree = "<group>"; };
 		3CA85F651E5D12FF00980746 /* messModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messModel.h; path = Class/Module/Chat/Modules/messModel.h; sourceTree = "<group>"; };
 		3CA85F661E5D12FF00980746 /* messModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = messModel.m; path = Class/Module/Chat/Modules/messModel.m; sourceTree = "<group>"; };
 		3CA85F671E5D12FF00980746 /* modelFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = modelFrame.h; path = Class/Module/Chat/Modules/modelFrame.h; sourceTree = "<group>"; };
@@ -604,6 +614,9 @@
 				3C9AB3BD1E66BA4800A787CE /* ModifyViewController.h */,
 				3C9AB3BE1E66BA4800A787CE /* ModifyViewController.m */,
 				3C9AB3BF1E66BA4800A787CE /* ModifyViewController.xib */,
+				3C9AB4231E6912BB00A787CE /* AlertTableViewController.h */,
+				3C9AB4241E6912BB00A787CE /* AlertTableViewController.m */,
+				3C9AB4251E6912BB00A787CE /* AlertTableViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -679,6 +692,9 @@
 				3C6BD2EB1E62B0080027BE35 /* SettingTableViewCell.h */,
 				3C6BD2EC1E62B0080027BE35 /* SettingTableViewCell.m */,
 				3C6BD2ED1E62B0080027BE35 /* SettingTableViewCell.xib */,
+				3C9AB41E1E69111B00A787CE /* AlertTableViewCell.h */,
+				3C9AB41F1E69111B00A787CE /* AlertTableViewCell.m */,
+				3C9AB4201E69111B00A787CE /* AlertTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -965,6 +981,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF1BB4E1E56C56000A19245 /* EHCourseCollectionViewCell.xib in Resources */,
+				3C9AB4271E6912BB00A787CE /* AlertTableViewController.xib in Resources */,
 				3C6BD2B11E6119100027BE35 /* EHMineTableViewCell.xib in Resources */,
 				3C6BD2EF1E62B0080027BE35 /* SettingTableViewCell.xib in Resources */,
 				3CBE41CF1E59BA0E00C5414E /* EHConsultHeaderView.xib in Resources */,
@@ -980,6 +997,7 @@
 				3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */,
 				3CF1BB641E59695400A19245 /* EHAdjustTableViewCell.xib in Resources */,
 				3C30E21E1E5AD27D0073F505 /* EHGraphicTextViewController.xib in Resources */,
+				3C9AB4221E69111B00A787CE /* AlertTableViewCell.xib in Resources */,
 				3C30E2191E5A92B80073F505 /* EHChartViewViewController.xib in Resources */,
 				3C6BD2D21E6148240027BE35 /* QAViewController.xib in Resources */,
 				3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */,
@@ -1168,6 +1186,7 @@
 				3C8DAEE31E66A1EF00360252 /* UserDefaultsUtils.m in Sources */,
 				3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */,
 				3C6BD2E01E62A16E0027BE35 /* UIAlertController+AutoHide.m in Sources */,
+				3C9AB4261E6912BB00A787CE /* AlertTableViewController.m in Sources */,
 				3CF1BB2A1E5578E800A19245 /* EHCourseViewController.m in Sources */,
 				3C6BD2E41E62A5830027BE35 /* PersonalDataTableViewCell.m in Sources */,
 				3C6BD2431E5D66CE0027BE35 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
@@ -1197,6 +1216,7 @@
 				3C6BD2B51E6121F20027BE35 /* ExercisePlanTableViewController.m in Sources */,
 				3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */,
 				3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */,
+				3C9AB4211E69111B00A787CE /* AlertTableViewCell.m in Sources */,
 				3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */,
 				3C6BD2D61E614E190027BE35 /* QATableViewCell.m in Sources */,
 				3CF1BB3E1E569D5D00A19245 /* EHGraphicTableViewCell.m in Sources */,
