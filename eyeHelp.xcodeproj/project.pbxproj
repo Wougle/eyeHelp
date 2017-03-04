@@ -80,6 +80,8 @@
 		3CA85F711E5D131900980746 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F701E5D131900980746 /* CustomTableViewCell.m */; };
 		3CA85F751E5D136F00980746 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA85F731E5D136F00980746 /* ChatViewController.m */; };
 		3CA85F761E5D136F00980746 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA85F741E5D136F00980746 /* ChatViewController.xib */; };
+		3CBD95961E6AE7D0002A7401 /* LogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD95941E6AE7D0002A7401 /* LogViewController.m */; };
+		3CBD95971E6AE7D0002A7401 /* LogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBD95951E6AE7D0002A7401 /* LogViewController.xib */; };
 		3CBE41CD1E59BA0100C5414E /* EHConsultHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE41CC1E59BA0100C5414E /* EHConsultHeaderView.m */; };
 		3CBE41CF1E59BA0E00C5414E /* EHConsultHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CBE41CE1E59BA0E00C5414E /* EHConsultHeaderView.xib */; };
 		3CBE41D31E59BDA200C5414E /* EHConsultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBE41D11E59BDA200C5414E /* EHConsultTableViewCell.m */; };
@@ -244,6 +246,9 @@
 		3CA85F721E5D136F00980746 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatViewController.h; path = Class/Module/Chat/ViewControllers/ChatViewController.h; sourceTree = "<group>"; };
 		3CA85F731E5D136F00980746 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatViewController.m; path = Class/Module/Chat/ViewControllers/ChatViewController.m; sourceTree = "<group>"; };
 		3CA85F741E5D136F00980746 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ChatViewController.xib; path = Class/Module/Chat/ViewControllers/ChatViewController.xib; sourceTree = "<group>"; };
+		3CBD95931E6AE7D0002A7401 /* LogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogViewController.h; path = Class/Module/Log/ViewControllers/LogViewController.h; sourceTree = "<group>"; };
+		3CBD95941E6AE7D0002A7401 /* LogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogViewController.m; path = Class/Module/Log/ViewControllers/LogViewController.m; sourceTree = "<group>"; };
+		3CBD95951E6AE7D0002A7401 /* LogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LogViewController.xib; path = Class/Module/Log/ViewControllers/LogViewController.xib; sourceTree = "<group>"; };
 		3CBE41CB1E59BA0100C5414E /* EHConsultHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHConsultHeaderView.h; path = Class/Module/Consult/Views/EHConsultHeaderView.h; sourceTree = "<group>"; };
 		3CBE41CC1E59BA0100C5414E /* EHConsultHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHConsultHeaderView.m; path = Class/Module/Consult/Views/EHConsultHeaderView.m; sourceTree = "<group>"; };
 		3CBE41CE1E59BA0E00C5414E /* EHConsultHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHConsultHeaderView.xib; path = Class/Module/Consult/Views/EHConsultHeaderView.xib; sourceTree = "<group>"; };
@@ -465,6 +470,7 @@
 		3C62488A1E55420800125670 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				3CBD958F1E6AE730002A7401 /* Log */,
 				3C6BD2BC1E6130B30027BE35 /* QA */,
 				3C6BD23C1E5D66B80027BE35 /* Camera */,
 				3CA85F611E5D127F00980746 /* Chat */,
@@ -821,6 +827,40 @@
 			name = Modules;
 			sourceTree = "<group>";
 		};
+		3CBD958F1E6AE730002A7401 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD95921E6AE77A002A7401 /* Views */,
+				3CBD95911E6AE772002A7401 /* ViewControllers */,
+				3CBD95901E6AE769002A7401 /* Modules */,
+			);
+			name = Log;
+			sourceTree = "<group>";
+		};
+		3CBD95901E6AE769002A7401 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		3CBD95911E6AE772002A7401 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3CBD95931E6AE7D0002A7401 /* LogViewController.h */,
+				3CBD95941E6AE7D0002A7401 /* LogViewController.m */,
+				3CBD95951E6AE7D0002A7401 /* LogViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3CBD95921E6AE77A002A7401 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		3CF1BB2C1E5596BB00A19245 /* 侧滑 */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,6 +1035,7 @@
 				3C98FA211E5C3B63008E300A /* EHVideoViewController.xib in Resources */,
 				3C9AB3C11E66BA4800A787CE /* ModifyViewController.xib in Resources */,
 				3CF1BB2B1E5578E800A19245 /* EHCourseViewController.xib in Resources */,
+				3CBD95971E6AE7D0002A7401 /* LogViewController.xib in Resources */,
 				3CF1BB641E59695400A19245 /* EHAdjustTableViewCell.xib in Resources */,
 				3C30E21E1E5AD27D0073F505 /* EHGraphicTextViewController.xib in Resources */,
 				3C9AB4221E69111B00A787CE /* AlertTableViewCell.xib in Resources */,
@@ -1184,6 +1225,7 @@
 				3C6BD2F31E62B1210027BE35 /* SettingTableViewController.m in Sources */,
 				3C6BD2DB1E6156810027BE35 /* EHTabBarViewController.m in Sources */,
 				3C8DAEE31E66A1EF00360252 /* UserDefaultsUtils.m in Sources */,
+				3CBD95961E6AE7D0002A7401 /* LogViewController.m in Sources */,
 				3CF1BB391E55A9CA00A19245 /* LeftMenuTableViewCell.m in Sources */,
 				3C6BD2E01E62A16E0027BE35 /* UIAlertController+AutoHide.m in Sources */,
 				3C9AB4261E6912BB00A787CE /* AlertTableViewController.m in Sources */,

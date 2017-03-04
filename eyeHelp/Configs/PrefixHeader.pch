@@ -29,5 +29,5 @@
 #import "UIAlertController+AutoHide.h"
 #import "UserDefaultsUtils.h"
 #import <UserNotifications/UserNotifications.h>
-
+#import "LogViewController.h"
 #endif /* PrefixHeader_pch */

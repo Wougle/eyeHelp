@@ -404,7 +404,11 @@ HomeMenuViewDelegate>
 }
 
 - (void)searchBtn{
-    
+    LogViewController *vc = [[LogViewController alloc] init];
+    self.hidesBottomBarWhenPushed = YES;
+    vc.viewType = 1;
+    [self.navigationController pushViewController:vc animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 @end
