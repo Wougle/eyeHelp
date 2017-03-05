@@ -56,6 +56,7 @@ HomeMenuViewDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"教程";
     self.view.backgroundColor = BG_COLOR;
@@ -65,6 +66,7 @@ HomeMenuViewDelegate>
     [self refreshTableView:0];
     [self setNavigation];//导航栏设置
     
+    [self log];
 }
 
 - (void)createMenu {
@@ -404,11 +406,18 @@ HomeMenuViewDelegate>
 }
 
 - (void)searchBtn{
-    LogViewController *vc = [[LogViewController alloc] init];
-    self.hidesBottomBarWhenPushed = YES;
-    vc.viewType = 1;
-    [self.navigationController pushViewController:vc animated:YES];
-    self.hidesBottomBarWhenPushed = NO;
+   
+}
+
+- (void)log{
+    if ([[UserDefaultsUtils valueWithKey:@"ReLog"] isEqualToString:@"0"]) {
+        LogViewController *vc = [[LogViewController alloc] init];
+        vc.viewType = 1;
+        //[self presentViewController:vc animated:YES completion:nil];
+        //self.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+        //self.hidesBottomBarWhenPushed = NO;
+    }
 }
 
 @end

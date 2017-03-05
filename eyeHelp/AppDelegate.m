@@ -50,6 +50,9 @@
     [[UIToolbar appearance] setBarTintColor:[UIColor blackColor]];//title颜色
     
     [self setNaviBack];
+    
+    /*********************** 登录配置 ***************************/
+    [UserDefaultsUtils saveValue:@"0" forKey:@"ReLog"];
 
     /*********************** 初始化配置 ***************************/
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

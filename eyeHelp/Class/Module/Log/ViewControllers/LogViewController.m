@@ -8,7 +8,9 @@
 
 #import "LogViewController.h"
 
-@interface LogViewController ()
+@interface LogViewController (){
+    BOOL isSecure;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;
@@ -34,11 +36,13 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
+    self.tabBarController.tabBar.hidden=YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO];
+    self.tabBarController.tabBar.hidden=NO;
 }
 
 - (void)viewDidLoad {
@@ -70,6 +74,7 @@
     //现在注册
     [self.regBtn addTarget:self action:@selector(registerIn) forControlEvents:UIControlEventTouchUpInside];
 
+    isSecure = 0;
 }
 
 - (void)setView{
@@ -77,11 +82,13 @@
         _topImageView.image = [UIImage imageNamed:@"bg_login"];
         self.logView.hidden = NO;
         self.regView.hidden = YES;
+        self.backBtn.hidden = YES;
     }
     else{
          _topImageView.image = [UIImage imageNamed:@"bg_signup"];
         self.logView.hidden = YES;
         self.regView.hidden = NO;
+        self.backBtn.hidden = NO;
     }
 }
 
@@ -112,7 +119,28 @@
 }
 //登录
 - (void)logIn{
-    
+    if (self.logPhoneTF.text.length != 0) {
+        if (self.logPsdTF.text.length != 0) {
+            [UserDefaultsUtils saveValue:@"1" forKey:@"ReLog"];
+            UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [self.navigationController popViewControllerAnimated:YES];
+
+            }]];
+            [self presentViewController:alertVc animated:YES completion:nil];
+        }
+        else{
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请输入密码" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC setDismissInterval:ALERT_TIME];
+            [self presentViewController:alertVC animated:YES completion:nil];
+        }
+    }
+    else{
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请输入手机号" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVC setDismissInterval:ALERT_TIME];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }
+
 }
 //获取验证码
 - (void)getCheckCode{
@@ -120,10 +148,42 @@
 }
 //眼睛
 - (void)eyeOn{
-    
+    if (isSecure == 0) {
+        self.regPsdTF.secureTextEntry = YES;
+        isSecure = 1;
+    }
+    else{
+        self.regPsdTF.secureTextEntry = NO;
+        isSecure = 0;
+    }
 }
 //现在注册
 - (void)registerIn{
-    
+    if (self.regPhoneTF.text.length != 0) {
+        if (self.regCheckTF.text.length != 0) {
+            if (self.regPsdTF.text.length != 0) {
+                UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:@"注册成功" preferredStyle:UIAlertControllerStyleAlert];
+                [alertVc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [self.navigationController popViewControllerAnimated:YES];
+                }]];
+                [self presentViewController:alertVc animated:YES completion:nil];
+            }
+            else{
+                UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请输入密码" preferredStyle:UIAlertControllerStyleAlert];
+                [alertVC setDismissInterval:ALERT_TIME];
+                [self presentViewController:alertVC animated:YES completion:nil];
+            }
+        }
+        else{
+            UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请输入验证码" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVC setDismissInterval:ALERT_TIME];
+            [self presentViewController:alertVC animated:YES completion:nil];
+        }
+    }
+    else{
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:@"请输入手机号" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVC setDismissInterval:ALERT_TIME];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }
 }
 @end

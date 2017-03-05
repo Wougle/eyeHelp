@@ -82,12 +82,12 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnf-ux-9KT">
-                                    <rect key="frame" x="0.0" y="99" width="50" height="29"/>
+                                    <rect key="frame" x="0.0" y="99" width="70" height="29"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="50" id="Sgf-He-nKL"/>
+                                        <constraint firstAttribute="width" constant="70" id="Sgf-He-nKL"/>
                                         <constraint firstAttribute="height" constant="29" id="cj8-2P-BZx"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <state key="normal" title="忘记密码？">
                                         <color key="titleColor" red="0.098039215686274508" green="0.75294117647058822" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
@@ -98,7 +98,7 @@
                                         <constraint firstAttribute="width" constant="50" id="2eK-Ix-670"/>
                                         <constraint firstAttribute="height" constant="29" id="PiX-eY-k2O"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <state key="normal" title="立即注册">
                                         <color key="titleColor" red="0.098039215690000001" green="0.75294117650000003" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
