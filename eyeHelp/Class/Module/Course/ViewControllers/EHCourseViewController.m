@@ -66,7 +66,7 @@ HomeMenuViewDelegate>
     [self refreshTableView:0];
     [self setNavigation];//导航栏设置
     
-    [self log];
+    //[self log];
 }
 
 - (void)createMenu {

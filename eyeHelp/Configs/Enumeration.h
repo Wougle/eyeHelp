@@ -21,4 +21,9 @@ typedef NS_ENUM(NSInteger, EHGraphicTextType){
     EHConsult,      //咨询
 };
 
+typedef NS_ENUM(NSInteger, EHCollectionType){
+    Cource = 0,   //图文
+    Science = 1,  //科普
+};
+
 #endif /* Enumeration_h */

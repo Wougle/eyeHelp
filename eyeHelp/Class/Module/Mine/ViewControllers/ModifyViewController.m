@@ -30,6 +30,8 @@
     [super viewDidLoad];
     self.title = self.titleNameStr;
     [self setView];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(finishBtn)];
+    self.navigationItem.rightBarButtonItem = rightItem;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -68,6 +70,52 @@
             _commonFirstTF.placeholder = @"请输入左眼视力";
             _commonSecondTF.placeholder = @"请输入右眼视力";
         }
+    }
+}
+
+- (void)finishBtn{
+    if (self.type == 1) {
+        
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:@"修改成功" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [UserDefaultsUtils saveValue:_nickNameTF.text forKey:@"nickName"];
+            
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }]];
+        [self presentViewController:alertVc animated:YES completion:nil];
+        
+        
+        
+    }
+    else if(self.type == 2){
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:@"修改成功" preferredStyle:UIAlertControllerStyleAlert];
+        [alertVc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [UserDefaultsUtils saveValue:_phoneNewPhoTF.text forKey:@"phoneNumber"];
+            
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        }]];
+        [self presentViewController:alertVc animated:YES completion:nil];
+    }
+    else{
+        if (self.type == 3) {
+            
+        }
+        else{
+            UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:@"修改成功" preferredStyle:UIAlertControllerStyleAlert];
+            [alertVc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+                [UserDefaultsUtils saveValue:_commonFirstTF.text forKey:@"leftEye"];
+                [UserDefaultsUtils saveValue:_commonSecondTF.text forKey:@"rightEye"];
+                
+                [self.navigationController popViewControllerAnimated:YES];
+                
+            }]];
+            [self presentViewController:alertVc animated:YES completion:nil];
+            }
     }
 
 }

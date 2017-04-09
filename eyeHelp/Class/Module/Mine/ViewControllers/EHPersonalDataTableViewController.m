@@ -24,16 +24,15 @@ static NSString *const kPersonalDataTableViewCell = @"kPersonalDataTableViewCell
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
     iconArr = @[@"头像",@"昵称",@"手机号",@"修改密码",@"视力情况"];
-    titleArr = @[@"head_small",@"飞翔的小飞侠",@"13911102333",@"",@"左眼：4.4  右眼：4.7"];
-    
+    titleArr = @[@"head_small",[UserDefaultsUtils valueWithKey:@"nickName"],[UserDefaultsUtils valueWithKey:@"phoneNumber"],@"",[NSString stringWithFormat:@"左眼：%@  右眼：%@",[UserDefaultsUtils valueWithKey:@"leftEye"],[UserDefaultsUtils valueWithKey:@"rightEye"]]];
+    [self.tableView reloadData];
     [self prepareView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.title = self.titleName;
 }
 

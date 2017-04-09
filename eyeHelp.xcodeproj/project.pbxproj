@@ -104,6 +104,10 @@
 		3CF1BB5F1E595B8000A19245 /* VWaterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB5E1E595B8000A19245 /* VWaterView.m */; };
 		3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF1BB611E59695400A19245 /* EHAdjustTableViewCell.m */; };
 		3CF1BB641E59695400A19245 /* EHAdjustTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF1BB621E59695400A19245 /* EHAdjustTableViewCell.xib */; };
+		3CF4062F1E99FCA50042ED73 /* EHCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF4062D1E99FCA50042ED73 /* EHCollectionViewController.m */; };
+		3CF406301E99FCA50042ED73 /* EHCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF4062E1E99FCA50042ED73 /* EHCollectionViewController.xib */; };
+		3CF406341E9A04DE0042ED73 /* ECollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF406321E9A04DE0042ED73 /* ECollectionViewCell.m */; };
+		3CF406351E9A04DE0042ED73 /* ECollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF406331E9A04DE0042ED73 /* ECollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +288,12 @@
 		3CF1BB601E59695400A19245 /* EHAdjustTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHAdjustTableViewCell.h; path = Class/Module/Screen/Views/EHAdjustTableViewCell.h; sourceTree = "<group>"; };
 		3CF1BB611E59695400A19245 /* EHAdjustTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHAdjustTableViewCell.m; path = Class/Module/Screen/Views/EHAdjustTableViewCell.m; sourceTree = "<group>"; };
 		3CF1BB621E59695400A19245 /* EHAdjustTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHAdjustTableViewCell.xib; path = Class/Module/Screen/Views/EHAdjustTableViewCell.xib; sourceTree = "<group>"; };
+		3CF4062C1E99FCA50042ED73 /* EHCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EHCollectionViewController.h; path = Class/Module/Mine/ViewControllers/EHCollectionViewController.h; sourceTree = "<group>"; };
+		3CF4062D1E99FCA50042ED73 /* EHCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EHCollectionViewController.m; path = Class/Module/Mine/ViewControllers/EHCollectionViewController.m; sourceTree = "<group>"; };
+		3CF4062E1E99FCA50042ED73 /* EHCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EHCollectionViewController.xib; path = Class/Module/Mine/ViewControllers/EHCollectionViewController.xib; sourceTree = "<group>"; };
+		3CF406311E9A04DE0042ED73 /* ECollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECollectionViewCell.h; path = Class/Module/Mine/Views/ECollectionViewCell.h; sourceTree = "<group>"; };
+		3CF406321E9A04DE0042ED73 /* ECollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECollectionViewCell.m; path = Class/Module/Mine/Views/ECollectionViewCell.m; sourceTree = "<group>"; };
+		3CF406331E9A04DE0042ED73 /* ECollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ECollectionViewCell.xib; path = Class/Module/Mine/Views/ECollectionViewCell.xib; sourceTree = "<group>"; };
 		42CD977474DC0A65DF337F96 /* Pods-eyeHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.release.xcconfig"; sourceTree = "<group>"; };
 		4A6B458A0A722FCE921AEBA6 /* Pods-eyeHelpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelpTests/Pods-eyeHelpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C5425DD485F6BF6E0401646 /* Pods-eyeHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eyeHelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eyeHelp/Pods-eyeHelp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -605,6 +615,9 @@
 		3C6248971E55426000125670 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3CF4062C1E99FCA50042ED73 /* EHCollectionViewController.h */,
+				3CF4062D1E99FCA50042ED73 /* EHCollectionViewController.m */,
+				3CF4062E1E99FCA50042ED73 /* EHCollectionViewController.xib */,
 				3C6248B11E5543CC00125670 /* EHMineTableViewController.h */,
 				3C6248B21E5543CC00125670 /* EHMineTableViewController.m */,
 				3C6248B31E5543CC00125670 /* EHMineTableViewController.xib */,
@@ -701,6 +714,9 @@
 				3C9AB41E1E69111B00A787CE /* AlertTableViewCell.h */,
 				3C9AB41F1E69111B00A787CE /* AlertTableViewCell.m */,
 				3C9AB4201E69111B00A787CE /* AlertTableViewCell.xib */,
+				3CF406311E9A04DE0042ED73 /* ECollectionViewCell.h */,
+				3CF406321E9A04DE0042ED73 /* ECollectionViewCell.m */,
+				3CF406331E9A04DE0042ED73 /* ECollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1041,6 +1057,8 @@
 				3C9AB4221E69111B00A787CE /* AlertTableViewCell.xib in Resources */,
 				3C30E2191E5A92B80073F505 /* EHChartViewViewController.xib in Resources */,
 				3C6BD2D21E6148240027BE35 /* QAViewController.xib in Resources */,
+				3CF406301E99FCA50042ED73 /* EHCollectionViewController.xib in Resources */,
+				3CF406351E9A04DE0042ED73 /* ECollectionViewCell.xib in Resources */,
 				3CF1BB3A1E55A9CA00A19245 /* LeftMenuTableViewCell.xib in Resources */,
 				3C6248B51E5543CC00125670 /* EHMineTableViewController.xib in Resources */,
 				3C6248591E55346000125670 /* Assets.xcassets in Resources */,
@@ -1244,6 +1262,7 @@
 				3C30E2101E5A92760073F505 /* GraphDot.m in Sources */,
 				3C6BD2D11E6148240027BE35 /* QAViewController.m in Sources */,
 				3C6BD2B01E6119100027BE35 /* EHMineTableViewCell.m in Sources */,
+				3CF406341E9A04DE0042ED73 /* ECollectionViewCell.m in Sources */,
 				3C6BD2451E5D66CE0027BE35 /* CameraCollectionViewCell.m in Sources */,
 				3C30E2181E5A92B80073F505 /* EHChartViewViewController.m in Sources */,
 				3CA85F711E5D131900980746 /* CustomTableViewCell.m in Sources */,
@@ -1258,6 +1277,7 @@
 				3C6BD2B51E6121F20027BE35 /* ExercisePlanTableViewController.m in Sources */,
 				3C30E1FD1E5A7D1B0073F505 /* MyCollectionViewCell.m in Sources */,
 				3CF1BB631E59695400A19245 /* EHAdjustTableViewCell.m in Sources */,
+				3CF4062F1E99FCA50042ED73 /* EHCollectionViewController.m in Sources */,
 				3C9AB4211E69111B00A787CE /* AlertTableViewCell.m in Sources */,
 				3C98FA201E5C3B63008E300A /* EHVideoViewController.m in Sources */,
 				3C6BD2D61E614E190027BE35 /* QATableViewCell.m in Sources */,

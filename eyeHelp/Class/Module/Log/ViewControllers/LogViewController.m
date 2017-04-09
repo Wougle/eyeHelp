@@ -124,6 +124,14 @@
             [UserDefaultsUtils saveValue:@"1" forKey:@"ReLog"];
             UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:nil message:@"登录成功" preferredStyle:UIAlertControllerStyleAlert];
             [alertVc addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+                if ([UserDefaultsUtils valueWithKey:@"nickName"] == nil) {
+                    [UserDefaultsUtils saveValue:@"飞翔的小飞侠" forKey:@"nickName"];
+                    [UserDefaultsUtils saveValue:@"13911102333" forKey:@"phoneNumber"];
+                    [UserDefaultsUtils saveValue:@"4.4" forKey:@"leftEye"];
+                    [UserDefaultsUtils saveValue:@"4.7" forKey:@"rightEye"];
+                }
+                
                 [self.navigationController popViewControllerAnimated:YES];
 
             }]];

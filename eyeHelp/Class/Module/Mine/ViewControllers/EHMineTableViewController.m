@@ -12,6 +12,7 @@
 
 #import "EHPersonalDataTableViewController.h"
 #import "ExercisePlanTableViewController.h"
+#import "EHCollectionViewController.h"
 #import "SettingTableViewController.h"
 #import "AlertTableViewController.h"
 static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
@@ -62,9 +63,9 @@ static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
     self.mineHeaderViews = [nib objectAtIndex:0];
     self.mineHeaderViews.frame = CGRectMake(0, 0, SCREEN_WIDTH, 300);
     
-    self.mineHeaderViews.nickNameLabel.text = @"飞翔的小飞侠";
-    self.mineHeaderViews.leftEyeLabel.text = @"左眼：4.4";
-    self.mineHeaderViews.rightEyeLabel.text = @"右眼：4.7";
+    self.mineHeaderViews.nickNameLabel.text = [NSString stringWithFormat:@"%@",[UserDefaultsUtils valueWithKey:@"nickName"]];
+    self.mineHeaderViews.leftEyeLabel.text = [NSString stringWithFormat:@"左眼：%@",[UserDefaultsUtils valueWithKey:@"leftEye"]];
+    self.mineHeaderViews.rightEyeLabel.text = [NSString stringWithFormat:@"右眼：%@",[UserDefaultsUtils valueWithKey:@"rightEye"]];
     
     self.tableView.tableHeaderView = self.mineHeaderViews;
     
@@ -119,10 +120,10 @@ static NSString *const kEHMineTableViewCell = @"kEHMineTableViewCell";
         self.hidesBottomBarWhenPushed = NO;
     }
     else if (indexPath.row == 2){
-        //            PEProgressViewController *vc = [[PEProgressViewController alloc] init];
-        //            self.hidesBottomBarWhenPushed  = YES;
-        //            [self.navigationController pushViewController:vc animated:YES];
-        //            self.hidesBottomBarWhenPushed = NO;
+        EHCollectionViewController *vc = [[EHCollectionViewController alloc] init];
+        self.hidesBottomBarWhenPushed  = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+        self.hidesBottomBarWhenPushed = NO;
     }
     else if (indexPath.row == 3){
         AlertTableViewController *vc = [[AlertTableViewController alloc] init];
